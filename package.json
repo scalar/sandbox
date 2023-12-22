@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@scalar/api-reference": "^1.12.1",
+    "monaco-editor": "^0.45.0",
     "vue": "^3.3.11"
   },
   "devDependencies": {
