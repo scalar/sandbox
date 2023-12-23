@@ -9,6 +9,20 @@ const monacoEditorRef = ref<HTMLElement>()
 
 let editor: monaco.editor.IStandaloneCodeEditor | null = null
 
+const jsonSchema = {
+    type: 'object',
+    properties: {
+        name: {
+            type: 'string',
+            description: 'Name of the item'
+        },
+        value: {
+            type: 'number',
+            description: 'Value of the item'
+        },
+    }
+};
+
 async function init() {
   await nextTick()
 
@@ -17,25 +31,27 @@ async function init() {
   }
 
   self.MonacoEnvironment = {
-    getWorker: function (workerId, label) {
-      const getWorkerModule = (moduleUrl, label) => {
-        return new Worker(self.MonacoEnvironment.getWorkerUrl(moduleUrl), {
-          name: label,
-          type: 'module'
-        });
-      };
+    getWorker(_workerId: string, label: string): Worker {
+    switch (label) {
+      case 'json': {
+        return new Worker(
+          new URL(
+            'monaco-editor/esm/vs/language/json/json.worker.js',
+            import.meta.url,
+          ),
+          { type: 'module' },
+        );
+      }
 
-      switch (label) {
-        case 'json':
-          return getWorkerModule('/monaco-editor/esm/vs/language/json/json.worker?worker', label);
-        case 'javascript':
-          return getWorkerModule('/monaco-editor/esm/vs/language/typescript/ts.worker?worker', label);
-        default:
-          return getWorkerModule('/monaco-editor/esm/vs/editor/editor.worker?worker', label);
+      default: {
+        return new Worker(
+          new URL('monaco-editor/esm/vs/editor/editor.worker.js', import.meta.url),
+          { type: 'module' },
+        );
       }
     }
-  };
-
+  },
+  }
 
   editor = monaco.editor.create(monacoEditorRef.value, {
     theme: 'vs-dark',
@@ -45,9 +61,18 @@ async function init() {
   })
 
   editor.onDidChangeModelContent(_ => {
-    console.log('change')
     emit('update:modelValue', editor?.getValue())
   })
+
+  // Set JSON schema for the editor
+  monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+      validate: true,
+      schemas: [{
+          uri: 'http://example.com/foobar-schema.json',
+          fileMatch: ['*'],
+          schema: jsonSchema
+      }]
+  });
 }
 
 onMounted(() => {
