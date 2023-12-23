@@ -4,24 +4,13 @@ import { onMounted, ref,  nextTick } from 'vue'
 
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
+import openApi31 from './openapi-3.1.json'
 
 const monacoEditorRef = ref<HTMLElement>()
 
 let editor: monaco.editor.IStandaloneCodeEditor | null = null
 
-const jsonSchema = {
-    type: 'object',
-    properties: {
-        name: {
-            type: 'string',
-            description: 'Name of the item'
-        },
-        value: {
-            type: 'number',
-            description: 'Value of the item'
-        },
-    }
-};
+const jsonSchema = openApi31
 
 async function init() {
   await nextTick()
