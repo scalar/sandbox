@@ -8,6 +8,5 @@ An easy way to share OpenAPI files.
 
 ```
 pnpm install
-pnpm run frontend
-pnpm run backend
+pnpm dev
 ```

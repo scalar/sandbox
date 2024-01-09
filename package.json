@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently 'pnpm run frontend' 'pnpm run backend'",
+    "dev": "concurrently -n frontend,backend -c 'auto' 'pnpm run frontend' 'pnpm run backend'",
     "build": "vue-tsc && vite build",
     "frontend": "vite",
     "backend": "wrangler pages dev ./",
