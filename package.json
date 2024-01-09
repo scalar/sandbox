@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently 'pnpm run frontend' 'pnpm run backend'",
     "build": "vue-tsc && vite build",
+    "frontend": "vite",
+    "backend": "wrangler pages dev ./",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
+    "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier-vue": "^5.0.0",
@@ -23,6 +26,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-plugin-node-polyfills": "^0.17.0",
-    "vue-tsc": "^1.8.25"
+    "vue-tsc": "^1.8.25",
+    "wrangler": "^3.22.3"
   }
 }

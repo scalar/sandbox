@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const content = ref<string>(JSON.stringify({
   'openapi': '3.1.0',
@@ -9,7 +9,32 @@ const content = ref<string>(JSON.stringify({
     'title': 'Hello World',
     'version': '1.0.0'
   },
+  paths: {},
 }, null, 2))
+
+const contentChanged = ref<boolean>(true)
+
+const share = () => {
+  fetch('/api/share', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: '{}'
+    // JSON.stringify({
+    //   content: content.value
+    // })
+  }).then(res => res.json()).then(res => {
+    console.log(res)
+    contentChanged.value = true
+    // window.location.href = `/play/${res.id}`
+  })
+}
+
+watch(content, (value) => {
+  contentChanged.value = true
+  console.log('content changed', value)
+})
 </script>
 
 <template>
@@ -19,7 +44,7 @@ const content = ref<string>(JSON.stringify({
         Play
       </div>
       <div class="actions">
-        <button type="button">
+        <button type="button" @click="share" :disabled="!contentChanged">
           Share
         </button>
       </div>
