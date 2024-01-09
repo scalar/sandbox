@@ -20,10 +20,9 @@ const share = () => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: '{}'
-    // JSON.stringify({
-    //   content: content.value
-    // })
+    body: JSON.stringify({
+      content: content.value
+    })
   }).then(res => res.json()).then(res => {
     console.log(res)
     contentChanged.value = true

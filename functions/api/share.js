@@ -1,4 +1,6 @@
-export async function onRequest(request) {
+export async function onRequest(context) {
+  console.log('json', await context.request.json())
+
   const data = {
     hello: 'world',
   };
@@ -7,7 +9,7 @@ export async function onRequest(request) {
 
   return new Response(json, {
     headers: {
-      "content-type": "application/json;charset=UTF-8",
+      'content-type': 'application/json;charset=UTF-8',
     },
   });
 }
