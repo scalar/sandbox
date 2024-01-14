@@ -1,0 +1,4 @@
+[[d1_databases]]
+binding = "DB"
+database_name = "prod-d1-play"
+database_id = "070c90e5-b671-4854-aaa7-b122c535b8c5"
