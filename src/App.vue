@@ -39,7 +39,8 @@ const share = () => {
     body: JSON.stringify({
       parentId: storedContent.id ?? null,
       content: content.value
-    })
+    }),
+    credentials: 'same-origin'
   }).then(res => res.json()).then(data => {
     console.log(data)
     contentChanged.value = false
@@ -60,7 +61,9 @@ watch(content, (value) => {
 // Fetch content from the server
 watch(() => route.params.id, (id) => {
   if (id) {
-    fetch(`/api/share/${id}`).then(res => res.json()).then(data => {
+    fetch(`/api/share/${id}`, {
+      credentials: 'same-origin'
+    }).then(res => res.json()).then(data => {
       Object.assign(storedContent, data)
       content.value = data.content
     })
