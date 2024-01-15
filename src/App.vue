@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
-import { ref, watch } from 'vue'
+import { ref, reactive, watch } from 'vue'
 
 const content = ref<string>(JSON.stringify({
   'openapi': '3.1.0',
@@ -12,7 +12,19 @@ const content = ref<string>(JSON.stringify({
   paths: {},
 }, null, 2))
 
-const contentChanged = ref<boolean>(true)
+const contentChanged = ref<boolean>(false)
+
+export type SpecObject = {
+  id: number
+  content: string
+  createdAt: string
+}
+
+const storedContent = reactive<SpecObject>({
+  id: null,
+  content: '',
+  createdAt: '',
+})
 
 const share = () => {
   fetch('/api/share', {
@@ -23,16 +35,20 @@ const share = () => {
     body: JSON.stringify({
       content: content.value
     })
-  }).then(res => res.json()).then(res => {
-    console.log(res)
-    contentChanged.value = true
-    // window.location.href = `/play/${res.id}`
+  }).then(res => res.json()).then(data => {
+    console.log(data)
+    contentChanged.value = false
+    history.pushState({}, "", `/e/${data.id}`);
+    Object.assign(storedContent, data)
   })
 }
 
 watch(content, (value) => {
-  contentChanged.value = true
-  console.log('content changed', value)
+  if (value !== storedContent.content) {
+    contentChanged.value = true
+  } else {
+    contentChanged.value = false
+  }
 })
 </script>
 
@@ -40,7 +56,7 @@ watch(content, (value) => {
   <div class="app">
     <header class="header">
       <div class="logo">
-        Play
+        Play {{ storedContent.id ?? '' }}
       </div>
       <div class="actions">
         <button type="button" @click="share" :disabled="!contentChanged">

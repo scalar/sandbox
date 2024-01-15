@@ -22,7 +22,7 @@ export async function onRequest(context) {
       })
       .returning()
 
-    return Response.json(result)
+    return Response.json(result[0])
   }
 
   return new Response('Method not allowed, try POST.', {
