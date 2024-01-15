@@ -8,16 +8,20 @@
     "build": "vue-tsc && vite build",
     "frontend": "vite",
     "backend": "wrangler pages dev ./",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db:generate": "drizzle-kit generate:sqlite --schema=./db/schema.ts --out=./migrations",
+    "db:up": "drizzle-kit up:sqlite"
   },
   "dependencies": {
     "@scalar/api-reference": "^1.12.1",
+    "drizzle-orm": "^0.29.3",
     "monaco-editor": "^0.45.0",
     "vue": "^3.3.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "concurrently": "^8.2.2",
+    "drizzle-kit": "^0.20.12",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier-vue": "^5.0.0",
