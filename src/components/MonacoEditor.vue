@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as monaco from 'monaco-editor'
-import { onMounted, ref,  nextTick } from 'vue'
+import { onMounted, ref,  nextTick, watch } from 'vue'
 
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
@@ -51,6 +51,12 @@ async function init() {
 
   editor.onDidChangeModelContent(_ => {
     emit('update:modelValue', editor?.getValue())
+  })
+
+  watch(() => props.modelValue, (value) => {
+    if (editor?.getValue() !== value) {
+      editor?.setValue(value)
+    }
   })
 
   // Set JSON schema for the editor

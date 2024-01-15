@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
-import { ref, reactive, watch } from 'vue'
+import { ref, reactive, watch, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const content = ref<string>(JSON.stringify({
   'openapi': '3.1.0',
@@ -15,7 +18,7 @@ const content = ref<string>(JSON.stringify({
 const contentChanged = ref<boolean>(false)
 
 export type SpecObject = {
-  id: number
+  id: number | null
   content: string
   createdAt: string
 }
@@ -26,6 +29,7 @@ const storedContent = reactive<SpecObject>({
   createdAt: '',
 })
 
+// Store the content
 const share = () => {
   fetch('/api/share', {
     method: 'POST',
@@ -33,21 +37,33 @@ const share = () => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+      parentId: storedContent.id ?? null,
       content: content.value
     })
   }).then(res => res.json()).then(data => {
     console.log(data)
     contentChanged.value = false
-    history.pushState({}, "", `/e/${data.id}`);
+    history.pushState({}, "", `/r/${data.id}`);
     Object.assign(storedContent, data)
   })
 }
 
+// Mark content as 'dirty'
 watch(content, (value) => {
   if (value !== storedContent.content) {
     contentChanged.value = true
   } else {
     contentChanged.value = false
+  }
+})
+
+// Fetch content from the server
+watch(() => route.params.id, (id) => {
+  if (id) {
+    fetch(`/api/share/${id}`).then(res => res.json()).then(data => {
+      Object.assign(storedContent, data)
+      content.value = data.content
+    })
   }
 })
 </script>
@@ -56,7 +72,7 @@ watch(content, (value) => {
   <div class="app">
     <header class="header">
       <div class="logo">
-        Play {{ storedContent.id ?? '' }}
+        Play {{ storedContent ?? '' }} {{  $route.params }}
       </div>
       <div class="actions">
         <button type="button" @click="share" :disabled="!contentChanged">

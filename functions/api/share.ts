@@ -18,6 +18,7 @@ export async function onRequest(context) {
     const result = await db
       .insert(Specs)
       .values({
+        parentId: data.parentId || null,
         content: data.content,
       })
       .returning()
