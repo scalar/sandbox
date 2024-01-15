@@ -72,7 +72,7 @@ watch(() => route.params.id, (id) => {
   <div class="app">
     <header class="header">
       <div class="logo">
-        Play {{ storedContent ?? '' }} {{  $route.params }}
+        Play
       </div>
       <div class="actions">
         <button type="button" @click="share" :disabled="!contentChanged">
