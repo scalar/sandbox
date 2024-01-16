@@ -16,6 +16,7 @@
     "@scalar/api-reference": "^1.12.1",
     "drizzle-orm": "^0.29.3",
     "monaco-editor": "^0.45.0",
+    "nanoid": "^5.0.4",
     "vue": "^3.3.11",
     "vue-router": "4"
   },

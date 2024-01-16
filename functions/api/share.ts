@@ -1,5 +1,6 @@
 import { drizzle } from 'drizzle-orm/d1'
 import { Specs } from '../../db/schema'
+import { nanoid } from 'nanoid'
 
 export interface Env {
   // If you set another name in wrangler.toml as the value for 'binding',
@@ -18,7 +19,8 @@ export async function onRequest(context) {
     const result = await db
       .insert(Specs)
       .values({
-        // parentId: data.parentId || null,
+        id: nanoid(5),
+        parentId: data.parentId || null,
         content: data.content,
       })
       .returning()

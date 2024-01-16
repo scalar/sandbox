@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1705278292306,
-      "tag": "0000_dizzy_living_lightning",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1705278416497,
-      "tag": "0001_windy_dark_beast",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1705278468137,
-      "tag": "0002_fast_amphibian",
+      "when": 1705424323701,
+      "tag": "0000_optimal_black_cat",
       "breakpoints": true
     }
   ]

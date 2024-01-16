@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "88ea7ba3-9671-4d8a-b3cb-7672e6efeec5",
+  "id": "fecba7c0-67cd-47a5-aa88-45b3825cf916",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "Specs": {
@@ -9,14 +9,14 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": true,
           "notNull": true,
           "autoincrement": false
         },
         "parent_id": {
           "name": "parent_id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
@@ -34,7 +34,7 @@
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false,
-          "default": "DATETIME('now')"
+          "default": "CURRENT_TIMESTAMP"
         }
       },
       "indexes": {},
