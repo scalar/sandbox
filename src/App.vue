@@ -75,7 +75,7 @@ watch(() => route.params.id, (id) => {
   <div class="app">
     <header class="header">
       <div class="logo">
-        Play
+        Scalar Play
       </div>
       <div class="actions">
         <button type="button" @click="share" :disabled="!contentChanged">
