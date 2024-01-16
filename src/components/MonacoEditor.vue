@@ -33,16 +33,6 @@ async function init() {
         );
       }
 
-      case 'yaml': {
-        return new Worker(
-          new URL(
-            'monaco-editor/esm/vs/language/yaml/yaml.worker.js',
-            import.meta.url,
-          ),
-          { type: 'module' },
-        );
-      }
-
       default: {
         return new Worker(
           new URL('monaco-editor/esm/vs/editor/editor.worker.js', import.meta.url),
