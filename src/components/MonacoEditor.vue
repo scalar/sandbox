@@ -4,13 +4,14 @@ import { onMounted, ref,  nextTick, watch } from 'vue'
 
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
-import openApi31 from './openapi-3.1.json'
+import Swagger20 from './swagger-2.0.json'
+import OpenAPI30 from './openapi-3.0.json'
+import OpenAPI31 from './openapi-3.1.json'
 
 const monacoEditorRef = ref<HTMLElement>()
+const openApiVersion = ref<'3.1' | '3.0' | '2.0' | null>('3.1')
 
 let editor: monaco.editor.IStandaloneCodeEditor | null = null
-
-const jsonSchema = openApi31
 
 async function init() {
   await nextTick()
@@ -50,7 +51,11 @@ async function init() {
   })
 
   editor.onDidChangeModelContent(_ => {
-    emit('update:modelValue', editor?.getValue())
+    const newValue = editor?.getValue()
+
+    emit('update:modelValue', newValue)
+
+    determineOpenApiVersion(newValue)
   })
 
   watch(() => props.modelValue, (value) => {
@@ -59,15 +64,52 @@ async function init() {
     }
   })
 
-  // Set JSON schema for the editor
-  monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-      validate: true,
-      schemas: [{
-          uri: 'http://example.com/foobar-schema.json',
+  const determineOpenApiVersion = (value?: string) => {
+    try {
+      const data = JSON.parse(value ?? '')
+
+      if (data.swagger === '2.0') {
+        openApiVersion.value = '2.0'
+      }
+      else if (data.openapi?.match(/^3\.0\.\d(-.+)?$/)) {
+        openApiVersion.value = '3.0'
+      }
+      else {
+        openApiVersion.value = '3.1'
+      }
+    } catch {
+      openApiVersion.value = '3.1'
+
+      return
+    }
+  }
+
+  watch(openApiVersion, () => {
+    const jsonSchema = openApiVersion.value === '2.0'
+    ? {
+      uri: 'http://swagger.io/v2/schema.json#',
+      fileMatch: ['*'],
+      schema: Swagger20
+    }
+    : openApiVersion.value === '3.0' ?
+    {
+          uri: 'http://swagger.io/v2/schema.json#',
           fileMatch: ['*'],
-          schema: jsonSchema
-      }]
-  });
+          schema: OpenAPI30
+      }
+    : {
+          uri: 'http://swagger.io/v2/schema.json#',
+          fileMatch: ['*'],
+          schema: OpenAPI31
+      }
+
+    // Set JSON schema for the editor
+    monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+      validate: true,
+      schemas: [jsonSchema]
+    })
+
+  }, { immediate: true })
 }
 
 onMounted(() => {
