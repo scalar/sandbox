@@ -57,7 +57,8 @@ async function init() {
     theme: 'vs-dark',
     minimap: { enabled: false },
     value: props.modelValue,
-    language: 'json'
+    language: 'json',
+    automaticLayout: true
   })
 
   editor.onDidChangeModelContent(_ => {
@@ -75,6 +76,10 @@ async function init() {
       monaco.editor.setModelLanguage(editor?.getModel()!, 'json')
     }
   })
+
+  // window.onresize = () => {
+  //     editor?.layout()
+  // }
 
   watch(() => props.modelValue, (value) => {
     if (editor?.getValue() !== value) {
@@ -126,7 +131,6 @@ async function init() {
       validate: true,
       schemas: [jsonSchema]
     })
-
   }, { immediate: true })
 }
 
