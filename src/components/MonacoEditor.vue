@@ -67,10 +67,6 @@ async function init() {
     }
   })
 
-  // window.onresize = () => {
-  //     editor?.layout()
-  // }
-
   watch(() => props.modelValue, (value) => {
     if (editor?.getValue() !== value) {
       editor?.setValue(value)
