@@ -33,6 +33,16 @@ async function init() {
         );
       }
 
+      case 'yaml': {
+        return new Worker(
+          new URL(
+            'monaco-editor/esm/vs/language/yaml/yaml.worker.js',
+            import.meta.url,
+          ),
+          { type: 'module' },
+        );
+      }
+
       default: {
         return new Worker(
           new URL('monaco-editor/esm/vs/editor/editor.worker.js', import.meta.url),
@@ -56,6 +66,14 @@ async function init() {
     emit('update:modelValue', newValue)
 
     determineOpenApiVersion(newValue)
+
+    // if YAML, set Monaco to use YAML
+    // else use JSON syntax highlighting
+    if (newValue?.startsWith('openapi:') || newValue?.startsWith('swagger:')) {
+      monaco.editor.setModelLanguage(editor?.getModel()!, 'yaml')
+    } else {
+      monaco.editor.setModelLanguage(editor?.getModel()!, 'json')
+    }
   })
 
   watch(() => props.modelValue, (value) => {
