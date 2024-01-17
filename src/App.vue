@@ -159,8 +159,12 @@ watch(() => route.params.id, (id) => {
   border-right: 1px solid var(--default-theme-border-color);
 }
 .right {
-  width: 50%;
+  width: 100%;
   height: 100%;
+}
+
+.left+.right {
+  width: 50%;
 }
 </style>
 
