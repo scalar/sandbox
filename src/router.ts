@@ -3,7 +3,8 @@ import App from './App.vue'
 
 const routes = [
   { path: '/', component: App },
-  { path: '/r/:id', component: App },
+  { path: '/e/:id', component: App, name: 'edit' },
+  { path: '/p/:id', component: App, name: 'preview' },
 ]
 
 export const router = createRouter({

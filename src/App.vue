@@ -2,9 +2,11 @@
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
 import { ref, reactive, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
+import ShareButton from './components/ShareButton.vue'
 
 const route = useRoute()
+const router = useRouter()
 
 const content = ref<string>(JSON.stringify({
   'openapi': '3.1.0',
@@ -42,9 +44,8 @@ const share = () => {
     }),
     credentials: 'same-origin'
   }).then(res => res.json()).then(data => {
-    console.log(data)
     contentChanged.value = false
-    history.pushState({}, "", `/r/${data.id}`);
+    router.replace({ name: 'edit', params: { id: data.id } })
     Object.assign(storedContent, data)
   })
 }
@@ -77,14 +78,16 @@ watch(() => route.params.id, (id) => {
       <div class="logo">
         Scalar Play
       </div>
+      <div class="mode" v-if="route.params.id">
+        <RouterLink v-if="route.name === 'preview'" :to="{ name: 'edit', params: { id: route.params.id } }">Edit</RouterLink>
+        <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">View</RouterLink>
+      </div>
       <div class="actions">
-        <button type="button" @click="share" :disabled="!contentChanged">
-          Share
-        </button>
+        <ShareButton @click="share" :disabled="!contentChanged" />
       </div>
     </header>
     <div class="layout">
-      <div class="left">
+      <div class="left" v-if="route.name !== 'preview'">
         <MonacoEditor v-model="content" />
       </div>
       <div class="right">
@@ -106,6 +109,12 @@ watch(() => route.params.id, (id) => {
   align-items: center;
   justify-content: space-between;
   padding: 12px;
+}
+
+.mode a {
+  text-decoration: none;
+  color: var(--default-theme-color-1);
+  font-size: var(--default-theme-small);
 }
 
 .logo {
