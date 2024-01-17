@@ -46,6 +46,18 @@ async function init() {
   editor = monaco.editor.create(monacoEditorRef.value, {
     theme: 'vs-dark',
     minimap: { enabled: false },
+    overviewRulerLanes: 0,
+    scrollbar: {
+      verticalScrollbarSize: 5,
+    },
+    guides: {
+      indentation: false,
+    },
+    formatOnPaste: true,
+    formatOnType: true,
+    lineHeight: 20,
+    renderLineHighlight: 'none',
+    fontFamily: `'JetBrains Mono', monospace`,
     value: props.modelValue,
     language: 'json',
     automaticLayout: true
@@ -115,7 +127,7 @@ async function init() {
     // Set JSON schema for the editor
     monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
       validate: true,
-      schemas: [jsonSchema]
+      schemas: [jsonSchema],
     })
   }, { immediate: true })
 }
