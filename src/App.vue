@@ -101,6 +101,9 @@ watch(() => route.params.id, (id) => {
         <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">View</RouterLink>
       </div>
       <div class="actions">
+        <a href="https://github.com/scalar/scalar">
+          GitHub
+        </a>
         <ShareButton @click="share" />
       </div>
     </header>
@@ -129,7 +132,13 @@ watch(() => route.params.id, (id) => {
   padding: 12px;
 }
 
-.mode a {
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mode a, .actions a {
   text-decoration: none;
   color: var(--default-theme-color-1);
   font-size: var(--default-theme-small);
