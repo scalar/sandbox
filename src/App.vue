@@ -98,7 +98,7 @@ watch(() => route.params.id, (id) => {
       </div>
       <div class="mode" v-if="route.params.id">
         <RouterLink v-if="route.name === 'preview'" :to="{ name: 'edit', params: { id: route.params.id } }">Edit</RouterLink>
-        <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">View</RouterLink>
+        <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">Preview</RouterLink>
       </div>
       <div class="actions">
         <a href="https://github.com/scalar/scalar">
