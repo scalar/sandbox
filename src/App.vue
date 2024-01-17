@@ -5,7 +5,6 @@ import { ref, reactive, watch } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
 import { Toaster, toast } from 'vue-sonner'
-import { compileStyle } from 'vue/compiler-sfc';
 
 const route = useRoute()
 const router = useRouter()
@@ -62,7 +61,9 @@ const share = () => {
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text).then(() => {
-    toast.success('Copied to clipboard.')
+    toast.success('Copied URL to clipboard.', {
+      description: window.location.href
+    })
   })
 }
 
