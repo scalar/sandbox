@@ -17,7 +17,7 @@
     "drizzle-orm": "^0.29.3",
     "monaco-editor": "^0.45.0",
     "nanoid": "^5.0.4",
-    "vue": "^3.4.14",
+    "vue": "^3.3.11",
     "vue-router": "4",
     "vue-sonner": "^1.0.2"
   },
