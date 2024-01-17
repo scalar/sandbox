@@ -4,6 +4,8 @@ import MonacoEditor from './components/MonacoEditor.vue'
 import { ref, reactive, watch } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
+import { Toaster, toast } from 'vue-sonner'
+import { compileStyle } from 'vue/compiler-sfc';
 
 const route = useRoute()
 const router = useRouter()
@@ -33,6 +35,12 @@ const storedContent = reactive<SpecObject>({
 
 // Store the content
 const share = () => {
+  // Nothing changed, just copy the URL.
+  if (!contentChanged.value) {
+    return copyToClipboard(window.location.href)
+  }
+
+  // Something changed, create a new URL.
   fetch('/api/share', {
     method: 'POST',
     headers: {
@@ -47,6 +55,14 @@ const share = () => {
     contentChanged.value = false
     router.replace({ name: 'edit', params: { id: data.id } })
     Object.assign(storedContent, data)
+
+    copyToClipboard(window.location.href)
+  })
+}
+
+function copyToClipboard(text: string) {
+  navigator.clipboard.writeText(text).then(() => {
+    toast.success('Copied to clipboard.')
   })
 }
 
@@ -73,6 +89,7 @@ watch(() => route.params.id, (id) => {
 </script>
 
 <template>
+  <Toaster theme="dark" />
   <div class="app">
     <header class="header">
       <div class="logo">
@@ -83,7 +100,7 @@ watch(() => route.params.id, (id) => {
         <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">View</RouterLink>
       </div>
       <div class="actions">
-        <ShareButton @click="share" :disabled="!contentChanged" />
+        <ShareButton @click="share" />
       </div>
     </header>
     <div class="layout">

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  disabled: boolean,
+  disabled?: boolean,
 }>()
 
 defineEmits<{

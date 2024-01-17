@@ -23,6 +23,9 @@ dependencies:
   vue-router:
     specifier: '4'
     version: 4.2.5(vue@3.3.13)
+  vue-sonner:
+    specifier: ^1.0.2
+    version: 1.0.2
 
 devDependencies:
   '@vitejs/plugin-vue':
@@ -5626,6 +5629,10 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.5.1
       vue: 3.3.13(typescript@5.3.3)
+    dev: false
+
+  /vue-sonner@1.0.2:
+    resolution: {integrity: sha512-BXIyb9lGSMUjTpOukISp7oV9nrczgbfYz+TnDeoap3io3ayGXiWv+/3eQ9UKnmofwUlC4nh/H5jzBOO89lRItQ==}
     dev: false
 
   /vue-template-compiler@2.7.15:
