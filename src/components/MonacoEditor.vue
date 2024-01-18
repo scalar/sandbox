@@ -48,8 +48,10 @@ async function init() {
     minimap: { enabled: false },
     overviewRulerLanes: 0,
     scrollbar: {
+      useShadows: false,
       verticalScrollbarSize: 5,
     },
+    scrollBeyondLastLine: false,
     guides: {
       indentation: false,
     },
