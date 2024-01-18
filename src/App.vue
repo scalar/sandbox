@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
+import FileDrop from './components/FileDrop.vue'
 import { ref, reactive, watch } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
@@ -87,35 +88,41 @@ watch(() => route.params.id, (id) => {
     })
   }
 })
+
+function handleDrop(text: string) {
+  content.value = text
+}
 </script>
 
 <template>
   <Toaster theme="dark" />
-  <div class="app">
-    <header class="header">
-      <div class="logo">
-        Scalar Play
-      </div>
-      <div class="mode" v-if="route.params.id">
-        <RouterLink v-if="route.name === 'preview'" :to="{ name: 'edit', params: { id: route.params.id } }">Edit</RouterLink>
-        <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">Preview</RouterLink>
-      </div>
-      <div class="actions">
-        <a href="https://github.com/scalar/scalar">
-          GitHub
-        </a>
-        <ShareButton @click="share" />
-      </div>
-    </header>
-    <div class="layout">
-      <div class="left" v-if="route.name !== 'preview'">
-        <MonacoEditor v-model="content" />
-      </div>
-      <div class="right">
-        <ApiReference :configuration="{ spec: { content } }" />
+  <FileDrop @drop="handleDrop">
+    <div class="app">
+      <header class="header">
+        <div class="logo">
+          Scalar Play
+        </div>
+        <div class="mode" v-if="route.params.id">
+          <RouterLink v-if="route.name === 'preview'" :to="{ name: 'edit', params: { id: route.params.id } }">Edit</RouterLink>
+          <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">Preview</RouterLink>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/scalar/scalar">
+            GitHub
+          </a>
+          <ShareButton @click="share" />
+        </div>
+      </header>
+      <div class="layout">
+        <div class="left" v-if="route.name !== 'preview'">
+          <MonacoEditor v-model="content" />
+        </div>
+        <div class="right">
+          <ApiReference :configuration="{ spec: { content } }" />
+        </div>
       </div>
     </div>
-  </div>
+  </FileDrop>
 </template>
 
 <style scoped>
