@@ -2,7 +2,7 @@
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
 import FileDrop from './components/FileDrop.vue'
-import { ref, reactive, watch } from 'vue'
+import { ref, reactive, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
 import { Toaster, toast } from 'vue-sonner'
@@ -92,6 +92,18 @@ watch(() => route.params.id, (id) => {
 function handleDrop(text: string) {
   content.value = text
 }
+
+onMounted(() => {
+  window.onbeforeunload = function() {
+    if (contentChanged.value) {
+      return false
+    }
+  }
+})
+
+onUnmounted(() => {
+  window.onbeforeunload = null
+})
 </script>
 
 <template>
