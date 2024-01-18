@@ -159,6 +159,13 @@ function handleDrop(text: string) {
   font-size: var(--default-theme-small);
 }
 
+.mode a {
+  background: var(--default-theme-background-4);
+  padding: 6px 12px;
+  border-radius: var(--default-theme-radius-lg);
+  color: var(--default-theme-color-1);
+}
+
 .logo {
   font-size: var(--default-theme-small);
   font-weight: var(--default-theme-bold);
