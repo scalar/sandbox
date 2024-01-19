@@ -2,10 +2,14 @@
 import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
 import FileDrop from './components/FileDrop.vue'
+import DarkModeToggle from './components/DarkModeToggle.vue'
 import { ref, reactive, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
 import { Toaster, toast } from 'vue-sonner'
+import { useDark } from '@vueuse/core'
+
+const isDark = useDark()
 
 const route = useRoute()
 const router = useRouter()
@@ -122,6 +126,7 @@ onUnmounted(() => {
           <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">Preview</RouterLink>
         </div>
         <div class="actions">
+          <DarkModeToggle />
           <a href="https://github.com/scalar/scalar">
             <!-- make the SVG 20px high-->
             <svg width="20" height="20" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" class="github-logo">
@@ -138,7 +143,7 @@ onUnmounted(() => {
           <MonacoEditor v-model="content" />
         </div>
         <div class="right">
-          <ApiReference :configuration="{ spec: { content } }" />
+          <ApiReference :configuration="{ spec: { content }, darkMode: isDark }" />
         </div>
       </div>
     </div>
@@ -161,7 +166,7 @@ onUnmounted(() => {
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   align-items: center;
 }
 

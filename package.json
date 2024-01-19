@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "@scalar/api-reference": "^1.13.9",
+    "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.29.3",
     "monaco-editor": "^0.45.0",
     "nanoid": "^5.0.4",
+    "oh-vue-icons": "1.0.0-rc3",
     "vue": "^3.3.11",
     "vue-router": "4",
     "vue-sonner": "^1.0.2"

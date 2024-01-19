@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import * as monaco from 'monaco-editor'
 import { onMounted, ref,  nextTick, watch } from 'vue'
+import { useDark } from '@vueuse/core'
 
+const isDark = useDark()
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
 import Swagger20 from './swagger-2.0.json'
@@ -44,7 +46,7 @@ async function init() {
   }
 
   editor = monaco.editor.create(monacoEditorRef.value, {
-    theme: 'vs-dark',
+    theme: isDark.value ? 'vs-dark' : 'vs',
     minimap: { enabled: false },
     overviewRulerLanes: 0,
     scrollbar: {
@@ -85,6 +87,12 @@ async function init() {
     if (editor?.getValue() !== value) {
       editor?.setValue(value)
     }
+  })
+
+  watch(isDark, () => {
+    editor?.updateOptions({
+      theme: isDark.value ? 'vs-dark' : 'vs'
+    })
   })
 
   const determineOpenApiVersion = (value?: string) => {

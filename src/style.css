@@ -15,3 +15,7 @@ body {
   margin: 0;
   background: var(--default-theme-background-1);
 }
+
+.darklight-reference {
+  display: none;
+}
