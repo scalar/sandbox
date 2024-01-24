@@ -1,5 +1,5 @@
 import { drizzle } from 'drizzle-orm/d1'
-import { Specs } from '../../../db/schema'
+import { Specs } from '../../db/schema'
 import { sql } from 'drizzle-orm'
 
 export interface Env {
@@ -19,7 +19,7 @@ function notFound() {
 export async function onRequest(context) {
   const db = drizzle(context.env.DB)
 
-  const {id} = context.params
+  const [id, view] = context.params.id
 
   const results = (
     await db
@@ -34,5 +34,9 @@ export async function onRequest(context) {
 
   const result = results[0]
 
-  return Response.json(result)
+  if (view === 'openapi.json') {
+    return Response.json(JSON.parse(result.content))
+  }
+
+  return notFound()
 }
