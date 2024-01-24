@@ -3,7 +3,7 @@ import { ApiReference } from '@scalar/api-reference';
 import MonacoEditor from './components/MonacoEditor.vue'
 import FileDrop from './components/FileDrop.vue'
 import DarkModeToggle from './components/DarkModeToggle.vue'
-import { ref, reactive, watch, onMounted, onUnmounted } from 'vue'
+import { ref, reactive, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
 import { Toaster, toast } from 'vue-sonner'
@@ -55,19 +55,21 @@ const share = () => {
       content: content.value
     }),
     credentials: 'same-origin'
-  }).then(res => res.json()).then(data => {
+  }).then(res => res.json()).then(async data => {
     contentChanged.value = false
-    router.replace({ name: 'edit', params: { id: data.id } })
     Object.assign(storedContent, data)
+    router.replace({ name: 'edit', params: { id: data.id } })
 
-    copyToClipboard(window.location.href)
+    await nextTick()
+
+    copyToClipboard(window.location.origin + route.fullPath)
   })
 }
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text).then(() => {
     toast.success('Copied URL to clipboard.', {
-      description: window.location.href
+      description: text
     })
   })
 }
