@@ -31,20 +31,4 @@ export async function onRequest(context) {
   return new Response('Method not allowed, try POST.', {
     status: 405,
   })
-
-  // const result = await db.select().from(Specs).all()
-
-  // console.log('json', await context.request.json())
-
-  // const data = {
-  //   hello: 'world',
-  // }
-
-  // const json = JSON.stringify(data, null, 2)
-
-  // return new Response(json, {
-  //   headers: {
-  //     'content-type': 'application/json;charset=UTF-8',
-  //   },
-  // })
 }
