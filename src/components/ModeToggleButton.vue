@@ -90,5 +90,4 @@ const model = computed<boolean>({
 .toggle-item-active {
   color: var(--theme-color-1, var(--default-theme-color-1));
 }
-
 </style>

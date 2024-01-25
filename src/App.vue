@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ApiReference } from '@scalar/api-reference';
+import { ApiReference } from '@scalar/api-reference'
 import MonacoEditor from './components/MonacoEditor.vue'
 import FileDrop from './components/FileDrop.vue'
 import DarkModeToggle from './components/DarkModeToggle.vue'
@@ -7,28 +7,38 @@ import { ref, reactive, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
 import { Toaster, toast } from 'vue-sonner'
-import { useDark } from '@vueuse/core'
-import ModeToggleButton from './components/ModeToggleButton.vue';
-import GitHubLogo from './components/GithubLogo.vue';
-import ScalarLogo from './components/ScalarLogo.vue';
+import { useMediaQuery } from '@vueuse/core'
+import ModeToggleButton from './components/ModeToggleButton.vue'
+import GitHubLogo from './components/GithubLogo.vue'
+import ScalarLogo from './components/ScalarLogo.vue'
+import { ThemeStyles } from '@scalar/themes'
+import { useDarkMode } from './hooks/useDarkMode'
 
-const isDark = useDark()
+const isDark = useDarkMode()
 
 const route = useRoute()
 const router = useRouter()
+
+const isMobile = useMediaQuery('(max-width: 1000px)')
 
 const loading = ref<boolean>(false)
 
 const editing = ref<boolean>(true)
 
-const content = ref<string>(JSON.stringify({
-  'openapi': '3.1.0',
-  'info': {
-    'title': 'Hello World',
-    'version': '1.0.0'
-  },
-  paths: {},
-}, null, 2))
+const content = ref<string>(
+  JSON.stringify(
+    {
+      openapi: '3.1.0',
+      info: {
+        title: 'Hello World',
+        version: '1.0.0',
+      },
+      paths: {},
+    },
+    null,
+    2,
+  ),
+)
 
 const contentChanged = ref<boolean>(false)
 
@@ -57,30 +67,33 @@ const share = () => {
   fetch('/api/share', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       parentId: storedContent.id ?? null,
-      content: content.value
+      content: content.value,
     }),
-    credentials: 'same-origin'
-  }).then(res => res.json()).then(async data => {
-    contentChanged.value = false
-    Object.assign(storedContent, data)
-    router.replace({ name: 'edit', params: { id: data.id } })
-
-    await nextTick()
-
-    copyToClipboard(window.location.origin + route.fullPath)
-  }).finally(() => {
-    loading.value = false
+    credentials: 'same-origin',
   })
+    .then((res) => res.json())
+    .then(async (data) => {
+      contentChanged.value = false
+      Object.assign(storedContent, data)
+      router.replace({ name: 'edit', params: { id: data.id } })
+
+      await nextTick()
+
+      copyToClipboard(window.location.origin + route.fullPath)
+    })
+    .finally(() => {
+      loading.value = false
+    })
 }
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text).then(() => {
     toast.success('Copied URL to clipboard.', {
-      description: text
+      description: text,
     })
   })
 }
@@ -95,16 +108,21 @@ watch(content, (value) => {
 })
 
 // Fetch content from the server
-watch(() => route.params.id, (id) => {
-  if (id) {
-    fetch(`/api/share/${id}`, {
-      credentials: 'same-origin'
-    }).then(res => res.json()).then(data => {
-      Object.assign(storedContent, data)
-      content.value = data.content
-    })
-  }
-})
+watch(
+  () => route.params.id,
+  (id) => {
+    if (id) {
+      fetch(`/api/share/${id}`, {
+        credentials: 'same-origin',
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          Object.assign(storedContent, data)
+          content.value = data.content
+        })
+    }
+  },
+)
 
 function handleDrop(text: string) {
   content.value = text
@@ -125,14 +143,13 @@ onUnmounted(() => {
 
 <template>
   <Toaster theme="dark" />
+  <ThemeStyles id="default" />
   <FileDrop @drop="handleDrop">
     <div class="app">
       <header class="header">
         <div class="logo">
           <ScalarLogo />
-          <div class="logo-text">
-            Sandbox
-          </div>
+          <div class="logo-text">Sandbox</div>
         </div>
         <div class="mode">
           <ModeToggleButton v-model="editing" />
@@ -142,16 +159,34 @@ onUnmounted(() => {
           <a href="https://github.com/scalar/scalar">
             <GitHubLogo />
           </a>
-          <ShareButton @click="share" :loading="loading" />
+          <ShareButton
+            @click="share"
+            :loading="loading" />
         </div>
       </header>
       <div class="layout">
-        <div class="left" v-if="route.name !== 'preview' && (!route.params.id && editing)">
-          <MonacoEditor v-model="content" />
-        </div>
-        <div class="right">
-          <ApiReference :configuration="{ spec: { content }, darkMode: isDark }" />
-        </div>
+        <!-- Mobile Layout -->
+        <template v-if="isMobile">
+          <div v-if="route.name !== 'preview' && !route.params.id && editing">
+            <MonacoEditor v-model="content" />
+          </div>
+          <div v-else>
+            <ApiReference
+              :configuration="{ spec: { content }, darkMode: isDark }" />
+          </div>
+        </template>
+        <!-- Desktop Layout -->
+        <template v-else>
+          <div
+            class="left"
+            v-if="route.name !== 'preview' && !route.params.id && editing">
+            <MonacoEditor v-model="content" />
+          </div>
+          <div class="right">
+            <ApiReference
+              :configuration="{ spec: { content }, darkMode: isDark }" />
+          </div>
+        </template>
       </div>
     </div>
   </FileDrop>
@@ -159,7 +194,7 @@ onUnmounted(() => {
 
 <style scoped>
 .app {
-  font-family: var(--default-theme-font)
+  font-family: var(--default-theme-font);
 }
 
 .header {
@@ -171,18 +206,18 @@ onUnmounted(() => {
   padding: 12px;
 }
 
-.header>* {
+.header > * {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
 }
 
-.header> :first-child {
+.header > :first-child {
   justify-content: start;
 }
 
-.header> :last-child {
+.header > :last-child {
   justify-content: end;
 }
 
@@ -217,23 +252,15 @@ onUnmounted(() => {
 
 .layout {
   display: flex;
-  flex-direction: row;
   height: calc(100vh - 50px);
 }
 
-.left {
-  width: 50%;
-  height: 100%;
-  border-right: 1px solid var(--default-theme-border-color);
+.layout > * {
+  flex: 1;
+  min-width: 0;
 }
 
-.right {
-  width: 100%;
-  height: 100%;
-}
-
-.left+.right {
-  width: 50%;
+.layout > * + * {
+  border-left: 1px solid var(--default-theme-border-color);
 }
 </style>
-

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import * as monaco from 'monaco-editor'
-import { onMounted, ref,  nextTick, watch } from 'vue'
-import { useDark } from '@vueuse/core'
-
-const isDark = useDark()
-const props = defineProps(['modelValue'])
-const emit = defineEmits(['update:modelValue'])
+import { onMounted, ref, nextTick, watch } from 'vue'
+import { useDarkMode } from '../hooks/useDarkMode'
 import Swagger20 from './swagger-2.0.json'
 import OpenAPI30 from './openapi-3.0.json'
 import OpenAPI31 from './openapi-3.1.json'
+
+const isDark = useDarkMode()
+const props = defineProps(['modelValue'])
+const emit = defineEmits(['update:modelValue'])
 
 const monacoEditorRef = ref<HTMLElement>()
 const openApiVersion = ref<'3.1' | '3.0' | '2.0' | null>('3.1')
@@ -24,25 +24,28 @@ async function init() {
 
   self.MonacoEnvironment = {
     getWorker(_workerId: string, label: string): Worker {
-    switch (label) {
-      case 'json': {
-        return new Worker(
-          new URL(
-            'monaco-editor/esm/vs/language/json/json.worker.js',
-            import.meta.url,
-          ),
-          { type: 'module' },
-        );
-      }
+      switch (label) {
+        case 'json': {
+          return new Worker(
+            new URL(
+              'monaco-editor/esm/vs/language/json/json.worker.js',
+              import.meta.url,
+            ),
+            { type: 'module' },
+          )
+        }
 
-      default: {
-        return new Worker(
-          new URL('monaco-editor/esm/vs/editor/editor.worker.js', import.meta.url),
-          { type: 'module' },
-        );
+        default: {
+          return new Worker(
+            new URL(
+              'monaco-editor/esm/vs/editor/editor.worker.js',
+              import.meta.url,
+            ),
+            { type: 'module' },
+          )
+        }
       }
-    }
-  },
+    },
   }
 
   editor = monaco.editor.create(monacoEditorRef.value, {
@@ -64,10 +67,10 @@ async function init() {
     fontFamily: `'JetBrains Mono', monospace`,
     value: props.modelValue,
     language: 'json',
-    automaticLayout: true
+    automaticLayout: true,
   })
 
-  editor.onDidChangeModelContent(_ => {
+  editor.onDidChangeModelContent((_) => {
     const newValue = editor?.getValue()
 
     emit('update:modelValue', newValue)
@@ -83,15 +86,18 @@ async function init() {
     }
   })
 
-  watch(() => props.modelValue, (value) => {
-    if (editor?.getValue() !== value) {
-      editor?.setValue(value)
-    }
-  })
+  watch(
+    () => props.modelValue,
+    (value) => {
+      if (editor?.getValue() !== value) {
+        editor?.setValue(value)
+      }
+    },
+  )
 
   watch(isDark, () => {
     editor?.updateOptions({
-      theme: isDark.value ? 'vs-dark' : 'vs'
+      theme: isDark.value ? 'vs-dark' : 'vs',
     })
   })
 
@@ -101,11 +107,9 @@ async function init() {
 
       if (data.swagger === '2.0') {
         openApiVersion.value = '2.0'
-      }
-      else if (data.openapi?.match(/^3\.0\.\d(-.+)?$/)) {
+      } else if (data.openapi?.match(/^3\.0\.\d(-.+)?$/)) {
         openApiVersion.value = '3.0'
-      }
-      else {
+      } else {
         openApiVersion.value = '3.1'
       }
     } catch {
@@ -115,31 +119,36 @@ async function init() {
     }
   }
 
-  watch(openApiVersion, () => {
-    const jsonSchema = openApiVersion.value === '2.0'
-    ? {
-      uri: 'http://swagger.io/v2/schema.json#',
-      fileMatch: ['*'],
-      schema: Swagger20
-    }
-    : openApiVersion.value === '3.0' ?
-    {
-          uri: 'http://swagger.io/v2/schema.json#',
-          fileMatch: ['*'],
-          schema: OpenAPI30
-      }
-    : {
-          uri: 'http://swagger.io/v2/schema.json#',
-          fileMatch: ['*'],
-          schema: OpenAPI31
-      }
+  watch(
+    openApiVersion,
+    () => {
+      const jsonSchema =
+        openApiVersion.value === '2.0'
+          ? {
+              uri: 'http://swagger.io/v2/schema.json#',
+              fileMatch: ['*'],
+              schema: Swagger20,
+            }
+          : openApiVersion.value === '3.0'
+            ? {
+                uri: 'http://swagger.io/v2/schema.json#',
+                fileMatch: ['*'],
+                schema: OpenAPI30,
+              }
+            : {
+                uri: 'http://swagger.io/v2/schema.json#',
+                fileMatch: ['*'],
+                schema: OpenAPI31,
+              }
 
-    // Set JSON schema for the editor
-    monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-      validate: true,
-      schemas: [jsonSchema],
-    })
-  }, { immediate: true })
+      // Set JSON schema for the editor
+      monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+        validate: true,
+        schemas: [jsonSchema],
+      })
+    },
+    { immediate: true },
+  )
 }
 
 onMounted(() => {
@@ -148,7 +157,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="monacoEditorRef" class="editor"></div>
+  <div
+    ref="monacoEditorRef"
+    class="editor"></div>
 </template>
 
 <style>
