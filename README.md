@@ -1,4 +1,4 @@
-# Scalar Play
+# Scalar Sandbox
 
 WIP
 
