@@ -4,10 +4,11 @@ import MonacoEditor from './components/MonacoEditor.vue'
 import FileDrop from './components/FileDrop.vue'
 import DarkModeToggle from './components/DarkModeToggle.vue'
 import { ref, reactive, watch, onMounted, onUnmounted, nextTick } from 'vue'
-import { useRoute, useRouter, RouterLink } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import ShareButton from './components/ShareButton.vue'
 import { Toaster, toast } from 'vue-sonner'
 import { useDark } from '@vueuse/core'
+import ModeToggleButton from './components/ModeToggleButton.vue';
 
 const isDark = useDark()
 
@@ -131,13 +132,8 @@ onUnmounted(() => {
             Sandbox
           </div>
         </div>
-        <div class="mode" v-if="route.params.id">
-          <RouterLink v-if="route.name === 'preview'" :to="{ name: 'edit', params: { id: route.params.id } }">Edit</RouterLink>
-          <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">Preview</RouterLink>
-        </div>
-        <div class="mode" v-else>
-          <button type="button" v-if="!editing" @click="editing = true">Edit</button>
-          <button type="button" v-if="editing" @click="editing = false">Preview</button>
+        <div class="mode">
+          <ModeToggleButton v-model="editing" />
         </div>
         <div class="actions">
           <DarkModeToggle />
