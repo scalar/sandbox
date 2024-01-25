@@ -14,6 +14,10 @@ const isDark = useDark()
 const route = useRoute()
 const router = useRouter()
 
+const loading = ref<boolean>(false)
+
+const editing = ref<boolean>(true)
+
 const content = ref<string>(JSON.stringify({
   'openapi': '3.1.0',
   'info': {
@@ -45,6 +49,8 @@ const share = () => {
   }
 
   // Something changed, create a new URL.
+  loading.value = true
+
   fetch('/api/share', {
     method: 'POST',
     headers: {
@@ -63,6 +69,8 @@ const share = () => {
     await nextTick()
 
     copyToClipboard(window.location.origin + route.fullPath)
+  }).finally(() => {
+    loading.value = false
   })
 }
 
@@ -127,6 +135,10 @@ onUnmounted(() => {
           <RouterLink v-if="route.name === 'preview'" :to="{ name: 'edit', params: { id: route.params.id } }">Edit</RouterLink>
           <RouterLink v-if="route.name === 'edit'" :to="{ name: 'preview', params: { id: route.params.id } }">Preview</RouterLink>
         </div>
+        <div class="mode" v-else>
+          <button type="button" v-if="!editing" @click="editing = true">Edit</button>
+          <button type="button" v-if="editing" @click="editing = false">Preview</button>
+        </div>
         <div class="actions">
           <DarkModeToggle />
           <a href="https://github.com/scalar/scalar">
@@ -137,11 +149,11 @@ onUnmounted(() => {
                     fill="currentColor" />
             </svg>
           </a>
-          <ShareButton @click="share" />
+          <ShareButton @click="share" :loading="loading" />
         </div>
       </header>
       <div class="layout">
-        <div class="left" v-if="route.name !== 'preview'">
+        <div class="left" v-if="route.name !== 'preview' && (!route.params.id && editing)">
           <MonacoEditor v-model="content" />
         </div>
         <div class="right">
@@ -172,13 +184,17 @@ onUnmounted(() => {
   align-items: center;
 }
 
-.mode a, .actions a {
+.mode a, .mode button, .actions a {
   text-decoration: none;
   color: var(--default-theme-color-1);
   font-size: var(--default-theme-small);
 }
 
-.mode a {
+.mode a,
+.mode button {
+  font-size: var(--default-theme-small);
+  font-family: var(--default-theme-font);
+  border: none;
   background: var(--default-theme-background-4);
   padding: 6px 12px;
   border-radius: var(--default-theme-radius-lg);
