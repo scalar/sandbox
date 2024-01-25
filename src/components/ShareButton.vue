@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-defineProps<{
-  disabled?: boolean,
-}>()
+withDefaults(defineProps<{
+  loading?: boolean,
+}>(), {
+  loading: false,
+})
 
 defineEmits<{
   (e: 'share'): void
@@ -9,7 +11,7 @@ defineEmits<{
 </script>
 
 <template>
-  <button type="button" @click="$emit('share')" :disabled="disabled" class="button">
+  <button type="button" @click="$emit('share')" :disabled="loading" class="button">
     Share
   </button>
 </template>
@@ -23,5 +25,10 @@ defineEmits<{
   font-size: var(--default-theme-small);
   padding: 6px 12px;
   border-radius: var(--default-theme-radius-lg);
+  transition: all .5s ease-in-out;
+}
+
+.button[disabled] {
+  color: var(--default-theme-color-3);
 }
 </style>
