@@ -21,7 +21,8 @@
     "oh-vue-icons": "1.0.0-rc3",
     "vue": "^3.3.11",
     "vue-router": "4",
-    "vue-sonner": "^1.0.3"
+    "vue-sonner": "^1.0.3",
+    "yaml": "^2.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",

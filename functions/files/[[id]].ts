@@ -1,6 +1,7 @@
 import { drizzle } from 'drizzle-orm/d1'
 import { Specs } from '../../db/schema'
 import { sql } from 'drizzle-orm'
+import YAML from 'yaml'
 
 export interface Env {
   // If you set another name in wrangler.toml as the value for 'binding',
@@ -36,6 +37,10 @@ export async function onRequest(context) {
 
   if (view === 'openapi.json') {
     return Response.json(JSON.parse(result.content))
+  }
+
+  if (view === 'openapi.yaml' || view === 'openapi.yml') {
+    return new Response(YAML.stringify(JSON.parse(result.content)))
   }
 
   return notFound()
