@@ -81,9 +81,8 @@ const share = () => {
       Object.assign(storedContent, data)
       router.replace({ name: 'edit', params: { id: data.id } })
 
-      await nextTick()
-
-      copyToClipboard(window.location.origin + route.fullPath)
+      const path = router.resolve({ name: 'edit', params: { id: data.id } }).href
+      copyToClipboard(window.location.origin + path)
     })
     .finally(() => {
       loading.value = false
@@ -104,6 +103,18 @@ watch(content, (value) => {
     contentChanged.value = true
   } else {
     contentChanged.value = false
+  }
+})
+
+watch(editing, (value) => {
+  if (!route.params.id)  {
+    return
+  }
+
+  if (value) {
+    router.replace({ name: 'edit', params: { id: route.params.id } })
+  } else {
+    router.replace({ name: 'preview', params: { id: route.params.id } })
   }
 })
 
@@ -167,7 +178,7 @@ onUnmounted(() => {
       <div class="layout">
         <!-- Mobile Layout -->
         <template v-if="isMobile">
-          <div v-if="route.name !== 'preview' && !route.params.id && editing">
+          <div v-if="editing">
             <MonacoEditor v-model="content" />
           </div>
           <div v-else>
@@ -179,7 +190,7 @@ onUnmounted(() => {
         <template v-else>
           <div
             class="left"
-            v-if="route.name !== 'preview' && !route.params.id && editing">
+            v-if="editing">
             <MonacoEditor v-model="content" />
           </div>
           <div class="right">
