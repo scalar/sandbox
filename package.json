@@ -21,7 +21,7 @@
     "monaco-editor": "^0.45.0",
     "nanoid": "^5.0.4",
     "oh-vue-icons": "1.0.0-rc3",
-    "vue": "3.3.11",
+    "vue": "3.3.13",
     "vue-router": "4",
     "vue-sonner": "^1.0.3",
     "yaml": "^2.3.4"
