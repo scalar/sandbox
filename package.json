@@ -39,6 +39,6 @@
     "vite": "^5.0.12",
     "vite-plugin-node-polyfills": "^0.19.0",
     "vue-tsc": "^1.8.27",
-    "wrangler": "^3.24.0"
+    "wrangler": "^3.26.0"
   }
 }
