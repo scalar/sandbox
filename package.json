@@ -18,7 +18,7 @@
     "@scalar/themes": "^0.5.4",
     "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.29.3",
-    "monaco-editor": "^0.45.0",
+    "monaco-editor": "^0.46.0",
     "nanoid": "^5.0.4",
     "oh-vue-icons": "1.0.0-rc3",
     "vue": "3.3.11",
