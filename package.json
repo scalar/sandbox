@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.17",
-    "@scalar/api-reference": "^1.13.15",
+    "@scalar/api-reference": "^1.15.6",
     "@scalar/themes": "^0.5.4",
     "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.29.3",
