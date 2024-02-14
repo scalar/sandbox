@@ -9,7 +9,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 10
     allow:
-      # Allow updates for Lodash
       - dependency-name: "@scalar/*"
