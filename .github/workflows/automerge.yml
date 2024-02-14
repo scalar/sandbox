@@ -15,13 +15,13 @@ jobs:
         uses: dependabot/fetch-metadata@v1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-      # Output outputs.dependency-names to be used in the next step
-      - name: Output dependency names
-        run: echo "dependency-names=${{ steps.metadata.outputs.dependency-names }}"
-      # Output true or false for contains(steps.metadata.outputs.dependency-names, '@scalar') to be used in the next step
-      - name: Output true/false
-        run: echo "${{ contains(steps.metadata.outputs.dependency-names, '@scalar') }}"
-      - name: Enable auto-merge for Dependabot PRs
+      - name: Approve PR
+        if: contains(steps.metadata.outputs.dependency-names, '@scalar')
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Enable auto-merge
         if: contains(steps.metadata.outputs.dependency-names, '@scalar')
         run: gh pr merge --auto --merge "$PR_URL"
         env:
