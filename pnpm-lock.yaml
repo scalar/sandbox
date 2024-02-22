@@ -10,7 +10,7 @@ dependencies:
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
     specifier: ^1.16.1
-    version: 1.16.1(nanoid@5.0.4)(postcss@8.4.33)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    version: 1.16.1(nanoid@5.0.4)(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.5.5
     version: 0.5.5(vue@3.3.11)
@@ -1617,7 +1617,7 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.16.1(nanoid@5.0.4)(postcss@8.4.33)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+  /@scalar/api-reference@1.16.1(nanoid@5.0.4)(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
     resolution: {integrity: sha512-QQCuQ1buBhUM3dyY5Ng3hLFCqxMEKtkNLGuA5YGfC1gRwBpo61bNCK5dtxpAjS9kzEukjwd2TknVd1ViuD45qg==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -1647,7 +1647,7 @@ packages:
       httpsnippet-lite: 3.0.5
       js-yaml: 4.1.0
       openapi-types: 12.1.3
-      postcss-nested: 6.0.1(postcss@8.4.33)
+      postcss-nested: 6.0.1(postcss@8.4.35)
       rehype-external-links: 3.0.0
       rehype-format: 5.0.0
       rehype-highlight: 7.0.0
@@ -4646,7 +4646,7 @@ packages:
       exit-hook: 2.2.1
       glob-to-regexp: 0.4.1
       stoppable: 1.1.0
-      undici: 5.28.2
+      undici: 5.28.3
       workerd: 1.20231218.0
       ws: 8.16.0
       youch: 3.3.3
@@ -4989,13 +4989,13 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /postcss-nested@6.0.1(postcss@8.4.33):
+  /postcss-nested@6.0.1(postcss@8.4.35):
     resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
     dependencies:
-      postcss: 8.4.33
+      postcss: 8.4.35
       postcss-selector-parser: 6.0.15
     dev: false
 
@@ -5013,6 +5013,15 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /postcss@8.4.35:
+    resolution: {integrity: sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: false
 
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -5677,8 +5686,8 @@ packages:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
-  /undici@5.28.2:
-    resolution: {integrity: sha512-wh1pHJHnUeQV5Xa8/kyQhO7WFa8M34l026L5P/+2TYiakvGy5Rdc8jWZVyG7ieht/0WgJLEd3kcU5gKx+6GC8w==}
+  /undici@5.28.3:
+    resolution: {integrity: sha512-3ItfzbrhDlINjaP0duwnNsKpDQk3acHI3gVJ1z4fmwMK31k5G9OVIAMLSIaP6w4FaGkaAkN6zaQO9LUvZ1t7VA==}
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.1.0
