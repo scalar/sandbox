@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.17.4
-    version: 1.17.4(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.17.10
+    version: 1.17.10(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.5.8
     version: 0.5.8(vue@3.3.11)
@@ -1522,16 +1522,16 @@ packages:
     dev: true
     optional: true
 
-  /@scalar/api-client@0.12.6(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-XO0s9jlRjo/IWYC2vSJeFV2m7jxTLX/5WsX9w9forzh2iZNo2qU0E1vZOZ69s7wjkb18r3a60+ewjtZx7lZMog==}
+  /@scalar/api-client@0.12.10(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-jQibOi6unXH4iX6Dmz/SuebTuYJEqIn59h53q19bXMaqNkNTXuBpPdO4ExqHNnJ2UhiNMFSsAdjwQdbPBeqvvw==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.17(vue@3.3.11)
-      '@scalar/components': 0.2.5(typescript@5.3.3)
-      '@scalar/themes': 0.5.8(vue@3.3.11)
-      '@scalar/use-codemirror': 0.8.6(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/components': 0.3.0(typescript@5.3.3)
+      '@scalar/themes': 0.5.10(vue@3.3.11)
+      '@scalar/use-codemirror': 0.8.7(vue@3.3.11)(yjs@13.6.12)
       '@scalar/use-modal': 0.2.8(@headlessui/vue@1.7.17)(vue@3.3.11)
       '@vueuse/core': 10.7.2(vue@3.3.11)
       axios: 1.6.6
@@ -1547,8 +1547,8 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.17.4(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-wxeO8TpGj++QK4g3WQBEUkptaWrvStgWFQDwp/AEPfS0d03rngHz9FmUFTUOlE+WfcHh61mGTw7IIP3fRYIgrA==}
+  /@scalar/api-reference@1.17.10(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-T84HSBqVVkHfnGgKJM+C0hkDL+YjixzKCv0RZMeLVtcuMu7dTnH6jKi+WWfm/junXOkB1Q6CcE6gA6//R7GFMg==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
@@ -1556,12 +1556,12 @@ packages:
     dependencies:
       '@floating-ui/vue': 1.0.4(vue@3.3.11)
       '@headlessui/vue': 1.7.17(vue@3.3.11)
-      '@scalar/api-client': 0.12.6(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
-      '@scalar/components': 0.2.5(typescript@5.3.3)
+      '@scalar/api-client': 0.12.10(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/components': 0.3.0(typescript@5.3.3)
       '@scalar/snippetz': 0.1.5
-      '@scalar/swagger-editor': 0.10.8(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/swagger-editor': 0.10.12(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
       '@scalar/swagger-parser': 0.5.18(openapi-types@12.1.3)
-      '@scalar/themes': 0.5.8(vue@3.3.11)
+      '@scalar/themes': 0.5.10(vue@3.3.11)
       '@scalar/use-modal': 0.2.8(@headlessui/vue@1.7.17)(vue@3.3.11)
       '@scalar/use-tooltip': 0.5.11(vue@3.3.11)
       '@unhead/schema': 1.8.10
@@ -1575,7 +1575,6 @@ packages:
       js-yaml: 4.1.0
       openapi-types: 12.1.3
       postcss-nested: 6.0.1(postcss@8.4.35)
-      prismjs: 1.29.0
       rehype-external-links: 3.0.0
       rehype-format: 5.0.0
       rehype-highlight: 7.0.0
@@ -1599,8 +1598,8 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/components@0.2.5(typescript@5.3.3):
-    resolution: {integrity: sha512-7pUzruMSrCsJ74cqU/3Z6Xqry84f5fuZqvKANORioEI26Quy11Ms9d/i4PyT2Uy6vVboBkHXKcygSX2uYf8Fhw==}
+  /@scalar/components@0.3.0(typescript@5.3.3):
+    resolution: {integrity: sha512-zMXPgR6bvBxwQLPdoGFqc63P8QcGkd9oGz3mucxOfV6qzc5npjDUIQc2wRmdNKpSd5kDfBdqojv81dFY98xK/Q==}
     engines: {node: '>=18'}
     dependencies:
       '@headlessui/vue': 1.7.17(vue@3.3.11)
@@ -1609,6 +1608,7 @@ packages:
       class-variance-authority: 0.7.0
       cva: 1.0.0-beta.1(typescript@5.3.3)
       nanoid: 5.0.4
+      prismjs: 1.29.0
       tailwind-merge: 2.2.1
       vue: 3.3.11(typescript@5.3.3)
     transitivePeerDependencies:
@@ -1649,15 +1649,15 @@ packages:
       '@scalar/snippetz-plugin-node-undici': 0.1.5
     dev: false
 
-  /@scalar/swagger-editor@0.10.8(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-dqQJnmG1fAc13AX07ccBGPYuoZ25KWA4XkcvpF7WW3wLo/pHZ7BjGT56KCjKRqxRycOl4fNrxNnKudiNC76DvA==}
+  /@scalar/swagger-editor@0.10.12(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-Hyq5++ZOmC8LijXCV/nnuDA9FrSv93Cxu6TBzhbJDBRj25d7P+bEyTMYk3+t07HyhVdiCSvhsi4Oi8O3QSC31g==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
     dependencies:
-      '@scalar/components': 0.2.5(typescript@5.3.3)
-      '@scalar/themes': 0.5.8(vue@3.3.11)
-      '@scalar/use-codemirror': 0.8.6(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/components': 0.3.0(typescript@5.3.3)
+      '@scalar/themes': 0.5.10(vue@3.3.11)
+      '@scalar/use-codemirror': 0.8.7(vue@3.3.11)(yjs@13.6.12)
       '@vueuse/core': 10.7.2(vue@3.3.11)
       vue: 3.3.11(typescript@5.3.3)
     transitivePeerDependencies:
@@ -1676,6 +1676,15 @@ packages:
       - openapi-types
     dev: false
 
+  /@scalar/themes@0.5.10(vue@3.3.11):
+    resolution: {integrity: sha512-dJlavsnvH1vJRSE57lxAAyWs6S6bKv9rveBCqnomUMk1bdpcUFEVNjwkGT7PkjTMFdQkIyLxexaw5xATGBw7PQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      vue: ^3.3.0
+    dependencies:
+      vue: 3.3.11(typescript@5.3.3)
+    dev: false
+
   /@scalar/themes@0.5.8(vue@3.3.11):
     resolution: {integrity: sha512-eEwjhLATpvNVjke0m2Iwy+UatLqj7ylAIzJA+nNkmzf/41vSLK5klznVfKc5wMpYuqYlI9IPTRz1kY34j9IsKg==}
     engines: {node: '>=18'}
@@ -1685,8 +1694,8 @@ packages:
       vue: 3.3.11(typescript@5.3.3)
     dev: false
 
-  /@scalar/use-codemirror@0.8.6(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-8wtB1khnm7k/MvjsN6NQa2LAJJH2e/7m0fQ+6DgIgV56D5Ka9ZVeGKUvqCboDKHyrSkODj/GaWA8AnEX9NRVOg==}
+  /@scalar/use-codemirror@0.8.7(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-dUUMQfaHWEcHZmmjE2QkBG8Kyd2g2aJnS/P5DN9r/aV2UJglgkxvBfJKZ9iYJ9mTquOCAi/kkbcvr0QI/ieC+Q==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
