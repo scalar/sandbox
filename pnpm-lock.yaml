@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.20.9
     version: 1.20.9(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
-    specifier: ^0.6.6
-    version: 0.6.6(vue@3.3.11)
+    specifier: ^0.6.7
+    version: 0.6.7(vue@3.3.11)
   '@vueuse/core':
     specifier: ^10.7.2
     version: 10.7.2(vue@3.3.11)
@@ -1642,8 +1642,8 @@ packages:
       vue: 3.3.11(typescript@5.3.3)
     dev: false
 
-  /@scalar/themes@0.6.6(vue@3.3.11):
-    resolution: {integrity: sha512-UeAiKub4g1MYmFq5UhvHb2IMW5qnmOCSnnskHz6r+F3pbDkrnNVECkWNNO7+JNDa803kvP8a97SA8KzoExi+og==}
+  /@scalar/themes@0.6.7(vue@3.3.11):
+    resolution: {integrity: sha512-jKOb2DSk0Xcq5/LluQle/D4Sz5Hm+tLDPHhLdv9a2R58tEbur0ZwZN1pWHXdeyC3s6kdm0+OZlxc89VyTwF5sw==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
