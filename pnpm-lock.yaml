@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.20.14
-    version: 1.20.14(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.20.17
+    version: 1.20.17(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.6.7
     version: 0.6.7(vue@3.3.11)
@@ -1505,8 +1505,8 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.20.14(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-LRToQ/wpEyJpgyP/E7y0n9bOwiZ3cUCwpyhgd5ufYrX42fAHlv1QTVw19VV3cxDER56L/bcoAkg55z4cYDWxKw==}
+  /@scalar/api-reference@1.20.17(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-365tqnfpQb1eFWBfaFC1uuxqjHCsRval37Q6Tf30dTMVTD13fNBFmzIXj915jN9GwGrBJXENz2ou2hobPZclzQ==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
