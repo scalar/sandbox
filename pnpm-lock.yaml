@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.20.29
-    version: 1.20.29(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.20.30
+    version: 1.20.30(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.6.7
     version: 0.6.7(vue@3.3.11)
@@ -1469,21 +1469,21 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@scalar/api-client@1.1.15(@scalar/oas-utils@0.1.4)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-y+P7K3ejZA/tXLcJ1ZQZoukdYo4uZeeoZPF0ZWCe9EKk4C7Ijn9nYVKBItDaQYrPEF7BNk+xAex9RO3Q8l6KaQ==}
+  /@scalar/api-client@1.1.16(@scalar/oas-utils@0.1.5)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-b9dU+JIaz+zHESKFt5Kq2FA2fEFWwyABf0GQPpQ0k/skuyPVp0ixwQIZjEv2/PAY8qaZD9ghmXuSGDl0KbM5vA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@scalar/oas-utils': 0.1.4
+      '@scalar/oas-utils': 0.1.5
       vue: ^3.3.0
     dependencies:
       '@floating-ui/vue': 1.0.4(vue@3.3.11)
       '@headlessui/vue': 1.7.17(vue@3.3.11)
-      '@scalar/components': 0.4.10(typescript@5.3.3)(vue@3.3.11)
-      '@scalar/oas-utils': 0.1.4(axios@1.6.8)
+      '@scalar/components': 0.4.11(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
+      '@scalar/oas-utils': 0.1.5(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
       '@scalar/themes': 0.6.7(vue@3.3.11)
       '@scalar/use-codemirror': 0.9.1(vue@3.3.11)(yjs@13.6.12)
-      '@scalar/use-modal': 0.2.9(@headlessui/vue@1.7.17)(vue@3.3.11)
+      '@scalar/use-modal': 0.2.10(@headlessui/vue@1.7.17)(vue@3.3.11)
       '@vueuse/core': 10.7.2(vue@3.3.11)
       axios: 1.6.8
       content-type: 1.0.5
@@ -1505,21 +1505,21 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.20.29(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-lGFQsQ6wly7/7zI8swaMPmqblTUmAAB1JAnwU2CHu07m84qXkKFvwhkkgO6nlyom1AduayEJ+fLOFGAlLwmVTA==}
+  /@scalar/api-reference@1.20.30(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-EWlWq3WdirBxl+A7weI1FFlCbu2LMEyGTgAKaDDBbOMajBEisikCO5y3ZcPgv4JDGZNXdbJ+MpQxP91cetgdFw==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.17(vue@3.3.11)
-      '@scalar/api-client': 1.1.15(@scalar/oas-utils@0.1.4)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
-      '@scalar/components': 0.4.10(typescript@5.3.3)(vue@3.3.11)
-      '@scalar/oas-utils': 0.1.4(axios@1.6.8)
+      '@scalar/api-client': 1.1.16(@scalar/oas-utils@0.1.5)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/components': 0.4.11(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
+      '@scalar/oas-utils': 0.1.5(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
       '@scalar/snippetz': 0.1.6
       '@scalar/themes': 0.6.7(vue@3.3.11)
-      '@scalar/use-modal': 0.2.9(@headlessui/vue@1.7.17)(vue@3.3.11)
+      '@scalar/use-modal': 0.2.10(@headlessui/vue@1.7.17)(vue@3.3.11)
       '@scalar/use-tooltip': 0.5.12(vue@3.3.11)
       '@unhead/schema': 1.8.10
       '@vcarl/remark-headings': 0.1.0
@@ -1558,13 +1558,14 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/components@0.4.10(typescript@5.3.3)(vue@3.3.11):
-    resolution: {integrity: sha512-4T83QV1nZT/pmPkoWO4Y+5WVnugO8ukmVLwKQkiwQdr9iFCQizO9W4MZq/xhz/7sc2tp9vo5N7gMG3KOuupZSg==}
+  /@scalar/components@0.4.11(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11):
+    resolution: {integrity: sha512-Qw9pMvYwU1qjA53y9xbIsuwH2KP1yGffPn44kwoKdVMAEznCfwW/tvQ00i6tCNpPGdw/XVMBh9AWtd0IU6RN0A==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.17(vue@3.3.11)
+      '@scalar/oas-utils': 0.1.5(axios@1.6.8)
       '@vueuse/core': 10.7.2(vue@3.3.11)
       class-variance-authority: 0.7.0
       cva: 1.0.0-beta.1(typescript@5.3.3)
@@ -1574,11 +1575,12 @@ packages:
       vue: 3.3.11(typescript@5.3.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
+      - axios
       - typescript
     dev: false
 
-  /@scalar/oas-utils@0.1.4(axios@1.6.8):
-    resolution: {integrity: sha512-dVeQ3UWdp6JgchGbdJMxsBL9g/1HW3XxIQtrV+rN4fGdm31RlxLm2q5AivN2MYF13ztj+FfDpzjaog/kgBqUKw==}
+  /@scalar/oas-utils@0.1.5(axios@1.6.8):
+    resolution: {integrity: sha512-OwDcKLDgoGakDkWWahlzkDi2YNk1QbATf6Yq6v9KCScxFeBcjzIR9TnRc4RbA9prvy+wzmw92AT8auJzJ3WUgQ==}
     engines: {node: '>=18'}
     peerDependencies:
       axios: ^1.5
@@ -1694,8 +1696,8 @@ packages:
       yjs: 13.6.12
     dev: false
 
-  /@scalar/use-modal@0.2.9(@headlessui/vue@1.7.17)(vue@3.3.11):
-    resolution: {integrity: sha512-h+Je4bjtF38kQsgfvAZ4TanhJaqHxL3nk7jM8tBYQmKYHCMyFo7oELglu830f0wNrO0TmhDrrQem745Z5uyb2Q==}
+  /@scalar/use-modal@0.2.10(@headlessui/vue@1.7.17)(vue@3.3.11):
+    resolution: {integrity: sha512-kaDzszLWvuA8ZA2baVBl0/ba5cclQWJ2lp/TET7L09jh/r32EpVNDz7GcAqlct3y2nj5gdDG86tRvwQ/huFwUw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@headlessui/vue': ^1.7.0
