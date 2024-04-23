@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.22.6
     version: 1.22.6(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
-    specifier: ^0.7.1
-    version: 0.7.1(vue@3.3.11)
+    specifier: ^0.7.2
+    version: 0.7.2(vue@3.3.11)
   '@vueuse/core':
     specifier: ^10.7.2
     version: 10.7.2(vue@3.3.11)
@@ -1669,15 +1669,6 @@ packages:
       '@scalar/snippetz-plugin-node-fetch': 0.1.2
       '@scalar/snippetz-plugin-node-ofetch': 0.1.1
       '@scalar/snippetz-plugin-node-undici': 0.1.6
-    dev: false
-
-  /@scalar/themes@0.7.1(vue@3.3.11):
-    resolution: {integrity: sha512-CMR1bR4zGMD+HLTi3asBNhvKCYXSBKtIVEtMpU+rfV492wPdSg85mG7mIgPafDClcK2FqQ2npNT8iTQHFxrleA==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      vue: ^3.3.0
-    dependencies:
-      vue: 3.3.11(typescript@5.3.3)
     dev: false
 
   /@scalar/themes@0.7.2(vue@3.3.11):
