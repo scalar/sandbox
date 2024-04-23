@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.22.4
-    version: 1.22.4(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.22.6
+    version: 1.22.6(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.7.1
     version: 0.7.1(vue@3.3.11)
@@ -1193,7 +1193,7 @@ packages:
     dependencies:
       '@floating-ui/dom': 1.5.4
       '@floating-ui/utils': 0.2.1
-      vue-demi: 0.14.6(vue@3.3.11)
+      vue-demi: 0.14.7(vue@3.3.11)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -1516,8 +1516,8 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.22.4(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-+n0wRfnW1FG0zY1/+lx/Spn9IgTxP8b7I9yTA4bgV+umlpJQddc8tIB/p2O+2+GxwGTwweltOFt4Xs9sCdBVsQ==}
+  /@scalar/api-reference@1.22.6(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-BPt8fELvcf+58CAvdmN1Q88f5T03iiRqBv+9T7aYdIcNIc4hgUVnoBzvCiHHh7oVCCWoA32KIFPubIz/DSJryQ==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
@@ -2091,7 +2091,7 @@ packages:
   /@vueuse/shared@10.7.2(vue@3.3.11):
     resolution: {integrity: sha512-qFbXoxS44pi2FkgFjPvF4h7c9oMDutpyBdcJdMYIMg9XyXli2meFMuaKn+UMgsClo//Th6+beeCgqweT/79BVA==}
     dependencies:
-      vue-demi: 0.14.6(vue@3.3.11)
+      vue-demi: 0.14.7(vue@3.3.11)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
