@@ -41,26 +41,26 @@ const model = computed<boolean>({
 .toggle-group {
   display: flex;
   position: relative;
-  border-radius: var(--theme-radius, var(--default-theme-radius));
+  border-radius: var(--theme-radius, var(--scalar-radius));
 }
 .toggle-group:hover,
 .toggle-group:focus-visible {
-  background: var(--theme-background-3, var(--default-theme-background-3));
+  background: var(--theme-background-3, var(--scalar-background-3));
 }
 .toggle-group:before {
   content: '';
   display: block;
-  border-radius: var(--theme-radius, var(--default-theme-radius));
+  border-radius: var(--theme-radius, var(--scalar-radius));
   width: 50%;
   height: 100%;
   position: absolute;
-  background: var(--theme-background-3, var(--default-theme-background-3));
+  background: var(--theme-background-3, var(--scalar-background-3));
   transition: transform 0.2s ease-in-out;
   transform: translate3d(0%, 0, 0);
 }
 .toggle-group:hover:before,
 .toggle-group:focus-visible:before {
-  background: var(--theme-background-4, var(--default-theme-background-4));
+  background: var(--theme-background-4, var(--scalar-background-4));
 }
 .toggle-group-checked:before {
   transform: translate3d(100%, 0, 0);
@@ -68,8 +68,8 @@ const model = computed<boolean>({
 
 .toggle-item {
   flex: 1;
-  font-size: var(--theme-font-size-4, var(--default-theme-font-size-4));
-  color: var(--theme-color-3, var(--default-theme-color-3));
+  font-size: var(--theme-font-size-4, var(--scalar-font-size-4));
+  color: var(--theme-color-3, var(--scalar-color-3));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +88,6 @@ const model = computed<boolean>({
 }
 
 .toggle-item-active {
-  color: var(--theme-color-1, var(--default-theme-color-1));
+  color: var(--theme-color-1, var(--scalar-color-1));
 }
 </style>
