@@ -101,10 +101,10 @@ const toggleDark = useToggle(isDark)
 
 <style scoped>
 .darkmode-toggle {
-  color: var(--default-theme-color-1);
+  color: var(--scalar-color-1);
   cursor: pointer;
-  font-family: var(--default-theme-font);
-  font-size: var(--default-theme-small);
-  border-radius: var(--default-theme-radius-lg);
+  font-family: var(--scalar-font);
+  font-size: var(--scalar-small);
+  border-radius: var(--scalar-radius-lg);
 }
 </style>

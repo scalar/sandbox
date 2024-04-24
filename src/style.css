@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--default-theme-background-1);
+  background: var(--scalar-background-1);
 }
 
 .darklight-reference {

@@ -81,7 +81,10 @@ const share = () => {
       Object.assign(storedContent, data)
       router.replace({ name: 'edit', params: { id: data.id } })
 
-      const path = router.resolve({ name: 'edit', params: { id: data.id } }).href
+      const path = router.resolve({
+        name: 'edit',
+        params: { id: data.id },
+      }).href
       copyToClipboard(window.location.origin + path)
     })
     .finally(() => {
@@ -107,7 +110,7 @@ watch(content, (value) => {
 })
 
 watch(editing, (value) => {
-  if (!route.params.id)  {
+  if (!route.params.id) {
     return
   }
 
@@ -205,13 +208,13 @@ onUnmounted(() => {
 
 <style scoped>
 .app {
-  font-family: var(--default-theme-font);
+  font-family: var(--scalar-font);
 }
 
 .header {
   height: 50px;
-  border-bottom: 1px solid var(--default-theme-border-color);
-  color: var(--default-theme-color-1);
+  border-bottom: 1px solid var(--scalar-border-color);
+  color: var(--scalar-color-1);
   display: flex;
   align-items: center;
   padding: 12px;
@@ -240,24 +243,24 @@ onUnmounted(() => {
 .mode button,
 .actions a {
   text-decoration: none;
-  color: var(--default-theme-color-1);
-  font-size: var(--default-theme-small);
+  color: var(--scalar-color-1);
+  font-size: var(--scalar-small);
 }
 
 .mode a,
 .mode button {
-  font-size: var(--default-theme-small);
-  font-family: var(--default-theme-font);
+  font-size: var(--scalar-small);
+  font-family: var(--scalar-font);
   border: none;
-  background: var(--default-theme-background-4);
+  background: var(--scalar-background-4);
   padding: 6px 12px;
-  border-radius: var(--default-theme-radius-lg);
-  color: var(--default-theme-color-1);
+  border-radius: var(--scalar-radius-lg);
+  color: var(--scalar-color-1);
 }
 
 .logo {
-  font-size: var(--default-theme-small);
-  font-weight: var(--default-theme-bold);
+  font-size: var(--scalar-small);
+  font-weight: var(--scalar-bold);
   gap: 8px;
 }
 
@@ -272,6 +275,6 @@ onUnmounted(() => {
 }
 
 .layout > * + * {
-  border-left: 1px solid var(--default-theme-border-color);
+  border-left: 1px solid var(--scalar-border-color);
 }
 </style>
