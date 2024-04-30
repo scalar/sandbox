@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.22.14
-    version: 1.22.14(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.22.16
+    version: 1.22.16(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.7.4
     version: 0.7.4(vue@3.3.11)
@@ -1508,8 +1508,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@scalar/api-client@1.2.9(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-+8mbJCKsagypJo7YiGstogsqurEJKKcG/iHlEJWIgtcq2yOiVhwwOwUWnc8dR+5mQft6TRAKskm0T0LWpLkSpA==}
+  /@scalar/api-client@1.2.10(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-YqAMkA3F0yfhrmTwrZJZy3H5ffUl4AEMKmWRU1u8U7J4Ds++eSP3vHMkdpE1ygmF42gzx8SpaI2jweqAQtIRzQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@scalar/oas-utils': 0.1.6
@@ -1517,7 +1517,7 @@ packages:
     dependencies:
       '@floating-ui/vue': 1.0.4(vue@3.3.11)
       '@headlessui/vue': 1.7.20(vue@3.3.11)
-      '@scalar/components': 0.5.5(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
+      '@scalar/components': 0.6.0(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
       '@scalar/oas-utils': 0.1.6(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
       '@scalar/themes': 0.7.6(vue@3.3.11)
@@ -1550,16 +1550,16 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.22.14(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-qZIgRJFZsDIHvxSAOH/HjuiWN+MN3MFWyLSFiCjFITN/5FHtRj3KQjvT0jjz9L0+NUQirN9Kg8HphTFSF3jiUA==}
+  /@scalar/api-reference@1.22.16(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-6TnDu2E8CODMBON3C8QQPs+3/onIAWqZmSKtVxYtzDdNCpcsknL9HXUD3/nwqIOEICySdsH1tsJVHyvLUGffZQ==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.20(vue@3.3.11)
-      '@scalar/api-client': 1.2.9(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
-      '@scalar/components': 0.5.5(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
+      '@scalar/api-client': 1.2.10(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/components': 0.6.0(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
       '@scalar/oas-utils': 0.1.6(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
       '@scalar/snippetz': 0.1.6
@@ -1608,8 +1608,8 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/components@0.5.5(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11):
-    resolution: {integrity: sha512-RTS3LGOIk2JtvuWtt9g1crx4CIGdL5bproHZ57hLaTSqyIPvvNzDDqmB/EU/Vq3kb3x2LtQpCJ1PkVmJyZ28GA==}
+  /@scalar/components@0.6.0(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11):
+    resolution: {integrity: sha512-xXZUiYq3VW1fVf/I3K2zIuon1aWUAIfPrdHmsyXqa4f9+6v0VUys1MOC8USzzOUtO7G6IxQFmeYLuwwxj9e/Hw==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
@@ -3160,7 +3160,7 @@ packages:
     resolution: {integrity: sha512-E7uGkTzkk1d0ByLeSc6ZsFS79Axg+m1P/VsgYsxHgiuc3tFSj+MjMIwe90FC4lOAZzNBdY7kkO2P2wKdsQ1vgQ==}
     engines: {node: '>= 0.4'}
     dependencies:
-      get-intrinsic: 1.2.2
+      get-intrinsic: 1.2.4
       gopd: 1.0.1
       has-property-descriptors: 1.0.1
 
@@ -4065,7 +4065,7 @@ packages:
   /has-property-descriptors@1.0.1:
     resolution: {integrity: sha512-VsX8eaIewvas0xnvinAe9bw4WfIeODpGYikiWYLH+dma0Jw6KHYqWiWfhQlgOVK8D6PvjubK5Uc4P0iIhIcNVg==}
     dependencies:
-      get-intrinsic: 1.2.2
+      get-intrinsic: 1.2.4
 
   /has-property-descriptors@1.0.2:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
@@ -6020,7 +6020,7 @@ packages:
     dependencies:
       define-data-property: 1.1.1
       function-bind: 1.1.2
-      get-intrinsic: 1.2.2
+      get-intrinsic: 1.2.4
       gopd: 1.0.1
       has-property-descriptors: 1.0.1
 
