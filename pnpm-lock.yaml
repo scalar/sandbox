@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.22.18
-    version: 1.22.18(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.22.19
+    version: 1.22.19(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.7.6
     version: 0.7.6(vue@3.3.11)
@@ -1508,8 +1508,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@scalar/api-client@1.2.10(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-YqAMkA3F0yfhrmTwrZJZy3H5ffUl4AEMKmWRU1u8U7J4Ds++eSP3vHMkdpE1ygmF42gzx8SpaI2jweqAQtIRzQ==}
+  /@scalar/api-client@1.2.11(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-WFt8uaZMLi8zDeP6BghGv5j6K4T57VhtICVs/XOgp+7SsWYfGeXya6jGPzYI/8iTGsqo+Idr4RP175ThED5NCg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@scalar/oas-utils': 0.1.6
@@ -1517,7 +1517,7 @@ packages:
     dependencies:
       '@floating-ui/vue': 1.0.4(vue@3.3.11)
       '@headlessui/vue': 1.7.20(vue@3.3.11)
-      '@scalar/components': 0.6.0(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
+      '@scalar/components': 0.6.1(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
       '@scalar/oas-utils': 0.1.6(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
       '@scalar/themes': 0.7.6(vue@3.3.11)
@@ -1550,16 +1550,16 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.22.18(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-SvSDcoDqgf21ljmMnsnmsPrz4XbHkJ/QHpokVwVT8+5tGFu+tK4BJdXcIohTmTYm/vkaAEubl3lfbzS3Kofi7w==}
+  /@scalar/api-reference@1.22.19(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-AzI4elh+xd26mG7aC9A6Sltubm0Z+uRilspfkgGitTL6B/MQFM/l6KfFWwl9Dq6siyJXok+Y1pYenuI2z2py/Q==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.20(vue@3.3.11)
-      '@scalar/api-client': 1.2.10(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
-      '@scalar/components': 0.6.0(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
+      '@scalar/api-client': 1.2.11(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/components': 0.6.1(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
       '@scalar/galaxy': 0.1.0
       '@scalar/oas-utils': 0.1.6(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
@@ -1609,8 +1609,8 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/components@0.6.0(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11):
-    resolution: {integrity: sha512-xXZUiYq3VW1fVf/I3K2zIuon1aWUAIfPrdHmsyXqa4f9+6v0VUys1MOC8USzzOUtO7G6IxQFmeYLuwwxj9e/Hw==}
+  /@scalar/components@0.6.1(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11):
+    resolution: {integrity: sha512-MTabuZZU2FpM/YJ+YihOMymUQMr3YoWWUR6/2gMPREiufKrzH/qLgaqqK0XTPl7LsDxJYpYeT1Itmt5ZRsXLow==}
     engines: {node: '>=18'}
     peerDependencies:
       vue: ^3.3.0
@@ -6073,8 +6073,8 @@ packages:
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
-      call-bind: 1.0.5
-      get-intrinsic: 1.2.2
+      call-bind: 1.0.7
+      get-intrinsic: 1.2.4
       object-inspect: 1.13.1
 
   /signal-exit@3.0.7:
