@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.22.19
-    version: 1.22.19(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12)
+    specifier: ^1.22.20
+    version: 1.22.20(nanoid@5.0.4)(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue-sonner@1.0.3)(vue@3.3.11)(yjs@13.6.12)
   '@scalar/themes':
     specifier: ^0.7.6
     version: 0.7.6(vue@3.3.11)
@@ -1508,8 +1508,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@scalar/api-client@1.2.11(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-WFt8uaZMLi8zDeP6BghGv5j6K4T57VhtICVs/XOgp+7SsWYfGeXya6jGPzYI/8iTGsqo+Idr4RP175ThED5NCg==}
+  /@scalar/api-client@1.2.12(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-lFOnfsXCgxTfILeGeAHHIXHgg3omYuXhSsA+awWrT5Rfe9xIv3K7AW5j0b2IRlqS9sjaypS2fpO0y6VxqA9bvg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@scalar/oas-utils': 0.1.6
@@ -1550,15 +1550,15 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.22.19(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue@3.3.11)(yjs@13.6.12):
-    resolution: {integrity: sha512-AzI4elh+xd26mG7aC9A6Sltubm0Z+uRilspfkgGitTL6B/MQFM/l6KfFWwl9Dq6siyJXok+Y1pYenuI2z2py/Q==}
+  /@scalar/api-reference@1.22.20(nanoid@5.0.4)(postcss@8.4.35)(typescript@5.3.3)(unified@11.0.4)(vue-sonner@1.0.3)(vue@3.3.11)(yjs@13.6.12):
+    resolution: {integrity: sha512-RHbs2dekUCIwgl3udmO0AcLKykS78/Mra6qIQROQLXKwNzLcaMeps5bwC1GiziZlekM8UFUOysBwMN7A/d7oRQ==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.20(vue@3.3.11)
-      '@scalar/api-client': 1.2.11(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
+      '@scalar/api-client': 1.2.12(@scalar/oas-utils@0.1.6)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.12)
       '@scalar/components': 0.6.1(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
       '@scalar/galaxy': 0.1.0
       '@scalar/oas-utils': 0.1.6(axios@1.6.8)
@@ -1566,6 +1566,7 @@ packages:
       '@scalar/snippetz': 0.1.6
       '@scalar/themes': 0.7.6(vue@3.3.11)
       '@scalar/use-modal': 0.3.0(@headlessui/vue@1.7.20)(vue@3.3.11)
+      '@scalar/use-toasts': 0.6.1(nanoid@5.0.4)(vue-sonner@1.0.3)(vue@3.3.11)
       '@scalar/use-tooltip': 0.6.0(vue@3.3.11)
       '@unhead/schema': 1.9.7
       '@vcarl/remark-headings': 0.1.0
@@ -1588,7 +1589,6 @@ packages:
       unhead: 1.8.10
       unified: 11.0.4
       vue: 3.3.11(typescript@5.3.3)
-      vue-sonner: 1.0.3
     transitivePeerDependencies:
       - '@jest/globals'
       - '@types/bun'
@@ -1598,6 +1598,7 @@ packages:
       - jest
       - less
       - lightningcss
+      - nanoid
       - postcss
       - sass
       - stylus
@@ -1606,6 +1607,7 @@ packages:
       - terser
       - typescript
       - vitest
+      - vue-sonner
       - yjs
     dev: false
 
@@ -1768,6 +1770,19 @@ packages:
     dependencies:
       '@headlessui/vue': 1.7.20(vue@3.3.11)
       vue: 3.3.11(typescript@5.3.3)
+    dev: false
+
+  /@scalar/use-toasts@0.6.1(nanoid@5.0.4)(vue-sonner@1.0.3)(vue@3.3.11):
+    resolution: {integrity: sha512-jHwyq6Aqs3HgXkomxnXL+hWdkZ7Y4NdU22FtKDbYKnSxi5Y1A+4ZBZrlM4dF2Su5lwGWppP8T2tbZTw0ZeTNgQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      nanoid: 4 - 5
+      vue: ^3.3.0
+      vue-sonner: ^1.0.3
+    dependencies:
+      nanoid: 5.0.4
+      vue: 3.3.11(typescript@5.3.3)
+      vue-sonner: 1.0.3
     dev: false
 
   /@scalar/use-tooltip@0.6.0(vue@3.3.11):
@@ -3153,14 +3168,6 @@ packages:
       titleize: 3.0.0
     dev: true
 
-  /define-data-property@1.1.1:
-    resolution: {integrity: sha512-E7uGkTzkk1d0ByLeSc6ZsFS79Axg+m1P/VsgYsxHgiuc3tFSj+MjMIwe90FC4lOAZzNBdY7kkO2P2wKdsQ1vgQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      get-intrinsic: 1.2.4
-      gopd: 1.0.1
-      has-property-descriptors: 1.0.1
-
   /define-data-property@1.1.4:
     resolution: {integrity: sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==}
     engines: {node: '>= 0.4'}
@@ -3178,8 +3185,8 @@ packages:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-data-property: 1.1.1
-      has-property-descriptors: 1.0.1
+      define-data-property: 1.1.4
+      has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
   /delayed-stream@1.0.0:
@@ -4058,11 +4065,6 @@ packages:
   /has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
-
-  /has-property-descriptors@1.0.1:
-    resolution: {integrity: sha512-VsX8eaIewvas0xnvinAe9bw4WfIeODpGYikiWYLH+dma0Jw6KHYqWiWfhQlgOVK8D6PvjubK5Uc4P0iIhIcNVg==}
-    dependencies:
-      get-intrinsic: 1.2.4
 
   /has-property-descriptors@1.0.2:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
@@ -6015,11 +6017,11 @@ packages:
     resolution: {integrity: sha512-4DBHDoyHlM1IRPGYcoxexgh67y4ueR53FKV1yyxwFMY7aCqcN/38M1+SwZ/qJQ8iLv7+ck385ot4CcisOAPT9w==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-data-property: 1.1.1
+      define-data-property: 1.1.4
       function-bind: 1.1.2
       get-intrinsic: 1.2.4
       gopd: 1.0.1
-      has-property-descriptors: 1.0.1
+      has-property-descriptors: 1.0.2
 
   /set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
