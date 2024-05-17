@@ -7,7 +7,7 @@
     "dev": "concurrently -n frontend,backend -c 'auto' 'pnpm run frontend' 'pnpm run backend'",
     "build": "vue-tsc && vite build",
     "frontend": "vite",
-    "backend": "wrangler pages dev ./ --compatibility-flags='nodejs_compat'",
+    "backend": "wrangler pages dev ./",
     "preview": "vite preview",
     "db:generate": "drizzle-kit generate:sqlite --schema=./db/schema.ts --out=./migrations",
     "db:migrate": "wrangler d1 migrations apply DB --local",

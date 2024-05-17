@@ -1,7 +1,6 @@
 import { drizzle } from 'drizzle-orm/d1'
 import { Specs } from '../../db/schema'
-import { nanoid } from 'nanoid'
-import { randomBytes } from 'node:crypto'
+import { nanoid, customAlphabet } from 'nanoid'
 import { sql } from 'drizzle-orm'
 
 export interface Env {
@@ -17,7 +16,7 @@ export function generateUniqueId() {
 
 // Token to update the sandbox
 export function generateSecretToken() {
-  return randomBytes(32).toString('hex')
+  return customAlphabet('1234567890abcdef', 32)()
 }
 
 export async function onRequest(context) {
