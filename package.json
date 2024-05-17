@@ -17,7 +17,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.17",
     "@scalar/api-reference": "^1.22.38",
-    "@scalar/themes": "^0.7.9",
+    "@scalar/themes": "^0.7.10",
     "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.29.3",
     "monaco-editor": "^0.45.0",
