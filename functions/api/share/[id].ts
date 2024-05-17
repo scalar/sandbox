@@ -12,21 +12,20 @@ function notFound() {
   Response.json({
     error: true,
     code: 404,
-    message: 'Not Found'
+    message: 'Not Found',
   })
 }
 
 export async function onRequest(context) {
   const db = drizzle(context.env.DB)
 
-  const {id} = context.params
+  // Get a single entry
+  const { id } = context.params
 
-  const results = (
-    await db
-      .select()
-      .from(Specs)
-      .where(sql`${Specs.id} = ${id}`)
-  )
+  const results = await db
+    .select()
+    .from(Specs)
+    .where(sql`${Specs.id} = ${id}`)
 
   if (results.length !== 1) {
     return notFound()

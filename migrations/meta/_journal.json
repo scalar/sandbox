@@ -8,6 +8,13 @@
       "when": 1705424323701,
       "tag": "0000_optimal_black_cat",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1715955275890,
+      "tag": "0001_careful_boomer",
+      "breakpoints": true
     }
   ]
 }
