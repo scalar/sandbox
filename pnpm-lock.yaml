@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.17
     version: 1.7.17(vue@3.3.11)
   '@scalar/api-reference':
-    specifier: ^1.22.52
-    version: 1.22.52(nanoid@5.0.4)(postcss@8.4.38)(typescript@5.3.3)(unified@11.0.4)(vue-sonner@1.0.3)(vue@3.3.11)(yjs@13.6.15)
+    specifier: ^1.22.53
+    version: 1.22.53(nanoid@5.0.4)(postcss@8.4.38)(typescript@5.3.3)(unified@11.0.4)(vue-sonner@1.0.3)(vue@3.3.11)(yjs@13.6.15)
   '@scalar/themes':
     specifier: ^0.7.11
     version: 0.7.11(vue@3.3.11)
@@ -1514,8 +1514,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@scalar/api-client@1.2.36(@scalar/oas-utils@0.1.15)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.15):
-    resolution: {integrity: sha512-dTEy+ALkpKYv+TeBZIrDBUIu8mq4A8TDfvMk/GJjGDWBqUsSxvqI0Gu80pDN+DZG5TIYyTYtIsL63n+Mk8tHlw==}
+  /@scalar/api-client@1.2.37(@scalar/oas-utils@0.1.15)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.15):
+    resolution: {integrity: sha512-NKmSelGwf9cyI/LsT7K9gOlNaeQtsiM7l5s56bzi94oH6PJelySQRxtCYshcvZKhZoDdZCIs6AGS3myiadqcAw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@scalar/oas-utils': 0.1.15
@@ -1555,15 +1555,15 @@ packages:
       - yjs
     dev: false
 
-  /@scalar/api-reference@1.22.52(nanoid@5.0.4)(postcss@8.4.38)(typescript@5.3.3)(unified@11.0.4)(vue-sonner@1.0.3)(vue@3.3.11)(yjs@13.6.15):
-    resolution: {integrity: sha512-8SpwdZcTvJhfvT8GyLxRHO21GqBD15bL3U40xPUlG69CsYYRh9cBhoGw4iYWtCyMhsped3mUr/oBSuSpbSXqqQ==}
+  /@scalar/api-reference@1.22.53(nanoid@5.0.4)(postcss@8.4.38)(typescript@5.3.3)(unified@11.0.4)(vue-sonner@1.0.3)(vue@3.3.11)(yjs@13.6.15):
+    resolution: {integrity: sha512-MjFt4hYb1JMLOwFeL/jtCzWLMBDxdFd/DXUa+eTYTP00r7BJ33lOKlpSyNsyhtHWBBon4IjkLTuRBn9d7LQ18w==}
     engines: {node: '>=18'}
     peerDependencies:
       unified: ^11.0.0
       vue: ^3.3.0
     dependencies:
       '@headlessui/vue': 1.7.20(vue@3.3.11)
-      '@scalar/api-client': 1.2.36(@scalar/oas-utils@0.1.15)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.15)
+      '@scalar/api-client': 1.2.37(@scalar/oas-utils@0.1.15)(typescript@5.3.3)(vue@3.3.11)(yjs@13.6.15)
       '@scalar/components': 0.7.14(axios@1.6.8)(typescript@5.3.3)(vue@3.3.11)
       '@scalar/oas-utils': 0.1.15(axios@1.6.8)
       '@scalar/openapi-parser': 0.3.2
