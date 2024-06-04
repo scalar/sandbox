@@ -32,7 +32,14 @@ defineEmits<{
   font-size: var(--scalar-small);
   padding: 6px 12px;
   border-radius: var(--scalar-radius-lg);
-  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.button:hover {
+  background: color-mix(
+    in srgb,
+    var(--scalar-color-1),
+    var(--scalar-background-3) 95%
+  );
 }
 
 .button[disabled] {
