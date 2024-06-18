@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.7.1
     version: 0.7.1
   '@scalar/themes':
-    specifier: ^0.9.2
-    version: 0.9.2(typescript@5.4.5)
+    specifier: ^0.9.4
+    version: 0.9.4(typescript@5.4.5)
   '@vueuse/core':
     specifier: ^10.7.2
     version: 10.11.0(vue@3.3.11)
@@ -1749,8 +1749,8 @@ packages:
       vue: 3.3.11(typescript@5.4.5)
     dev: false
 
-  /@scalar/themes@0.9.2(typescript@5.4.5):
-    resolution: {integrity: sha512-kFZnabQfgz++a+Y/rTfHvrewYviVZDG1LBizk/t+NR6U7CQCYN4sbqtfOZMxVgUbLB0J8N1zuulKlTqyWzEqqQ==}
+  /@scalar/themes@0.9.4(typescript@5.4.5):
+    resolution: {integrity: sha512-J/a8FbfNotdx/rfgScpKw7qwj3JsK8Zr3Dw710e9unFj83T0dfAaOhKahWgkfD0bIoaWbPqIsGEQywrTM75SnA==}
     engines: {node: '>=18'}
     dependencies:
       vue: 3.4.29(typescript@5.4.5)
@@ -2244,7 +2244,6 @@ packages:
       entities: 4.5.0
       estree-walker: 2.0.2
       source-map-js: 1.2.0
-    dev: false
 
   /@vue/compiler-dom@3.3.11:
     resolution: {integrity: sha512-zoAiUIqSKqAJ81WhfPXYmFGwDRuO+loqLxvXmfUdR5fOitPoUiIeFI9cTTyv9MU5O1+ZZglJVTusWzy+wfk5hw==}
@@ -2264,7 +2263,6 @@ packages:
     dependencies:
       '@vue/compiler-core': 3.4.29
       '@vue/shared': 3.4.29
-    dev: false
 
   /@vue/compiler-sfc@3.3.11:
     resolution: {integrity: sha512-U4iqPlHO0KQeK1mrsxCN0vZzw43/lL8POxgpzcJweopmqtoYy9nljJzWDIQS3EfjiYhfdtdk9Gtgz7MRXnz3GA==}
@@ -2342,8 +2340,8 @@ packages:
     dependencies:
       '@volar/language-core': 1.11.1
       '@volar/source-map': 1.11.1
-      '@vue/compiler-dom': 3.4.27
-      '@vue/shared': 3.4.27
+      '@vue/compiler-dom': 3.4.29
+      '@vue/shared': 3.4.29
       computeds: 0.0.1
       minimatch: 9.0.4
       muggle-string: 0.3.1
@@ -2429,7 +2427,6 @@ packages:
 
   /@vue/shared@3.4.29:
     resolution: {integrity: sha512-hQ2gAQcBO/CDpC82DCrinJNgOHI2v+FA7BDW4lMSPeBpQ7sRe2OLHWe5cph1s7D8DUQAwRt18dBDfJJ220APEA==}
-    dev: false
 
   /@vueuse/core@10.11.0(vue@3.3.11):
     resolution: {integrity: sha512-x3sD4Mkm7PJ+pcq3HX8PLPBadXCAlSDR/waK87dz0gQE+qJnaaFhc/dZVfJz+IUYzTMVGum2QlR7ImiJQN4s6g==}
