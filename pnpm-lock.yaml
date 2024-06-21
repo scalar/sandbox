@@ -1910,8 +1910,8 @@ packages:
       codemirror: 6.0.1(@lezer/common@1.2.1)
       vue: 3.4.29(typescript@5.4.5)
     optionalDependencies:
-      y-codemirror.next: 0.3.4(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(yjs@13.6.16)
-      yjs: 13.6.16
+      y-codemirror.next: 0.3.5(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(yjs@13.6.18)
+      yjs: 13.6.18
     transitivePeerDependencies:
       - typescript
     dev: false
@@ -5398,7 +5398,7 @@ packages:
       stoppable: 1.1.0
       undici: 5.28.4
       workerd: 1.20240605.0
-      ws: 8.17.0
+      ws: 8.17.1
       youch: 3.3.3
       zod: 3.23.8
     transitivePeerDependencies:
@@ -7114,8 +7114,8 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws@8.17.0:
-    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
+  /ws@8.17.1:
+    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -7141,8 +7141,8 @@ packages:
     resolution: {integrity: sha512-ibF0Or+FivM9lNrg+HGJfVX8WJqgo+kCLDc4vx6xMeTce7Aj+DLttKbxxRR/gNLSAelRc1omAPlJ77N/Jem07A==}
     dev: true
 
-  /y-codemirror.next@0.3.4(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(yjs@13.6.16):
-    resolution: {integrity: sha512-G4l0P0MA0v9LFYuBgQU5M5fwzcDSa6757mQ46iJCmU2rHC/iT+k9L6ufIp/DYFY5DfJ/QYNj66qGKQ6EL9WEtw==}
+  /y-codemirror.next@0.3.5(@codemirror/state@6.4.1)(@codemirror/view@6.28.1)(yjs@13.6.18):
+    resolution: {integrity: sha512-VluNu3e5HfEXybnypnsGwKAj+fKLd4iAnR7JuX1Sfyydmn1jCBS5wwEL/uS04Ch2ib0DnMAOF6ZRR/8kK3wyGw==}
     requiresBuild: true
     peerDependencies:
       '@codemirror/state': ^6.0.0
@@ -7152,7 +7152,7 @@ packages:
       '@codemirror/state': 6.4.1
       '@codemirror/view': 6.28.1
       lib0: 0.2.94
-      yjs: 13.6.16
+      yjs: 13.6.18
     dev: false
     optional: true
 
@@ -7185,8 +7185,8 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
-  /yjs@13.6.16:
-    resolution: {integrity: sha512-uEq+n/dFIecBElEdeQea8nDnltScBfuhCSyAxDw4CosveP9Ag0eW6iZi2mdpW7EgxSFT7VXK2MJl3tKaLTmhAQ==}
+  /yjs@13.6.18:
+    resolution: {integrity: sha512-GBTjO4QCmv2HFKFkYIJl7U77hIB1o22vSCSQD1Ge8ZxWbIbn8AltI4gyXbtL+g5/GJep67HCMq3Y5AmNwDSyEg==}
     engines: {node: '>=16.0.0', npm: '>=8.0.0'}
     requiresBuild: true
     dependencies:
