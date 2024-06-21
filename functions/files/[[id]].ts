@@ -1,8 +1,9 @@
-import { drizzle } from 'drizzle-orm/d1'
-import { Specs } from '../../db/schema'
-import { sql } from 'drizzle-orm'
-import YAML from 'yaml'
 import { normalize } from '@scalar/openapi-parser'
+import { sql } from 'drizzle-orm'
+import { drizzle } from 'drizzle-orm/d1'
+import YAML from 'yaml'
+
+import { Specs } from '../../db/schema'
 
 export interface Env {
   // If you set another name in wrangler.toml as the value for 'binding',

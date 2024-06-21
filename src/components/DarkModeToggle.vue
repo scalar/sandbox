@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useToggle } from '@vueuse/core'
+
 import { useDarkMode } from '../hooks/useDarkMode'
 
 const isDark = useDarkMode()

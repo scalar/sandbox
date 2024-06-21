@@ -26,7 +26,7 @@ const drop = (e: DragEvent) => {
 
     reader.readAsText(
       // @ts-ignore
-      e.dataTransfer?.items[0].getAsFile()
+      e.dataTransfer?.items[0].getAsFile(),
     )
   }
 }

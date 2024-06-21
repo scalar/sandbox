@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import * as monaco from 'monaco-editor'
-import { onMounted, ref, nextTick, watch } from 'vue'
+import { nextTick, onMounted, ref, watch } from 'vue'
+
 import { useDarkMode } from '../hooks/useDarkMode'
-import Swagger20 from './swagger-2.0.json'
 import OpenAPI30 from './openapi-3.0.json'
 import OpenAPI31 from './openapi-3.1.json'
+import Swagger20 from './swagger-2.0.json'
 
 const isDark = useDarkMode()
 const props = defineProps(['modelValue'])

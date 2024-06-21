@@ -12,7 +12,9 @@
     "db:generate": "drizzle-kit generate:sqlite --schema=./db/schema.ts --out=./migrations",
     "db:migrate": "wrangler d1 migrations apply DB --local",
     "db:migrate:production": "wrangler d1 migrations apply DB",
-    "db:up": "drizzle-kit up:sqlite"
+    "db:up": "drizzle-kit up:sqlite",
+    "format": "pnpm prettier --write .",
+    "format:check": "pnpm prettier --check ."
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.17",
@@ -30,6 +32,7 @@
     "yaml": "^2.3.4"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@vitejs/plugin-vue": "^5.0.3",
     "concurrently": "^8.2.2",
     "drizzle-kit": "^0.20.13",

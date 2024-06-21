@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { ApiReference } from '@scalar/api-reference'
-import MonacoEditor from './components/MonacoEditor.vue'
-import FileDrop from './components/FileDrop.vue'
-import DarkModeToggle from './components/DarkModeToggle.vue'
-import { ref, reactive, watch, onMounted, onUnmounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import ShareButton from './components/ShareButton.vue'
-import { Toaster, toast } from 'vue-sonner'
 import { useMediaQuery } from '@vueuse/core'
-import ModeToggleButton from './components/ModeToggleButton.vue'
+import { onMounted, onUnmounted, reactive, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { Toaster, toast } from 'vue-sonner'
+
+import DarkModeToggle from './components/DarkModeToggle.vue'
+import FileDrop from './components/FileDrop.vue'
 import GitHubLogo from './components/GithubLogo.vue'
+import ModeToggleButton from './components/ModeToggleButton.vue'
+import MonacoEditor from './components/MonacoEditor.vue'
 import ScalarLogo from './components/ScalarLogo.vue'
-import { ResetStyles, ThemeStyles } from '@scalar/themes'
+import ShareButton from './components/ShareButton.vue'
 import { useDarkMode } from './hooks/useDarkMode'
 
 const isDark = useDarkMode()
@@ -156,58 +156,53 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <ResetStyles v-slot="{ styles }">
-    <Toaster theme="dark" />
-    <ThemeStyles id="default" />
-    <FileDrop @drop="handleDrop">
-      <div
-        class="app"
-        :class="styles">
-        <header class="header">
-          <div class="logo">
-            <ScalarLogo />
-            <div class="logo-text">Sandbox</div>
-          </div>
-          <div class="mode">
-            <ModeToggleButton v-model="editing" />
-          </div>
-          <div class="actions">
-            <DarkModeToggle />
-            <a href="https://github.com/scalar/scalar">
-              <GitHubLogo />
-            </a>
-            <ShareButton
-              @click="share"
-              :loading="loading" />
-          </div>
-        </header>
-        <div class="layout">
-          <!-- Mobile Layout -->
-          <template v-if="isMobile">
-            <div v-if="editing">
-              <MonacoEditor v-model="content" />
-            </div>
-            <div v-else>
-              <ApiReference
-                :configuration="{ spec: { content }, darkMode: isDark }" />
-            </div>
-          </template>
-          <!-- Desktop Layout -->
-          <template v-else>
-            <div
-              class="left"
-              v-if="editing">
-              <MonacoEditor v-model="content" />
-            </div>
-            <div class="right">
-              <ApiReference
-                :configuration="{ spec: { content }, darkMode: isDark }" />
-            </div>
-          </template>
+  <Toaster theme="dark" />
+  <FileDrop @drop="handleDrop">
+    <div class="app">
+      <header class="header">
+        <div class="logo">
+          <ScalarLogo />
+          <div class="logo-text">Sandbox</div>
         </div>
+        <div class="mode">
+          <ModeToggleButton v-model="editing" />
+        </div>
+        <div class="actions">
+          <DarkModeToggle />
+          <a href="https://github.com/scalar/scalar">
+            <GitHubLogo />
+          </a>
+          <ShareButton
+            @click="share"
+            :loading="loading" />
+        </div>
+      </header>
+      <div class="layout">
+        <!-- Mobile Layout -->
+        <template v-if="isMobile">
+          <div v-if="editing">
+            <MonacoEditor v-model="content" />
+          </div>
+          <div v-else>
+            <ApiReference
+              :configuration="{ spec: { content }, darkMode: isDark.value }" />
+          </div>
+        </template>
+        <!-- Desktop Layout -->
+        <template v-else>
+          <div
+            class="left"
+            v-if="editing">
+            <MonacoEditor v-model="content" />
+          </div>
+          <div class="right">
+            <ApiReference
+              :configuration="{ spec: { content }, darkMode: isDark.value }" />
+          </div>
+        </template>
       </div>
-    </FileDrop>
-  </ResetStyles>
+    </div>
+  </FileDrop>
 </template>
 
 <style scoped>
