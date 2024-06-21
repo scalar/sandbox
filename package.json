@@ -1,5 +1,5 @@
 {
-  "name": "scalar-play",
+  "name": "sandbox",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -22,29 +22,28 @@
     "@scalar/openapi-parser": "^0.7.1",
     "@scalar/themes": "^0.9.5",
     "@vueuse/core": "^10.7.2",
-    "drizzle-orm": "^0.29.3",
-    "monaco-editor": "^0.45.0",
+    "drizzle-orm": "^0.31.2",
+    "monaco-editor": "^0.50.0",
     "nanoid": "^5.0.4",
     "oh-vue-icons": "1.0.0-rc3",
-    "vue": "3.3.11",
+    "vue": "3.4.29",
     "vue-router": "4",
-    "vue-sonner": "^1.0.3",
+    "vue-sonner": "^1.1.3",
     "yaml": "^2.3.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@vitejs/plugin-vue": "^5.0.3",
     "concurrently": "^8.2.2",
-    "drizzle-kit": "^0.20.13",
-    "eslint": "^8.56.0",
+    "drizzle-kit": "^0.22.7",
+    "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier-vue": "^5.0.0",
     "eslint-plugin-vue": "^9.20.1",
     "prettier": "^3.2.4",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.12",
-    "vite-plugin-node-polyfills": "^0.19.0",
-    "vue-tsc": "^1.8.27",
-    "wrangler": "^3.24.0"
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1",
+    "vue-tsc": "^2.0.21",
+    "wrangler": "^3.61.0"
   }
 }

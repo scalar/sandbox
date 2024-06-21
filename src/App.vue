@@ -185,7 +185,7 @@ onUnmounted(() => {
           </div>
           <div v-else>
             <ApiReference
-              :configuration="{ spec: { content }, darkMode: isDark.value }" />
+              :configuration="{ spec: { content }, darkMode: isDark }" />
           </div>
         </template>
         <!-- Desktop Layout -->
@@ -197,7 +197,7 @@ onUnmounted(() => {
           </div>
           <div class="right">
             <ApiReference
-              :configuration="{ spec: { content }, darkMode: isDark.value }" />
+              :configuration="{ spec: { content }, darkMode: isDark }" />
           </div>
         </template>
       </div>
