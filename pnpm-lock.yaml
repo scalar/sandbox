@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.7.1
     version: 0.7.1
   '@scalar/themes':
-    specifier: ^0.9.5
-    version: 0.9.5(typescript@5.5.2)
+    specifier: ^0.9.7
+    version: 0.9.7(typescript@5.5.2)
   '@vueuse/core':
     specifier: ^10.7.2
     version: 10.11.0(vue@3.4.29)
@@ -1921,6 +1921,15 @@ packages:
 
   /@scalar/themes@0.9.5(typescript@5.5.2):
     resolution: {integrity: sha512-++Esv6gHpJrcVWpZTk3Om4zWmqXb5rBbM62eWJDaq560ABAyZLShMs3eQXITb3o9PixrQTd2gwfedvsPEi1SHQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      vue: 3.4.29(typescript@5.5.2)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
+  /@scalar/themes@0.9.7(typescript@5.5.2):
+    resolution: {integrity: sha512-75ogjdu4NwnhEfFQHpm3rO5UpcLSZZig/BcRdGFMIZvGhK4kkTQK5JW5ofC+l1ig/QLuaW3GnYCoYdWE3UCvdQ==}
     engines: {node: '>=18'}
     dependencies:
       vue: 3.4.29(typescript@5.5.2)
