@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.22(vue@3.4.29(typescript@5.5.2))
       '@scalar/api-reference':
-        specifier: ^1.24.45
-        version: 1.24.45(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)
+        specifier: ^1.24.46
+        version: 1.24.46(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)
       '@scalar/openapi-parser':
         specifier: ^0.7.2
         version: 0.7.2
@@ -1028,12 +1028,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/api-client@2.0.21':
-    resolution: {integrity: sha512-g8/iwGGVuVGh2rKAj+8U4poevY1Bv5Iec7Gpo+elOCo1YW57LGluYt3IaqYDLbOmCXHX5fwUXbtkvflCUq8kag==}
+  '@scalar/api-client@2.0.22':
+    resolution: {integrity: sha512-NpXc+ZSeeyNY68lV9aXTd7aU/b2rkODPqKOztZh8BuC1PB6irq7eey1et30l4So3NU/m+S9NDlSChrNcbcofhg==}
     engines: {node: '>=18'}
 
-  '@scalar/api-reference@1.24.45':
-    resolution: {integrity: sha512-K0xVoJpfeCbGOnEdWo8Bc/OICI3XVuEt9pWxg6N4efY4zaAzDrwLB8s/DabliWja/KESD1TXwaSR0aMCsdmvmg==}
+  '@scalar/api-reference@1.24.46':
+    resolution: {integrity: sha512-5bjxI+YujF6URreaa0xZt4giAWhwvIuco3cMU7UBfQKYkFmfvPWM1sVcBWI/IUZAe/E4V/u/r2MhAMPOcaEvSA==}
     engines: {node: '>=18'}
 
   '@scalar/code-highlight@0.0.7':
@@ -4132,7 +4132,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@scalar/api-client@2.0.21(tailwindcss@3.4.4)(typescript@5.5.2)':
+  '@scalar/api-client@2.0.22(tailwindcss@3.4.4)(typescript@5.5.2)':
     dependencies:
       '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.4)
       '@headlessui/vue': 1.7.22(vue@3.4.29(typescript@5.5.2))
@@ -4168,11 +4168,11 @@ snapshots:
       - typescript
       - vitest
 
-  '@scalar/api-reference@1.24.45(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)':
+  '@scalar/api-reference@1.24.46(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)':
     dependencies:
       '@floating-ui/vue': 1.0.6(vue@3.4.29(typescript@5.5.2))
       '@headlessui/vue': 1.7.22(vue@3.4.29(typescript@5.5.2))
-      '@scalar/api-client': 2.0.21(tailwindcss@3.4.4)(typescript@5.5.2)
+      '@scalar/api-client': 2.0.22(tailwindcss@3.4.4)(typescript@5.5.2)
       '@scalar/components': 0.12.14(typescript@5.5.2)
       '@scalar/oas-utils': 0.2.13(typescript@5.5.2)
       '@scalar/openapi-parser': 0.7.2
