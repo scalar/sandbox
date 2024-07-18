@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.22(vue@3.4.29(typescript@5.5.2))
       '@scalar/api-reference':
-        specifier: ^1.24.48
-        version: 1.24.48(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)
+        specifier: ^1.24.49
+        version: 1.24.49(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)
       '@scalar/openapi-parser':
         specifier: ^0.7.2
         version: 0.7.2
@@ -1032,8 +1032,8 @@ packages:
     resolution: {integrity: sha512-U8IO/rEVnTLg645VsyuV0tfaew7axNt+SiE9kvvpF84JGjFz0X1594XMlgC88It+g37CSE2ptIQ+WHCgMPlVfA==}
     engines: {node: '>=18'}
 
-  '@scalar/api-reference@1.24.48':
-    resolution: {integrity: sha512-Svh9bnAJHXuKzojw5Gzw6RfPRElki97MrYs70Slw8wesuRfjzA8uiqp+4tuc6s5wZVev0UoXvl/6TWN8CvbSpg==}
+  '@scalar/api-reference@1.24.49':
+    resolution: {integrity: sha512-+Q1oGFQet5FtweHJaUXXDwLMulAoqx+I7z/OQU6/BUTHi1iDmX1H/gjIpWax2BZjCVhgYjdnmxWK2lUtFzDlUw==}
     engines: {node: '>=18'}
 
   '@scalar/code-highlight@0.0.7':
@@ -1080,10 +1080,6 @@ packages:
 
   '@scalar/snippetz@0.1.6':
     resolution: {integrity: sha512-z3DEpT/FIZq9yeHL/tz2v6WvdHIiZ4uvK96RdeTPKUUJ0IXvA5vONG3PF5LE0Q/408PCzWsZpGs9f97ztaeJSQ==}
-
-  '@scalar/themes@0.9.13':
-    resolution: {integrity: sha512-ok1hC5ez9cYnVr2F8WF0FyE5P0GWiim12H3aOoPvq1VFI+ASoFjJNgo7rT4nhVbO3htcBh1Le9KfIFTyO7bhYA==}
-    engines: {node: '>=18'}
 
   '@scalar/themes@0.9.14':
     resolution: {integrity: sha512-+l0Dyon6pj7ie52Z8n1s6Z4/vEWNb5yMIfLMuC3B0kxNl+WqQ9ZOOtU8xcs6Kc0GgZ3lie2LroKmPyPU/tX1RQ==}
@@ -4172,7 +4168,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@scalar/api-reference@1.24.48(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)':
+  '@scalar/api-reference@1.24.49(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)':
     dependencies:
       '@floating-ui/vue': 1.0.6(vue@3.4.29(typescript@5.5.2))
       '@headlessui/vue': 1.7.22(vue@3.4.29(typescript@5.5.2))
@@ -4319,12 +4315,6 @@ snapshots:
       '@scalar/snippetz-plugin-node-fetch': 0.1.2
       '@scalar/snippetz-plugin-node-ofetch': 0.1.1
       '@scalar/snippetz-plugin-node-undici': 0.1.6
-
-  '@scalar/themes@0.9.13(typescript@5.5.2)':
-    dependencies:
-      vue: 3.4.29(typescript@5.5.2)
-    transitivePeerDependencies:
-      - typescript
 
   '@scalar/themes@0.9.14(typescript@5.5.2)':
     dependencies:
