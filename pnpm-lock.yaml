@@ -18,8 +18,8 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2
       '@scalar/themes':
-        specifier: ^0.9.15
-        version: 0.9.15(typescript@5.5.2)
+        specifier: ^0.9.16
+        version: 0.9.16(typescript@5.5.2)
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.29(typescript@5.5.2))
@@ -1083,6 +1083,10 @@ packages:
 
   '@scalar/themes@0.9.15':
     resolution: {integrity: sha512-imRx+r0DOqRfzzJaqHwSNyMBWKsRF8sXnPn9o50tFvXKPpWlzG6E9gz7tenfOlkCg2OW5xEGuAB4LlSCrvCVvQ==}
+    engines: {node: '>=18'}
+
+  '@scalar/themes@0.9.16':
+    resolution: {integrity: sha512-B5S8Hrvnt+gh/M+AJqMEIiHWEtp5qghz6seYzp8AOB71XEIacLYudG4g8Pb8xROlDsZhAPKv/mDYvDtzBVLRMA==}
     engines: {node: '>=18'}
 
   '@scalar/use-codemirror@0.11.8':
@@ -4317,6 +4321,12 @@ snapshots:
       '@scalar/snippetz-plugin-node-undici': 0.1.6
 
   '@scalar/themes@0.9.15(typescript@5.5.2)':
+    dependencies:
+      vue: 3.4.29(typescript@5.5.2)
+    transitivePeerDependencies:
+      - typescript
+
+  '@scalar/themes@0.9.16(typescript@5.5.2)':
     dependencies:
       vue: 3.4.29(typescript@5.5.2)
     transitivePeerDependencies:
