@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.22(vue@3.4.29(typescript@5.5.2))
       '@scalar/api-reference':
-        specifier: ^1.24.59
-        version: 1.24.59(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)
+        specifier: ^1.24.60
+        version: 1.24.60(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)
       '@scalar/openapi-parser':
         specifier: ^0.7.2
         version: 0.7.2
@@ -1028,28 +1028,28 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/api-client@2.0.34':
-    resolution: {integrity: sha512-agi4LfeHvk0pPL4+vaImH7zNTkdLRCoiyseyCIYc/RTN41rJWeK1n3srLLw1G3sDBknmgu9h+yLdqPLRjLsXEw==}
+  '@scalar/api-client@2.0.35':
+    resolution: {integrity: sha512-QHw4Jdv3edkzfSjwrLiF3TkY85Z/H2tmUdha12U5ukoJPwbSw3qcyoE9KHTBRb4tm1b3x69p2wRccbpcBtnu4A==}
     engines: {node: '>=18'}
 
-  '@scalar/api-reference@1.24.59':
-    resolution: {integrity: sha512-95vshdHHk+mqQGf9MQDePhburkPcPhHvfy/78nbasO983j7FysB++ruT2TLKmIefMoMzGd1Hn4xd20xXUIOTBg==}
+  '@scalar/api-reference@1.24.60':
+    resolution: {integrity: sha512-jJj8UqPDL7eulsg8WGbdyvLCjxDZ+t+KSzBXoUB7+rv+qW5lYB3LMCu4joQ3Dgbk5A6DMz0W42KVmd1lYK8bFw==}
     engines: {node: '>=18'}
 
   '@scalar/code-highlight@0.0.7':
     resolution: {integrity: sha512-YUSlnNapSUuLKDFiiQ54ok+gHD9ufCifI2CAU5HtIvt8pS/Ns4r0D/N+RuEWu5HccbBt/S4cLYkwlg4q76ym/A==}
     engines: {node: '>=18'}
 
-  '@scalar/components@0.12.21':
-    resolution: {integrity: sha512-kXebSPCKUKBTJZX2vggesEvgTEIrc3+vRMUXCJCVJyen6TmM0xzyDkPe1+oGG8pQTdz9RoGW95i+tWf1gXcHzw==}
+  '@scalar/components@0.12.22':
+    resolution: {integrity: sha512-u1LpAEOtEnz1zw1MRp+WL+eEC95d7z8694U5xSKEA07/cal0mUwFl9TwE8/Pw+x7MnUdtadT4LZwB5UOFGRGWA==}
     engines: {node: '>=18'}
 
   '@scalar/draggable@0.1.3':
     resolution: {integrity: sha512-A6lUgTV8q/zJGkzHerY1T+X3l3GXmCCg09Z7OU7j6yDyyuj2BSTblthncoD5sN3BdwLjHwkm9ecehfvaE0pj5w==}
     engines: {node: '>=18'}
 
-  '@scalar/oas-utils@0.2.18':
-    resolution: {integrity: sha512-CCo88GrZ25XjNmp+65wS7bQdpQqasEUVp+sgHytz6FOicUuNxvfFEU2lFAjFTftGtDbOyaZwMVNAbpfszF0n7g==}
+  '@scalar/oas-utils@0.2.19':
+    resolution: {integrity: sha512-HcEw/o8Iul+o/sOz1cJ1k4KqX/J4zY9SUKdHblFF77l6HEM5X4tUVU4hzLrnZnRE2/W6gEjtKwhLx5Pd1uqTQg==}
     engines: {node: '>=18'}
 
   '@scalar/object-utils@1.1.5':
@@ -4132,13 +4132,13 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@scalar/api-client@2.0.34(tailwindcss@3.4.4)(typescript@5.5.2)':
+  '@scalar/api-client@2.0.35(tailwindcss@3.4.4)(typescript@5.5.2)':
     dependencies:
       '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.4)
       '@headlessui/vue': 1.7.22(vue@3.4.29(typescript@5.5.2))
-      '@scalar/components': 0.12.21(typescript@5.5.2)
+      '@scalar/components': 0.12.22(typescript@5.5.2)
       '@scalar/draggable': 0.1.3(typescript@5.5.2)
-      '@scalar/oas-utils': 0.2.18(typescript@5.5.2)
+      '@scalar/oas-utils': 0.2.19(typescript@5.5.2)
       '@scalar/object-utils': 1.1.5(vue@3.4.29(typescript@5.5.2))
       '@scalar/openapi-parser': 0.7.2
       '@scalar/themes': 0.9.16(typescript@5.5.2)
@@ -4168,13 +4168,13 @@ snapshots:
       - typescript
       - vitest
 
-  '@scalar/api-reference@1.24.59(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)':
+  '@scalar/api-reference@1.24.60(postcss@8.4.38)(tailwindcss@3.4.4)(typescript@5.5.2)':
     dependencies:
       '@floating-ui/vue': 1.0.6(vue@3.4.29(typescript@5.5.2))
       '@headlessui/vue': 1.7.22(vue@3.4.29(typescript@5.5.2))
-      '@scalar/api-client': 2.0.34(tailwindcss@3.4.4)(typescript@5.5.2)
-      '@scalar/components': 0.12.21(typescript@5.5.2)
-      '@scalar/oas-utils': 0.2.18(typescript@5.5.2)
+      '@scalar/api-client': 2.0.35(tailwindcss@3.4.4)(typescript@5.5.2)
+      '@scalar/components': 0.12.22(typescript@5.5.2)
+      '@scalar/oas-utils': 0.2.19(typescript@5.5.2)
       '@scalar/openapi-parser': 0.7.2
       '@scalar/snippetz': 0.1.6
       '@scalar/themes': 0.9.16(typescript@5.5.2)
@@ -4226,7 +4226,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@scalar/components@0.12.21(typescript@5.5.2)':
+  '@scalar/components@0.12.22(typescript@5.5.2)':
     dependencies:
       '@floating-ui/utils': 0.2.2
       '@floating-ui/vue': 1.0.6(vue@3.4.29(typescript@5.5.2))
@@ -4255,7 +4255,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/oas-utils@0.2.18(typescript@5.5.2)':
+  '@scalar/oas-utils@0.2.19(typescript@5.5.2)':
     dependencies:
       '@scalar/themes': 0.9.16(typescript@5.5.2)
       axios: 1.7.2
