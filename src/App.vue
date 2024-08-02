@@ -77,15 +77,21 @@ const share = () => {
   })
     .then((res) => res.json())
     .then(async (data) => {
-      contentChanged.value = false
-      Object.assign(storedContent, data)
-      router.replace({ name: 'edit', params: { id: data.id } })
-
       const path = router.resolve({
         name: 'edit',
         params: { id: data.id },
       }).href
-      copyToClipboard(window.location.origin + path)
+
+      // Delay the clipboard copy to avoid issues with the browser window focus.
+      // @see https://github.com/scalar/scalar/issues/2739
+      window.setTimeout(() => {
+        copyToClipboard(window.location.origin + path)
+      }, 100)
+
+      contentChanged.value = false
+      Object.assign(storedContent, data)
+
+      router.replace({ name: 'edit', params: { id: data.id } })
     })
     .finally(() => {
       loading.value = false
