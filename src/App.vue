@@ -282,4 +282,9 @@ onUnmounted(() => {
 .layout > * + * {
   border-left: 1px solid var(--scalar-border-color);
 }
+
+
+.right {
+  overflow: auto;
+}
 </style>
