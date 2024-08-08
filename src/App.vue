@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ApiReference } from '@scalar/api-reference'
 import { useMediaQuery } from '@vueuse/core'
 import { onMounted, onUnmounted, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Toaster, toast } from 'vue-sonner'
 
+import ApiReference from './components/ApiReference.vue'
 import DarkModeToggle from './components/DarkModeToggle.vue'
 import FileDrop from './components/FileDrop.vue'
 import GitHubLogo from './components/GithubLogo.vue'
@@ -282,7 +282,6 @@ onUnmounted(() => {
 .layout > * + * {
   border-left: 1px solid var(--scalar-border-color);
 }
-
 
 .right {
   overflow: auto;

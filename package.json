@@ -27,6 +27,7 @@
     "nanoid": "^5.0.4",
     "oh-vue-icons": "1.0.0-rc3",
     "vue": "3.4.36",
+    "vue-plugin-load-script": "^2.1.1",
     "vue-router": "^4.4.3",
     "vue-sonner": "^1.1.4",
     "yaml": "^2.5.0"
