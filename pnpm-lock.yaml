@@ -38,6 +38,9 @@ importers:
       vue:
         specifier: 3.4.36
         version: 3.4.36(typescript@5.5.4)
+      vue-plugin-load-script:
+        specifier: ^2.1.1
+        version: 2.1.1
       vue-router:
         specifier: ^4.4.3
         version: 4.4.3(vue@3.4.36(typescript@5.5.4))
@@ -4517,6 +4520,9 @@ packages:
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
+
+  vue-plugin-load-script@2.1.1:
+    resolution: {integrity: sha512-IViO0hNj4O39M8I1taX74B5PR5RI7IrlEt+dvAjOk3NRLwQ7ZrdexUo9+K++KBzGPJtaVL1+emTyMWeOtjZojw==}
 
   vue-router@4.4.3:
     resolution: {integrity: sha512-sv6wmNKx2j3aqJQDMxLFzs/u/mjA9Z5LCgy6BE0f7yFWMjrPLnS/sPNn8ARY/FXw6byV18EFutn5lTO6+UsV5A==}
@@ -9694,6 +9700,8 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
+
+  vue-plugin-load-script@2.1.1: {}
 
   vue-router@4.4.3(vue@3.4.36(typescript@5.5.4)):
     dependencies:
