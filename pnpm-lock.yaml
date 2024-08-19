@@ -18,8 +18,8 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2
       '@scalar/themes':
-        specifier: ^0.9.23
-        version: 0.9.23(typescript@5.5.4)
+        specifier: ^0.9.26
+        version: 0.9.26
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -1106,12 +1106,12 @@ packages:
   '@scalar/snippetz@0.1.6':
     resolution: {integrity: sha512-z3DEpT/FIZq9yeHL/tz2v6WvdHIiZ4uvK96RdeTPKUUJ0IXvA5vONG3PF5LE0Q/408PCzWsZpGs9f97ztaeJSQ==}
 
-  '@scalar/themes@0.9.23':
-    resolution: {integrity: sha512-LFVPBegRF8GRNR24e8AAJwTfW1DP9Jj6NwsPjIq58ztD16DyzMBc48HY5fpacQRfcNORsuBsnOPXWT+kOu4/jw==}
-    engines: {node: '>=18'}
-
   '@scalar/themes@0.9.25':
     resolution: {integrity: sha512-95LjyXF3jImbzp8WbYD5mNXulcJ196EeA0A1e6k8OmLkVXlXEomOKXkSlVOCR6dNR2NpbF6gKkorrUHgIe7cgQ==}
+    engines: {node: '>=18'}
+
+  '@scalar/themes@0.9.26':
+    resolution: {integrity: sha512-94bEZgnTYZLaZiaiM/e7dY8EiK3UZxfd7Tp88f+8MWz314Jtg1klb2QOu7aJLgPIxoenSmF15IKkdKHB2bNKyQ==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.1':
@@ -3983,13 +3983,9 @@ snapshots:
       '@scalar/snippetz-plugin-node-ofetch': 0.1.1
       '@scalar/snippetz-plugin-node-undici': 0.1.6
 
-  '@scalar/themes@0.9.23(typescript@5.5.4)':
-    dependencies:
-      vue: 3.4.36(typescript@5.5.4)
-    transitivePeerDependencies:
-      - typescript
-
   '@scalar/themes@0.9.25': {}
+
+  '@scalar/themes@0.9.26': {}
 
   '@scalar/types@0.0.1':
     dependencies:
