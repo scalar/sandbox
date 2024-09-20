@@ -15,8 +15,8 @@ importers:
         specifier: ^1.25.13
         version: 1.25.13(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)
       '@scalar/openapi-parser':
-        specifier: ^0.8.2
-        version: 0.8.2
+        specifier: ^0.8.3
+        version: 0.8.3
       '@scalar/themes':
         specifier: ^0.9.28
         version: 0.9.28
@@ -1093,10 +1093,6 @@ packages:
 
   '@scalar/object-utils@1.1.8':
     resolution: {integrity: sha512-1NfxFkyp0hrj0TdF6fNKl8LsXMPUgrXN/K8gtAGY+2JBTj2wVAg01g+Rdpebrz5WIn5NQJ+uszA43A0WVMjUow==}
-    engines: {node: '>=18'}
-
-  '@scalar/openapi-parser@0.8.2':
-    resolution: {integrity: sha512-2A51+wM2AClNcHJ13nNdetQuppDlxL7SVp+jeKPiiVTjCjNjEn0ZHmyqvJT9zkwYPlyDaAaKJUXrp05Vo8Qptg==}
     engines: {node: '>=18'}
 
   '@scalar/openapi-parser@0.8.3':
@@ -3955,15 +3951,6 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
-
-  '@scalar/openapi-parser@0.8.2':
-    dependencies:
-      ajv: 8.17.1
-      ajv-draft-04: 1.0.0(ajv@8.17.1)
-      ajv-formats: 3.0.1(ajv@8.17.1)
-      jsonpointer: 5.0.1
-      leven: 4.0.0
-      yaml: 2.5.0
 
   '@scalar/openapi-parser@0.8.3':
     dependencies:
