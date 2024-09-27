@@ -18,8 +18,8 @@ importers:
         specifier: ^0.8.4
         version: 0.8.4
       '@scalar/themes':
-        specifier: ^0.9.31
-        version: 0.9.31
+        specifier: ^0.9.32
+        version: 0.9.32
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -1111,8 +1111,16 @@ packages:
     resolution: {integrity: sha512-tt5ny7PHnsE01XHicAOlDrbmPLo7F44PbyLNlfKen3VGus9hpUBa2G9OXrPaSomB3kFcirX6tkM5Pxo3fDwXLg==}
     engines: {node: '>=18'}
 
+  '@scalar/themes@0.9.32':
+    resolution: {integrity: sha512-1zohMXRJOzGO//MCV+RaOBkdCYLu4IUEukpvGU4n8Vfg2UdjKzdJPpvvosfpNr24efxg5sunFp70TFegSzQtPg==}
+    engines: {node: '>=18'}
+
   '@scalar/types@0.0.10':
     resolution: {integrity: sha512-b/n/y/tIa8cKlg+s2zODlI5TJa+jUIFDHDKkBcp3DsSCSzPPgE4jTc/IJ7h+EvHNe+YBlpZCrlTGlZ1n+ABoHQ==}
+    engines: {node: '>=18'}
+
+  '@scalar/types@0.0.11':
+    resolution: {integrity: sha512-cB2vhKWrxKmfq7eZ6WTvv9dvwEmBJrzsJrNLeRVZp+qAkLlohKktOcMIT9WLUwMRgH3xhv/44/G1HAOyrhhQpw==}
     engines: {node: '>=18'}
 
   '@scalar/use-codemirror@0.11.13':
@@ -3963,10 +3971,19 @@ snapshots:
 
   '@scalar/themes@0.9.31': {}
 
+  '@scalar/themes@0.9.32':
+    dependencies:
+      '@scalar/types': 0.0.11
+
   '@scalar/types@0.0.10':
     dependencies:
       '@scalar/openapi-types': 0.1.1
       '@scalar/themes': 0.9.31
+      '@unhead/schema': 1.9.16
+
+  '@scalar/types@0.0.11':
+    dependencies:
+      '@scalar/openapi-types': 0.1.1
       '@unhead/schema': 1.9.16
 
   '@scalar/use-codemirror@0.11.13(typescript@5.5.4)':
