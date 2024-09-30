@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.22(vue@3.4.36(typescript@5.5.4))
       '@scalar/api-reference':
-        specifier: ^1.25.22
-        version: 1.25.22(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)
+        specifier: ^1.25.24
+        version: 1.25.24(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)
       '@scalar/openapi-parser':
         specifier: ^0.8.4
         version: 0.8.4
@@ -1067,12 +1067,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/api-client@2.1.8':
-    resolution: {integrity: sha512-KMSlSce237xidz8P+hv43uuUm49gwOqMlTIavWyFFbflxhpTBM9sVsE+MZFnx3YW407cS2mMKOuyhXZxVoZtaw==}
+  '@scalar/api-client@2.1.10':
+    resolution: {integrity: sha512-JAzWDveYiE4ShKv43Y8NVw7Qe4M3v9aZczAaLBgJtRkexazC1T3f7uwCIbR19TfzEnWKVpjHWp2k0DnjhJQcVQ==}
     engines: {node: '>=18'}
 
-  '@scalar/api-reference@1.25.22':
-    resolution: {integrity: sha512-k/jOJD7m9cl14pxWbT5cc/z0JxDiOd/tKr6xoPeQdxpJElvf01wDZP3J56y30UKypDopJMTodNoI2f8VmSoadQ==}
+  '@scalar/api-reference@1.25.24':
+    resolution: {integrity: sha512-UY5UsBv6YIjPH41R0E2I65EGON9MJB2t/ggLHMM7bPR2JCZVBP2XCjtadyJt66URgC0YatQ7ZUDghZsg2DnghA==}
     engines: {node: '>=18'}
 
   '@scalar/code-highlight@0.0.11':
@@ -1091,8 +1091,8 @@ packages:
     resolution: {integrity: sha512-VVJK0JLpMyFf2Q4dIsOodCC1CoUXix5dkbKPtSHXznzy6FXa4lvn3kviIJFMPwzSxRFMAg3Gzn4anFkN4t+hyg==}
     engines: {node: '>=18'}
 
-  '@scalar/oas-utils@0.2.48':
-    resolution: {integrity: sha512-nHJ8Zqs2k8oS7i3XVL58cUCrDI1i4kAa6S5WAg8qi7BxuSl85Ha3taGeUi798XMfLJB3XA89KrwoNxmi2nEazA==}
+  '@scalar/oas-utils@0.2.49':
+    resolution: {integrity: sha512-0Fr+ZKapeJtBMQWMPCh/gCdO2lxf804nZQ6hvmT6e3cgRUyARQ97bz03QqWYgHyKLUA9b9ttlWTnFApPQNqBsA==}
     engines: {node: '>=18'}
 
   '@scalar/object-utils@1.1.9':
@@ -3813,14 +3813,14 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
-  '@scalar/api-client@2.1.8(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)':
+  '@scalar/api-client@2.1.10(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)':
     dependencies:
       '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.8)
       '@headlessui/vue': 1.7.22(vue@3.4.36(typescript@5.5.4))
       '@scalar/components': 0.12.48(typescript@5.5.4)
       '@scalar/draggable': 0.1.5(typescript@5.5.4)
       '@scalar/icons': 0.1.0(typescript@5.5.4)
-      '@scalar/oas-utils': 0.2.48(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))
+      '@scalar/oas-utils': 0.2.49(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))
       '@scalar/object-utils': 1.1.9(vue@3.4.36(typescript@5.5.4))
       '@scalar/openapi-parser': 0.8.4
       '@scalar/openapi-types': 0.1.1
@@ -3847,14 +3847,14 @@ snapshots:
       - tailwindcss
       - typescript
 
-  '@scalar/api-reference@1.25.22(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)':
+  '@scalar/api-reference@1.25.24(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)':
     dependencies:
       '@floating-ui/vue': 1.1.4(vue@3.4.36(typescript@5.5.4))
       '@headlessui/vue': 1.7.22(vue@3.4.36(typescript@5.5.4))
-      '@scalar/api-client': 2.1.8(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)
+      '@scalar/api-client': 2.1.10(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)
       '@scalar/code-highlight': 0.0.11
       '@scalar/components': 0.12.48(typescript@5.5.4)
-      '@scalar/oas-utils': 0.2.48(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))
+      '@scalar/oas-utils': 0.2.49(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))
       '@scalar/openapi-parser': 0.8.4
       '@scalar/openapi-types': 0.1.1
       '@scalar/snippetz': 0.2.3
@@ -3932,7 +3932,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/oas-utils@0.2.48(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))':
+  '@scalar/oas-utils@0.2.49(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))':
     dependencies:
       '@hyperjump/json-schema': 1.9.8(@hyperjump/browser@1.1.6)
       '@scalar/object-utils': 1.1.9(vue@3.4.36(typescript@5.5.4))
