@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.22(vue@3.4.36(typescript@5.5.4))
       '@scalar/api-reference':
-        specifier: ^1.25.27
-        version: 1.25.27(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)
+        specifier: ^1.25.28
+        version: 1.25.28(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)
       '@scalar/openapi-parser':
         specifier: ^0.8.5
         version: 0.8.5
@@ -262,9 +262,11 @@ packages:
 
   '@esbuild-kit/core-utils@3.3.2':
     resolution: {integrity: sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ==}
+    deprecated: 'Merged into tsx: https://tsx.is'
 
   '@esbuild-kit/esm-loader@2.6.5':
     resolution: {integrity: sha512-FxEMIkJKnodyA1OaCUoEvbYRkoZlLZ4d/eXFu9Fh8CbBBgP5EmZxrfTRyN0qpXZ4vOvqnE5YdRdcrmUUXuU+dA==}
+    deprecated: 'Merged into tsx: https://tsx.is'
 
   '@esbuild-plugins/node-globals-polyfill@0.2.3':
     resolution: {integrity: sha512-r3MIryXDeXDOZh7ih1l/yE9ZLORCd5e8vWg02azWRGj5SPTuoh69A2AIyn0Z31V/kHBfZ4HgWJ+OK3GTTwLmnw==}
@@ -1067,12 +1069,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/api-client@2.1.13':
-    resolution: {integrity: sha512-Z9zPoZ6rujL8VIInJLHMZFx0/WnnBhQP2wPWrFeAPvvcarHkg68FP1yfYeCfW64pGGfS32oW9tvq20MBQQ6Aew==}
+  '@scalar/api-client@2.1.14':
+    resolution: {integrity: sha512-tqinkGX/UbErTsZB8R+Pjldu1AECOmd2qFtSvnRq9qu+c3KXtO0+R8nCbZff+JFIyL7yRjV+aP8gi/sbtxCjgQ==}
     engines: {node: '>=18'}
 
-  '@scalar/api-reference@1.25.27':
-    resolution: {integrity: sha512-HQ1ll/RvgzMEcFJfrOMkbbJ60GpPeHwcooJ+GeSGWv0+iVHTN95q2e7Fmn4hSoQrUkjoFzfQ8V7Sh4VGg2Dbtw==}
+  '@scalar/api-reference@1.25.28':
+    resolution: {integrity: sha512-06QHAGx4rrjVkhJmS4wF4F7IY6gvGk+42khww0evIOFRTcUdYRJEr719pPooaZcm4E6PLl25A0gxEPIrbNiepw==}
     engines: {node: '>=18'}
 
   '@scalar/code-highlight@0.0.11':
@@ -3813,7 +3815,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
-  '@scalar/api-client@2.1.13(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)':
+  '@scalar/api-client@2.1.14(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)':
     dependencies:
       '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.8)
       '@headlessui/vue': 1.7.22(vue@3.4.36(typescript@5.5.4))
@@ -3848,11 +3850,11 @@ snapshots:
       - tailwindcss
       - typescript
 
-  '@scalar/api-reference@1.25.27(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)':
+  '@scalar/api-reference@1.25.28(@hyperjump/browser@1.1.6)(postcss@8.4.41)(tailwindcss@3.4.8)(typescript@5.5.4)':
     dependencies:
       '@floating-ui/vue': 1.1.4(vue@3.4.36(typescript@5.5.4))
       '@headlessui/vue': 1.7.22(vue@3.4.36(typescript@5.5.4))
-      '@scalar/api-client': 2.1.13(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)
+      '@scalar/api-client': 2.1.14(@hyperjump/browser@1.1.6)(tailwindcss@3.4.8)(typescript@5.5.4)
       '@scalar/code-highlight': 0.0.11
       '@scalar/components': 0.12.50(typescript@5.5.4)
       '@scalar/oas-utils': 0.2.51(@hyperjump/browser@1.1.6)(vue@3.4.36(typescript@5.5.4))
