@@ -18,8 +18,8 @@ importers:
         specifier: ^0.8.5
         version: 0.8.5
       '@scalar/themes':
-        specifier: ^0.9.34
-        version: 0.9.34
+        specifier: ^0.9.35
+        version: 0.9.35
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
