@@ -18,8 +18,8 @@ importers:
         specifier: ^0.8.6
         version: 0.8.6
       '@scalar/themes':
-        specifier: ^0.9.35
-        version: 0.9.35
+        specifier: ^0.9.36
+        version: 0.9.36
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -1105,10 +1105,6 @@ packages:
     resolution: {integrity: sha512-PO0AM5Li0p7QQfRdXPOGWBnFZHKgP7FxvKFk8o4UfaMDPu8mrGEzf2kjLWjEWUG+YGE2NZNXesgZILFz7dbzaA==}
     engines: {node: '>=18'}
 
-  '@scalar/openapi-types@0.1.1':
-    resolution: {integrity: sha512-NMy3QNk6ytcCoPUGJH0t4NNr36OWXgZhA3ormr3TvhX1NDgoF95wFyodGVH8xiHeUyn2/FxtETm8UBLbB5xEmg==}
-    engines: {node: '>=18'}
-
   '@scalar/openapi-types@0.1.2':
     resolution: {integrity: sha512-TxiAbs9Rw5qnMs/vvg+4Zx1Xf/5RhJXf8w6JOYSgvp4d2IKkOKc9eSOhid8ySvz7bWCjF2yWd8eHNc/BFs8cXg==}
     engines: {node: '>=18'}
@@ -1117,16 +1113,8 @@ packages:
     resolution: {integrity: sha512-Yd/h2ng6NDkjiUqMgGfUUx4IytJbsNRFMUk64Ex593NrEe9vWC88MXMq8RD0WW2FmjfWxdvTrrU+bWN7HhxtLg==}
     engines: {node: '>=18'}
 
-  '@scalar/themes@0.9.35':
-    resolution: {integrity: sha512-n0SlYqL5SfII6swoCwrO1V5OdFAostnk7nK4Y/2rNN4ecQ3I5SGzOe5eUaqOSp8ORBVxkO4BIxZkvsEvPRfp5w==}
-    engines: {node: '>=18'}
-
   '@scalar/themes@0.9.36':
     resolution: {integrity: sha512-2L5aaKMhlDadv9cvC34jIBFNVseDroVCq0Oxhu95qvePXRadytPE/3g9svEHEDnGJ280PqCg+YfW7VQg6FDohg==}
-    engines: {node: '>=18'}
-
-  '@scalar/types@0.0.13':
-    resolution: {integrity: sha512-4baCQ3uXTQsT/da5X3+yO34VEu057Jjw0SJFkaaFmXTqHXVZM+SaDHSyTvT6tyKvgDpPpn6iD22uiFCdldEzRQ==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.14':
@@ -3976,24 +3964,13 @@ snapshots:
       leven: 4.0.0
       yaml: 2.5.0
 
-  '@scalar/openapi-types@0.1.1': {}
-
   '@scalar/openapi-types@0.1.2': {}
 
   '@scalar/snippetz@0.2.4': {}
 
-  '@scalar/themes@0.9.35':
-    dependencies:
-      '@scalar/types': 0.0.13
-
   '@scalar/themes@0.9.36':
     dependencies:
       '@scalar/types': 0.0.14
-
-  '@scalar/types@0.0.13':
-    dependencies:
-      '@scalar/openapi-types': 0.1.1
-      '@unhead/schema': 1.9.16
 
   '@scalar/types@0.0.14':
     dependencies:
