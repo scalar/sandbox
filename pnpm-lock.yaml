@@ -18,8 +18,8 @@ importers:
         specifier: ^0.8.6
         version: 0.8.6
       '@scalar/themes':
-        specifier: ^0.9.36
-        version: 0.9.36
+        specifier: ^0.9.37
+        version: 0.9.37
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -1109,6 +1109,10 @@ packages:
     resolution: {integrity: sha512-TxiAbs9Rw5qnMs/vvg+4Zx1Xf/5RhJXf8w6JOYSgvp4d2IKkOKc9eSOhid8ySvz7bWCjF2yWd8eHNc/BFs8cXg==}
     engines: {node: '>=18'}
 
+  '@scalar/openapi-types@0.1.3':
+    resolution: {integrity: sha512-UPUquC/ZSAdeSDbpdqMzeBVcgeytqJTj9P3QR4X9IRti5I1jXoCOUBY84CGGLXfcWquB7wfwHxn3DqQEnQmBVw==}
+    engines: {node: '>=18'}
+
   '@scalar/snippetz@0.2.4':
     resolution: {integrity: sha512-Yd/h2ng6NDkjiUqMgGfUUx4IytJbsNRFMUk64Ex593NrEe9vWC88MXMq8RD0WW2FmjfWxdvTrrU+bWN7HhxtLg==}
     engines: {node: '>=18'}
@@ -1117,8 +1121,16 @@ packages:
     resolution: {integrity: sha512-2L5aaKMhlDadv9cvC34jIBFNVseDroVCq0Oxhu95qvePXRadytPE/3g9svEHEDnGJ280PqCg+YfW7VQg6FDohg==}
     engines: {node: '>=18'}
 
+  '@scalar/themes@0.9.37':
+    resolution: {integrity: sha512-JpPgvpEkJGLBPLWRKIDETzMHRUsYCEvhmf6gdiA6q4KLpZ5DLjoqJooc+6STytJZLhvDPtBmLMMygi6upYmL0g==}
+    engines: {node: '>=18'}
+
   '@scalar/types@0.0.14':
     resolution: {integrity: sha512-4yzW5d9nWtRE3eVNfLnuVUScSMf325PYJ9qCJ8CpaVP7hnWrTv9xGw/2n7csEKzu3QJkdff0myibHfxXJ6ICig==}
+    engines: {node: '>=18'}
+
+  '@scalar/types@0.0.15':
+    resolution: {integrity: sha512-9fSBoAuJTsmnt2FTkm/F6LRq+TIeeRI0H8wz+7J3pHfcw0YGFEZrRZOo1WZ8fpovD0fQgg+r4BPrtN8+qJ12wQ==}
     engines: {node: '>=18'}
 
   '@scalar/use-codemirror@0.11.20':
@@ -3966,15 +3978,26 @@ snapshots:
 
   '@scalar/openapi-types@0.1.2': {}
 
+  '@scalar/openapi-types@0.1.3': {}
+
   '@scalar/snippetz@0.2.4': {}
 
   '@scalar/themes@0.9.36':
     dependencies:
       '@scalar/types': 0.0.14
 
+  '@scalar/themes@0.9.37':
+    dependencies:
+      '@scalar/types': 0.0.15
+
   '@scalar/types@0.0.14':
     dependencies:
       '@scalar/openapi-types': 0.1.2
+      '@unhead/schema': 1.9.16
+
+  '@scalar/types@0.0.15':
+    dependencies:
+      '@scalar/openapi-types': 0.1.3
       '@unhead/schema': 1.9.16
 
   '@scalar/use-codemirror@0.11.20(typescript@5.5.4)':
