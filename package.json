@@ -21,6 +21,7 @@
     "@scalar/api-reference": "^1.25.48",
     "@scalar/openapi-parser": "^0.8.7",
     "@scalar/themes": "^0.9.41",
+    "@scalar/types": "^0.0.17",
     "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.32.2",
     "monaco-editor": "^0.50.0",

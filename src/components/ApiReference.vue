@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-import type {
-  ReferenceConfiguration,
-  ReferenceProps,
-} from '@scalar/api-reference'
+import type { ReferenceConfiguration } from '@scalar/types'
 import { onMounted, watch } from 'vue'
 import { loadScript } from 'vue-plugin-load-script'
 
@@ -23,14 +20,11 @@ onMounted(() => {
   // Load the script
   loadScript(url)
     .then(() => {
-      console.info('Ready:', url)
-
+      console.info('CDN:', url)
       updateConfiguration()
-
-      // reloadReferences()
     })
     .catch(() => {
-      console.error('Failed:', url)
+      console.error('Failed to load:', url)
     })
 })
 
@@ -40,16 +34,11 @@ watch(
   () => updateConfiguration,
 )
 
-// function reloadReferences() {
-//   document.dispatchEvent(new Event('scalar:reload-references'))
-// }
-
 function updateConfiguration() {
-  console.log('updateConfiguration')
   const event = new CustomEvent('scalar:update-references-config', {
     detail: {
       configuration: props.configuration,
-    } satisfies ReferenceProps,
+    },
   })
 
   document.dispatchEvent(event)
