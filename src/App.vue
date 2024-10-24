@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ApiReference } from '@scalar/api-reference'
-import { useMediaQuery } from '@vueuse/core'
 import { onMounted, onUnmounted, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Toaster, toast } from 'vue-sonner'
 
+import ApiReference from './components/ApiReference.vue'
 import DarkModeToggle from './components/DarkModeToggle.vue'
 import FileDrop from './components/FileDrop.vue'
 import GitHubLogo from './components/GithubLogo.vue'
@@ -18,8 +17,6 @@ const isDark = useDarkMode()
 
 const route = useRoute()
 const router = useRouter()
-
-const isMobile = useMediaQuery('(max-width: 1000px)')
 
 const loading = ref<boolean>(false)
 
@@ -184,28 +181,15 @@ onUnmounted(() => {
         </div>
       </header>
       <div class="layout">
-        <!-- Mobile Layout -->
-        <template v-if="isMobile">
-          <div v-if="editing">
-            <MonacoEditor v-model="content" />
-          </div>
-          <div v-else>
-            <ApiReference
-              :configuration="{ spec: { content }, darkMode: isDark }" />
-          </div>
-        </template>
-        <!-- Desktop Layout -->
-        <template v-else>
-          <div
-            class="left"
-            v-if="editing">
-            <MonacoEditor v-model="content" />
-          </div>
-          <div class="right">
-            <ApiReference
-              :configuration="{ spec: { content }, darkMode: isDark }" />
-          </div>
-        </template>
+        <div
+          class="editor"
+          v-if="editing">
+          <MonacoEditor v-model="content" />
+        </div>
+        <div class="preview">
+          <ApiReference
+            :configuration="{ spec: { content }, darkMode: isDark }" />
+        </div>
       </div>
     </div>
   </FileDrop>
@@ -272,6 +256,7 @@ onUnmounted(() => {
 .layout {
   display: flex;
   height: calc(100vh - 50px);
+  position: relative;
 }
 
 .layout > * {
@@ -283,8 +268,16 @@ onUnmounted(() => {
   border-left: 1px solid var(--scalar-border-color);
 }
 
-
-.right {
+.preview {
   overflow: auto;
+  z-index: 0;
+}
+
+@media (max-width: 1000px) {
+  .editor {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
 }
 </style>
