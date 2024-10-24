@@ -31,17 +31,19 @@ onMounted(() => {
 // Update the configuration when it changes
 watch(
   () => props.configuration,
-  () => updateConfiguration,
+  () => {
+    updateConfiguration()
+  },
 )
 
 function updateConfiguration() {
-  const event = new CustomEvent('scalar:update-references-config', {
-    detail: {
-      configuration: props.configuration,
-    },
-  })
-
-  document.dispatchEvent(event)
+  document.dispatchEvent(
+    new CustomEvent('scalar:update-references-config', {
+      detail: {
+        configuration: props.configuration,
+      },
+    }),
+  )
 }
 </script>
 
