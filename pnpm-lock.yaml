@@ -15,8 +15,8 @@ importers:
         specifier: ^0.8.10
         version: 0.8.10
       '@scalar/themes':
-        specifier: ^0.9.48
-        version: 0.9.48
+        specifier: ^0.9.49
+        version: 0.9.49
       '@scalar/types':
         specifier: ^0.0.20
         version: 0.0.20
@@ -945,12 +945,8 @@ packages:
     resolution: {integrity: sha512-6geH9ehvQ/sG/xUyy3e0lyOw3BaY5s6nn22wHjEJhcobdmWyFER0O6m7AU0ZN4QTjle/gYvFJOjj552l/rsNSw==}
     engines: {node: '>=18'}
 
-  '@scalar/themes@0.9.48':
-    resolution: {integrity: sha512-lsehl9KnlKgWG8BOIIaX3iIuNMLjRFZ0ctb1KsQBhOSsoTrq3c9EUJdYJiiTWzm52zdhF+RkIx7uHaX/pvgctw==}
-    engines: {node: '>=18'}
-
-  '@scalar/types@0.0.19':
-    resolution: {integrity: sha512-wOxtXd35BS0DaVhBopQUB8c8hfLQ+/PKEr99GbOZW+4DWCrEB8JfWJgvpJyxHU6by7LHNVY4fvpFQR7Ezh1IIw==}
+  '@scalar/themes@0.9.49':
+    resolution: {integrity: sha512-PxIJJLH0aly0jnhrXqv+s5GxM9wP4hNNLutpDOtT3g6xgBeksoy93Y8yZyGkpEzR/JK7deVasV9E++huvMC1mA==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.20':
@@ -988,9 +984,6 @@ packages:
 
   '@unhead/schema@1.11.11':
     resolution: {integrity: sha512-xSGsWHPBYcMV/ckQeImbrVu6ddeRnrdDCgXUKv3xIjGBY+ob/96V80lGX8FKWh8GwdFSwhblISObKlDAt5K9ZQ==}
-
-  '@unhead/schema@1.9.16':
-    resolution: {integrity: sha512-V2BshX+I6D2wN4ys5so8RQDUgsggsxW9FVBiuQi4h8oPWtHclogxzDiHa5BH2TgvNIoUxLnLYNAShMGipmVuUw==}
 
   '@vitejs/plugin-vue@5.1.2':
     resolution: {integrity: sha512-nY9IwH12qeiJqumTCLJLE7IiNx7HZ39cbHaysEUd+Myvbz9KAqd2yq+U01Kab1R/H1BmiyM2ShTYlNH32Fzo3A==}
@@ -2750,14 +2743,9 @@ snapshots:
 
   '@scalar/openapi-types@0.1.5': {}
 
-  '@scalar/themes@0.9.48':
+  '@scalar/themes@0.9.49':
     dependencies:
-      '@scalar/types': 0.0.19
-
-  '@scalar/types@0.0.19':
-    dependencies:
-      '@scalar/openapi-types': 0.1.5
-      '@unhead/schema': 1.9.16
+      '@scalar/types': 0.0.20
 
   '@scalar/types@0.0.20':
     dependencies:
@@ -2798,11 +2786,6 @@ snapshots:
   '@types/web-bluetooth@0.0.20': {}
 
   '@unhead/schema@1.11.11':
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-
-  '@unhead/schema@1.9.16':
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
