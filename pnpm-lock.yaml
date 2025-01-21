@@ -18,8 +18,8 @@ importers:
         specifier: ^0.9.61
         version: 0.9.61
       '@scalar/types':
-        specifier: ^0.0.26
-        version: 0.0.26
+        specifier: ^0.0.27
+        version: 0.0.27
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -966,10 +966,6 @@ packages:
     resolution: {integrity: sha512-hBg49hDYmr8nHnWqZaT5k6QRjZjz8Pl1DACLfyFcnDweQ8Yjk8lo6EIa+33vBXPCUpfrodjs4XrTAkSr6Hw1/g==}
     engines: {node: '>=18'}
 
-  '@scalar/types@0.0.26':
-    resolution: {integrity: sha512-32RvTVh/tpOD8unnVG+41/hBoPCsTr1YmcLaEC3LIgYZxAFE8OeCO25JkQRFNBZEaid5FfRt9/qBlx5HqH1PAg==}
-    engines: {node: '>=18'}
-
   '@scalar/types@0.0.27':
     resolution: {integrity: sha512-5f293PX78gwE3NwcBNXf7+qc9OIB6lYsRpzGZts7eaN3aN9i23ysWewF76DOs74oARRP5LgNBMC7JCo9dIxM1Q==}
     engines: {node: '>=18'}
@@ -1002,9 +998,6 @@ packages:
 
   '@types/web-bluetooth@0.0.20':
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
-
-  '@unhead/schema@1.11.11':
-    resolution: {integrity: sha512-xSGsWHPBYcMV/ckQeImbrVu6ddeRnrdDCgXUKv3xIjGBY+ob/96V80lGX8FKWh8GwdFSwhblISObKlDAt5K9ZQ==}
 
   '@unhead/schema@1.11.18':
     resolution: {integrity: sha512-a3TA/OJCRdfbFhcA3Hq24k1ZU1o9szicESrw8DZcGyQFacHnh84mVgnyqSkMnwgCmfN4kvjSiTBlLEHS6+wATw==}
@@ -2796,11 +2789,6 @@ snapshots:
     dependencies:
       '@scalar/types': 0.0.27
 
-  '@scalar/types@0.0.26':
-    dependencies:
-      '@scalar/openapi-types': 0.1.6
-      '@unhead/schema': 1.11.11
-
   '@scalar/types@0.0.27':
     dependencies:
       '@scalar/openapi-types': 0.1.6
@@ -2838,11 +2826,6 @@ snapshots:
       undici-types: 6.13.0
 
   '@types/web-bluetooth@0.0.20': {}
-
-  '@unhead/schema@1.11.11':
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
 
   '@unhead/schema@1.11.18':
     dependencies:
