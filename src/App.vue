@@ -268,6 +268,7 @@ onUnmounted(() => {
   border-left: 1px solid var(--scalar-border-color);
 }
 
+.editor,
 .preview {
   overflow: auto;
   z-index: 0;
