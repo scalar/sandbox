@@ -15,8 +15,8 @@ importers:
         specifier: ^0.10.5
         version: 0.10.5
       '@scalar/themes':
-        specifier: ^0.9.64
-        version: 0.9.64
+        specifier: ^0.9.65
+        version: 0.9.65
       '@scalar/types':
         specifier: ^0.0.31
         version: 0.0.31
@@ -962,12 +962,8 @@ packages:
     resolution: {integrity: sha512-oOTG3JQifg55U3DhKB7WdNIxFnJzbPJe7rqdyWdio977l8IkxQTVmObftJhdNIMvhV2K+1f/bDoMQGu6yTaD0A==}
     engines: {node: '>=18'}
 
-  '@scalar/themes@0.9.64':
-    resolution: {integrity: sha512-hr9bCTdH9M/N8w31Td+IJVtbH+v0Ej31myW8QWhUfwYZe5qS815Tl1mp+qWFaObstOw5VX3zOtiZuuhF1zMIyw==}
-    engines: {node: '>=18'}
-
-  '@scalar/types@0.0.30':
-    resolution: {integrity: sha512-rhgwovQb5f7PXuUB5bLUElpo90fdsiwcOgBXVWZ6n6dnFSKovNJ7GPXQimsZioMzTF6TdwfP94UpZVdZAK4aTw==}
+  '@scalar/themes@0.9.65':
+    resolution: {integrity: sha512-bkv3XcQ+502lpldjdoyDbo6LYze2z4xnK1kiptSdZxhj/44sq0l6W5IMMDOC+sWeNP3uusDpa7vMinckaRvf4w==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.31':
@@ -2789,14 +2785,9 @@ snapshots:
 
   '@scalar/openapi-types@0.1.7': {}
 
-  '@scalar/themes@0.9.64':
+  '@scalar/themes@0.9.65':
     dependencies:
-      '@scalar/types': 0.0.30
-
-  '@scalar/types@0.0.30':
-    dependencies:
-      '@scalar/openapi-types': 0.1.7
-      '@unhead/schema': 1.11.18
+      '@scalar/types': 0.0.31
 
   '@scalar/types@0.0.31':
     dependencies:
