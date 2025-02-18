@@ -18,8 +18,8 @@ importers:
         specifier: ^0.9.66
         version: 0.9.66
       '@scalar/types':
-        specifier: ^0.0.32
-        version: 0.0.32
+        specifier: ^0.0.33
+        version: 0.0.33
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -970,6 +970,10 @@ packages:
     resolution: {integrity: sha512-WHMkFQw4cu1mrG4pEiTUXVBBs205kHECdLM/5F7ATI0A7Axv6G1GgofkwbyCAayUjNk82uaCXzSOgPojbq4iGQ==}
     engines: {node: '>=18'}
 
+  '@scalar/types@0.0.33':
+    resolution: {integrity: sha512-4mQYkQJO0HHaoFd8Z+vSdQAvYcCJ2bRLN9ewE+GneB8kvoLG/oM3ynroqzGQdoytH8BmhnJwD3aEUagfbK2x5g==}
+    engines: {node: '>=18'}
+
   '@tanstack/virtual-core@3.7.0':
     resolution: {integrity: sha512-p0CWuqn+n8iZmsL7/l0Xg7kbyIKnHNqkEJkMDOkg4x3Ni3LohszmnJY8FPhTgG7Ad9ZFGcdKmn1R1mKUGEh9Xg==}
 
@@ -999,8 +1003,8 @@ packages:
   '@types/web-bluetooth@0.0.20':
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
 
-  '@unhead/schema@1.11.18':
-    resolution: {integrity: sha512-a3TA/OJCRdfbFhcA3Hq24k1ZU1o9szicESrw8DZcGyQFacHnh84mVgnyqSkMnwgCmfN4kvjSiTBlLEHS6+wATw==}
+  '@unhead/schema@1.11.19':
+    resolution: {integrity: sha512-7VhYHWK7xHgljdv+C01MepCSYZO2v6OhgsfKWPxRQBDDGfUKCUaChox0XMq3tFvXP6u4zSp6yzcDw2yxCfVMwg==}
 
   '@vitejs/plugin-vue@5.1.2':
     resolution: {integrity: sha512-nY9IwH12qeiJqumTCLJLE7IiNx7HZ39cbHaysEUd+Myvbz9KAqd2yq+U01Kab1R/H1BmiyM2ShTYlNH32Fzo3A==}
@@ -2792,7 +2796,12 @@ snapshots:
   '@scalar/types@0.0.32':
     dependencies:
       '@scalar/openapi-types': 0.1.7
-      '@unhead/schema': 1.11.18
+      '@unhead/schema': 1.11.19
+
+  '@scalar/types@0.0.33':
+    dependencies:
+      '@scalar/openapi-types': 0.1.7
+      '@unhead/schema': 1.11.19
 
   '@tanstack/virtual-core@3.7.0': {}
 
@@ -2827,7 +2836,7 @@ snapshots:
 
   '@types/web-bluetooth@0.0.20': {}
 
-  '@unhead/schema@1.11.18':
+  '@unhead/schema@1.11.19':
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
