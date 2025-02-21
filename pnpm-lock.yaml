@@ -15,8 +15,8 @@ importers:
         specifier: ^0.10.7
         version: 0.10.7
       '@scalar/themes':
-        specifier: ^0.9.67
-        version: 0.9.67
+        specifier: ^0.9.68
+        version: 0.9.68
       '@scalar/types':
         specifier: ^0.0.33
         version: 0.0.33
@@ -962,12 +962,20 @@ packages:
     resolution: {integrity: sha512-oOTG3JQifg55U3DhKB7WdNIxFnJzbPJe7rqdyWdio977l8IkxQTVmObftJhdNIMvhV2K+1f/bDoMQGu6yTaD0A==}
     engines: {node: '>=18'}
 
-  '@scalar/themes@0.9.67':
-    resolution: {integrity: sha512-dpMUrD9+kcQT8uJ021ok6ynAIR324ErbT3FdeWaQ6ja2JBN3nHiF5f++B/IAaHP2hUbd9ew58rEsGU4GAq6ZLw==}
+  '@scalar/openapi-types@0.1.8':
+    resolution: {integrity: sha512-iufA5/6hPCmRIVD2eh7qGpoKvoA08Gw/qUb2JECifBtAwA93fo7+1k9uHK440f2LMJsbxIzA+nv7RS0BmfiO/g==}
+    engines: {node: '>=18'}
+
+  '@scalar/themes@0.9.68':
+    resolution: {integrity: sha512-466ac2fdQJOBBSLkGUf88vuZVF+qNMeVpjb0aAHrKkxhpjucTPKdTYO8r2dsX1R5k9A13gWPnm594VW5G/bGHw==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.33':
     resolution: {integrity: sha512-4mQYkQJO0HHaoFd8Z+vSdQAvYcCJ2bRLN9ewE+GneB8kvoLG/oM3ynroqzGQdoytH8BmhnJwD3aEUagfbK2x5g==}
+    engines: {node: '>=18'}
+
+  '@scalar/types@0.0.34':
+    resolution: {integrity: sha512-q01ctijmHArM5KOny2zU+sHfhpsgOAENrDENecK2TsQNn5FYLmFZouMKeW2M6F7KFLPZnFxUiL/rT88b6Rp/Kg==}
     engines: {node: '>=18'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -1829,8 +1837,8 @@ packages:
     resolution: {integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.2:
-    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
+  postcss@8.5.3:
+    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2785,13 +2793,20 @@ snapshots:
 
   '@scalar/openapi-types@0.1.7': {}
 
-  '@scalar/themes@0.9.67':
+  '@scalar/openapi-types@0.1.8': {}
+
+  '@scalar/themes@0.9.68':
     dependencies:
-      '@scalar/types': 0.0.33
+      '@scalar/types': 0.0.34
 
   '@scalar/types@0.0.33':
     dependencies:
       '@scalar/openapi-types': 0.1.7
+      '@unhead/schema': 1.11.19
+
+  '@scalar/types@0.0.34':
+    dependencies:
+      '@scalar/openapi-types': 0.1.8
       '@unhead/schema': 1.11.19
 
   '@tanstack/virtual-core@3.7.0': {}
@@ -2923,7 +2938,7 @@ snapshots:
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
       magic-string: 0.30.17
-      postcss: 8.5.2
+      postcss: 8.5.3
       source-map-js: 1.2.1
     optional: true
 
@@ -3709,7 +3724,7 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  postcss@8.5.2:
+  postcss@8.5.3:
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
