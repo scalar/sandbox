@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.17",
-    "@scalar/openapi-parser": "^0.10.8",
+    "@scalar/openapi-parser": "^0.10.9",
     "@scalar/themes": "^0.9.70",
     "@scalar/types": "^0.0.34",
     "@vueuse/core": "^10.7.2",
