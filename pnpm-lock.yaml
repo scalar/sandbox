@@ -18,8 +18,8 @@ importers:
         specifier: ^0.9.70
         version: 0.9.70
       '@scalar/types':
-        specifier: ^0.0.34
-        version: 0.0.34
+        specifier: ^0.0.36
+        version: 0.0.36
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -958,20 +958,12 @@ packages:
     resolution: {integrity: sha512-wsKZtL4B3Fmbv24B1zzeWdsEr6F60fLmToOFLA1b9QGQ6TAtIvLgKQWQ65eh5Vfx93nQb/iekamfErqHRHtEhA==}
     engines: {node: '>=18'}
 
-  '@scalar/openapi-types@0.1.8':
-    resolution: {integrity: sha512-iufA5/6hPCmRIVD2eh7qGpoKvoA08Gw/qUb2JECifBtAwA93fo7+1k9uHK440f2LMJsbxIzA+nv7RS0BmfiO/g==}
-    engines: {node: '>=18'}
-
   '@scalar/openapi-types@0.1.9':
     resolution: {integrity: sha512-HQQudOSQBU7ewzfnBW9LhDmBE2XOJgSfwrh5PlUB7zJup/kaRkBGNgV2wMjNz9Af/uztiU/xNrO179FysmUT+g==}
     engines: {node: '>=18'}
 
   '@scalar/themes@0.9.70':
     resolution: {integrity: sha512-9orX967NcgytbMEIVTMtKbeAyba5SBdOAXw2e5DK07f2Z4sub95h94gLiqhWqRLngwpwK2XZy19vZT/BbVjgZA==}
-    engines: {node: '>=18'}
-
-  '@scalar/types@0.0.34':
-    resolution: {integrity: sha512-q01ctijmHArM5KOny2zU+sHfhpsgOAENrDENecK2TsQNn5FYLmFZouMKeW2M6F7KFLPZnFxUiL/rT88b6Rp/Kg==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.36':
@@ -1006,9 +998,6 @@ packages:
 
   '@types/web-bluetooth@0.0.20':
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
-
-  '@unhead/schema@1.11.19':
-    resolution: {integrity: sha512-7VhYHWK7xHgljdv+C01MepCSYZO2v6OhgsfKWPxRQBDDGfUKCUaChox0XMq3tFvXP6u4zSp6yzcDw2yxCfVMwg==}
 
   '@unhead/schema@1.11.20':
     resolution: {integrity: sha512-0zWykKAaJdm+/Y7yi/Yds20PrUK7XabLe9c3IRcjnwYmSWY6z0Cr19VIs3ozCj8P+GhR+/TI2mwtGlueCEYouA==}
@@ -2794,18 +2783,11 @@ snapshots:
       leven: 4.0.0
       yaml: 2.5.0
 
-  '@scalar/openapi-types@0.1.8': {}
-
   '@scalar/openapi-types@0.1.9': {}
 
   '@scalar/themes@0.9.70':
     dependencies:
       '@scalar/types': 0.0.36
-
-  '@scalar/types@0.0.34':
-    dependencies:
-      '@scalar/openapi-types': 0.1.8
-      '@unhead/schema': 1.11.19
 
   '@scalar/types@0.0.36':
     dependencies:
@@ -2844,11 +2826,6 @@ snapshots:
       undici-types: 6.13.0
 
   '@types/web-bluetooth@0.0.20': {}
-
-  '@unhead/schema@1.11.19':
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
 
   '@unhead/schema@1.11.20':
     dependencies:
