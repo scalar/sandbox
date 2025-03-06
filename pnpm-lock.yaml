@@ -18,8 +18,8 @@ importers:
         specifier: ^0.9.71
         version: 0.9.71
       '@scalar/types':
-        specifier: ^0.0.36
-        version: 0.0.36
+        specifier: ^0.0.37
+        version: 0.0.37
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -968,6 +968,10 @@ packages:
 
   '@scalar/types@0.0.36':
     resolution: {integrity: sha512-Mfv9IptUoGqDJC40xg9nfI9/3brov59tKw2lq8tPpbmXItyG9EplckHPRUf2bYKGOOQPfySUATpEgHqOBiJt7g==}
+    engines: {node: '>=18'}
+
+  '@scalar/types@0.0.37':
+    resolution: {integrity: sha512-aLaT8mXfWo+kfvaAseKsxPbxrkylZ1x5q7j2E+VWmaM0GlL/dIXrndMLuo+bwyLTRiR7O/uso+RlfcAT2Zx2gg==}
     engines: {node: '>=18'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2207,8 +2211,8 @@ packages:
   zhead@2.2.4:
     resolution: {integrity: sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==}
 
-  zod@3.23.8:
-    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
 snapshots:
 
@@ -2793,6 +2797,12 @@ snapshots:
     dependencies:
       '@scalar/openapi-types': 0.1.9
       '@unhead/schema': 1.11.20
+
+  '@scalar/types@0.0.37':
+    dependencies:
+      '@scalar/openapi-types': 0.1.9
+      '@unhead/schema': 1.11.20
+      zod: 3.24.2
 
   '@tanstack/virtual-core@3.7.0': {}
 
@@ -3612,7 +3622,7 @@ snapshots:
       workerd: 1.20240725.0
       ws: 8.18.0
       youch: 3.3.3
-      zod: 3.23.8
+      zod: 3.24.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4049,4 +4059,4 @@ snapshots:
 
   zhead@2.2.4: {}
 
-  zod@3.23.8: {}
+  zod@3.24.2: {}
