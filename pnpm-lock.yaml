@@ -18,8 +18,8 @@ importers:
         specifier: ^0.9.77
         version: 0.9.77
       '@scalar/types':
-        specifier: ^0.0.40
-        version: 0.0.40
+        specifier: ^0.1.0
+        version: 0.1.0
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -964,10 +964,6 @@ packages:
 
   '@scalar/themes@0.9.77':
     resolution: {integrity: sha512-vpvJu9pF+wl/XRD+xulgasmvoItj9ICSrgq2VyYvPoUUJ1CT0Ey4JrI1g1Zl+OSiDAB/h8K9VcINDUmP+y0+uA==}
-    engines: {node: '>=18'}
-
-  '@scalar/types@0.0.40':
-    resolution: {integrity: sha512-0J6o+yZzgZEvl3KhvLTAGiXXyrCeEPKvs9gUWQDf1Rb5NfFxF0lA10ougCQCwVJIguWNEzZfOUiSoAFzGy2EqQ==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.1.0':
@@ -2792,12 +2788,6 @@ snapshots:
   '@scalar/themes@0.9.77':
     dependencies:
       '@scalar/types': 0.1.0
-
-  '@scalar/types@0.0.40':
-    dependencies:
-      '@scalar/openapi-types': 0.1.9
-      '@unhead/schema': 1.11.20
-      zod: 3.24.2
 
   '@scalar/types@0.1.0':
     dependencies:
