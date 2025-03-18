@@ -19,7 +19,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.17",
     "@scalar/openapi-parser": "^0.10.10",
-    "@scalar/themes": "^0.9.77",
+    "@scalar/themes": "^0.9.79",
     "@scalar/types": "^0.1.1",
     "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.32.2",
