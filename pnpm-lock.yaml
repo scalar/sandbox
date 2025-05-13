@@ -18,8 +18,8 @@ importers:
         specifier: ^0.11.1
         version: 0.11.1
       '@scalar/types':
-        specifier: ^0.1.14
-        version: 0.1.14
+        specifier: ^0.1.15
+        version: 0.1.15
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -155,8 +155,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/parser@7.27.1':
-    resolution: {integrity: sha512-I0dZ3ZpCrJ1c04OqlNsQcKiZlsrXf/kkE4FXzID9rIOYICsAbA8mMDzhW/luRNAHdCNt7os/u8wenklZDlUVUQ==}
+  '@babel/parser@7.27.2':
+    resolution: {integrity: sha512-QYLs8299NA7WM/bZAdp+CviYYkVoYXlDW2rzliy3chxd1PQjej7JORuMJDJXJUb9g0TT+B99EwaVLKmX+sPXWw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -962,12 +962,20 @@ packages:
     resolution: {integrity: sha512-fwWboUf3W5U4qWU7nj4jrs+KYilnfKyVp0d6LC1ejB2aROgWXIAscRtVaPLPaNLpTZOBsMC8XpiAPm3/SlU+mA==}
     engines: {node: '>=18'}
 
+  '@scalar/openapi-types@0.2.3':
+    resolution: {integrity: sha512-O1GwqLpcRc3GKXTbeBZ5E12fXR2ltpqGWk4RfhoN4ebKZsPVknV5at5425G97E1SwMy12BporRvn90k1Z+MruQ==}
+    engines: {node: '>=18'}
+
   '@scalar/themes@0.11.1':
     resolution: {integrity: sha512-bPOO10L2JZQdwoirpTp3CWEsLqapU7x/EwydivY1WtU4/FOObluLdjmCQ7Ijw2fzY5t6I/BvTsZbWZRWrLvuUQ==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.1.14':
     resolution: {integrity: sha512-N7qZ9qARJfi4Gl5MEsRfwPHFWs68qDXWQ+jGi05LGExDqErAJStc4PPkEmxt44uSO4+TVx4ADxWB6xNoGMG/Zg==}
+    engines: {node: '>=18'}
+
+  '@scalar/types@0.1.15':
+    resolution: {integrity: sha512-qb/kYWD7MKthL9flHEH/FPDgE3uWkkq8os9+M3CwyYMo2OpyXLbnzZ47LiCJ+hfdCx/hfIiSEOum2eNsYM8Lfg==}
     engines: {node: '>=18'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2206,8 +2214,8 @@ packages:
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
 
-  zod@3.24.3:
-    resolution: {integrity: sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==}
+  zod@3.24.4:
+    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
 
 snapshots:
 
@@ -2273,7 +2281,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.25.2
 
-  '@babel/parser@7.27.1':
+  '@babel/parser@7.27.2':
     dependencies:
       '@babel/types': 7.27.1
     optional: true
@@ -2786,6 +2794,10 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
+  '@scalar/openapi-types@0.2.3':
+    dependencies:
+      zod: 3.24.1
+
   '@scalar/themes@0.11.1':
     dependencies:
       '@scalar/types': 0.1.14
@@ -2794,6 +2806,12 @@ snapshots:
   '@scalar/types@0.1.14':
     dependencies:
       '@scalar/openapi-types': 0.2.2
+      nanoid: 5.1.5
+      zod: 3.24.1
+
+  '@scalar/types@0.1.15':
+    dependencies:
+      '@scalar/openapi-types': 0.2.3
       nanoid: 5.1.5
       zod: 3.24.1
 
@@ -2865,7 +2883,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.12':
     dependencies:
-      '@babel/parser': 7.27.1
+      '@babel/parser': 7.27.2
       '@vue/shared': 3.5.12
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -2914,7 +2932,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.12':
     dependencies:
-      '@babel/parser': 7.27.1
+      '@babel/parser': 7.27.2
       '@vue/compiler-core': 3.5.12
       '@vue/compiler-dom': 3.5.12
       '@vue/compiler-ssr': 3.5.12
@@ -3608,7 +3626,7 @@ snapshots:
       workerd: 1.20240725.0
       ws: 8.18.0
       youch: 3.3.3
-      zod: 3.24.3
+      zod: 3.24.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4046,4 +4064,4 @@ snapshots:
 
   zod@3.24.1: {}
 
-  zod@3.24.3: {}
+  zod@3.24.4: {}
