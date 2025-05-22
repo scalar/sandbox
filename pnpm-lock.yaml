@@ -18,8 +18,8 @@ importers:
         specifier: ^0.12.1
         version: 0.12.1
       '@scalar/types':
-        specifier: ^0.1.16
-        version: 0.1.16
+        specifier: ^0.2.1
+        version: 0.2.1
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.0(vue@3.4.36(typescript@5.5.4))
@@ -958,10 +958,6 @@ packages:
     resolution: {integrity: sha512-SO+vw+kv8xEROJ527KpiT5ccAVQZuE6n8G4qTN6b72QVT0URHoLwr8uHQQnEGlyA0QhAx7En+lKD1Hy39xZ9oQ==}
     engines: {node: '>=18'}
 
-  '@scalar/openapi-types@0.2.3':
-    resolution: {integrity: sha512-O1GwqLpcRc3GKXTbeBZ5E12fXR2ltpqGWk4RfhoN4ebKZsPVknV5at5425G97E1SwMy12BporRvn90k1Z+MruQ==}
-    engines: {node: '>=18'}
-
   '@scalar/openapi-types@0.3.1':
     resolution: {integrity: sha512-635pb0OIxhhr2yVPwqExOyNh8eo01JLOqXkDvvflHFBaGo7CHvq5sduwriXdplkn2TRNkxdkdy/eNSOMNPVa1A==}
     engines: {node: '>=20'}
@@ -969,10 +965,6 @@ packages:
   '@scalar/themes@0.12.1':
     resolution: {integrity: sha512-QqtvVrjreddzyCLbojgMlhJ/zyPhEhDA47TiyujmszUMALTAwEzaoUnpWeefAemrgsJzpX2vyEkInZHcW0L4dA==}
     engines: {node: '>=20'}
-
-  '@scalar/types@0.1.16':
-    resolution: {integrity: sha512-v1L96F8Inn27NUw5Xcl0iifw3SOX0R9WBV6GeswR23s8i1SJz7UiLEi8rLOqOB5DiLtC8hDK0kNl4TKn7MNJWQ==}
-    engines: {node: '>=18'}
 
   '@scalar/types@0.2.1':
     resolution: {integrity: sha512-eXcxuwazLABrnCjpqE4tG+FgiCKyHhKxB4V8Bn4Uj/XCBTemRd+WSzXp0mmpGuBbqz820j5UGrlZ5cWlUWaWWw==}
@@ -2214,8 +2206,8 @@ packages:
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
 
-  zod@3.24.4:
-    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
+  zod@3.25.20:
+    resolution: {integrity: sha512-z03fqpTMDF1G02VLKUMt6vyACE7rNWkh3gpXVHgPTw28NPtDFRGvcpTtPwn2kMKtQ0idtYJUTxchytmnqYswcw==}
 
 snapshots:
 
@@ -2790,10 +2782,6 @@ snapshots:
       leven: 4.0.0
       yaml: 2.5.0
 
-  '@scalar/openapi-types@0.2.3':
-    dependencies:
-      zod: 3.24.1
-
   '@scalar/openapi-types@0.3.1':
     dependencies:
       zod: 3.24.1
@@ -2802,12 +2790,6 @@ snapshots:
     dependencies:
       '@scalar/types': 0.2.1
       nanoid: 5.1.5
-
-  '@scalar/types@0.1.16':
-    dependencies:
-      '@scalar/openapi-types': 0.2.3
-      nanoid: 5.1.5
-      zod: 3.24.1
 
   '@scalar/types@0.2.1':
     dependencies:
@@ -3626,7 +3608,7 @@ snapshots:
       workerd: 1.20240725.0
       ws: 8.18.0
       youch: 3.3.3
-      zod: 3.24.4
+      zod: 3.25.20
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4064,4 +4046,4 @@ snapshots:
 
   zod@3.24.1: {}
 
-  zod@3.24.4: {}
+  zod@3.25.20: {}
