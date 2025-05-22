@@ -15,8 +15,8 @@ importers:
         specifier: ^0.10.17
         version: 0.10.17
       '@scalar/themes':
-        specifier: ^0.11.3
-        version: 0.11.3
+        specifier: ^0.12.1
+        version: 0.12.1
       '@scalar/types':
         specifier: ^0.1.16
         version: 0.1.16
@@ -962,13 +962,21 @@ packages:
     resolution: {integrity: sha512-O1GwqLpcRc3GKXTbeBZ5E12fXR2ltpqGWk4RfhoN4ebKZsPVknV5at5425G97E1SwMy12BporRvn90k1Z+MruQ==}
     engines: {node: '>=18'}
 
-  '@scalar/themes@0.11.3':
-    resolution: {integrity: sha512-47+eQ/X4SSfxEoxSYicmRA2KAJpxY5s4eAV8m6hnhSNc9k8MuYUuI68jI5H8JOf0O6axQUdgyNfMTMsG7m6sEg==}
-    engines: {node: '>=18'}
+  '@scalar/openapi-types@0.3.1':
+    resolution: {integrity: sha512-635pb0OIxhhr2yVPwqExOyNh8eo01JLOqXkDvvflHFBaGo7CHvq5sduwriXdplkn2TRNkxdkdy/eNSOMNPVa1A==}
+    engines: {node: '>=20'}
+
+  '@scalar/themes@0.12.1':
+    resolution: {integrity: sha512-QqtvVrjreddzyCLbojgMlhJ/zyPhEhDA47TiyujmszUMALTAwEzaoUnpWeefAemrgsJzpX2vyEkInZHcW0L4dA==}
+    engines: {node: '>=20'}
 
   '@scalar/types@0.1.16':
     resolution: {integrity: sha512-v1L96F8Inn27NUw5Xcl0iifw3SOX0R9WBV6GeswR23s8i1SJz7UiLEi8rLOqOB5DiLtC8hDK0kNl4TKn7MNJWQ==}
     engines: {node: '>=18'}
+
+  '@scalar/types@0.2.1':
+    resolution: {integrity: sha512-eXcxuwazLABrnCjpqE4tG+FgiCKyHhKxB4V8Bn4Uj/XCBTemRd+WSzXp0mmpGuBbqz820j5UGrlZ5cWlUWaWWw==}
+    engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
     resolution: {integrity: sha512-p0CWuqn+n8iZmsL7/l0Xg7kbyIKnHNqkEJkMDOkg4x3Ni3LohszmnJY8FPhTgG7Ad9ZFGcdKmn1R1mKUGEh9Xg==}
@@ -2786,14 +2794,24 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  '@scalar/themes@0.11.3':
+  '@scalar/openapi-types@0.3.1':
     dependencies:
-      '@scalar/types': 0.1.16
+      zod: 3.24.1
+
+  '@scalar/themes@0.12.1':
+    dependencies:
+      '@scalar/types': 0.2.1
       nanoid: 5.1.5
 
   '@scalar/types@0.1.16':
     dependencies:
       '@scalar/openapi-types': 0.2.3
+      nanoid: 5.1.5
+      zod: 3.24.1
+
+  '@scalar/types@0.2.1':
+    dependencies:
+      '@scalar/openapi-types': 0.3.1
       nanoid: 5.1.5
       zod: 3.24.1
 
