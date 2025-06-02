@@ -15,8 +15,8 @@ importers:
         specifier: ^0.13.0
         version: 0.13.0
       '@scalar/themes':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.13.1
+        version: 0.13.1
       '@scalar/types':
         specifier: ^0.2.1
         version: 0.2.1
@@ -65,16 +65,16 @@ importers:
         version: 0.23.2
       eslint:
         specifier: ^9.8.0
-        version: 9.27.0
+        version: 9.28.0
       eslint-config-prettier:
         specifier: ^9.1.0
-        version: 9.1.0(eslint@9.27.0)
+        version: 9.1.0(eslint@9.28.0)
       eslint-plugin-prettier-vue:
         specifier: ^5.0.0
         version: 5.0.0
       eslint-plugin-vue:
         specifier: ^9.27.0
-        version: 9.33.0(eslint@9.27.0)
+        version: 9.33.0(eslint@9.28.0)
       prettier:
         specifier: ^3.3.3
         version: 3.5.3
@@ -830,8 +830,8 @@ packages:
     resolution: {integrity: sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/js@9.27.0':
-    resolution: {integrity: sha512-G5JD9Tu5HJEu4z2Uo4aHY2sLV64B7CDMXxFzqzjl3NKd6RVzSXNoE80jk7Y0lJkTTkjiIhBAqmlYwjuBY3tvpA==}
+  '@eslint/js@9.28.0':
+    resolution: {integrity: sha512-fnqSjGWd/CoIp4EXIxWVK/sHA6DOHN4+8Ix2cX5ycOY7LG0UY8nHCU5pIp2eaE1Mc7Qd8kHspYNzYXT2ojPLzg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/object-schema@2.1.6':
@@ -1093,8 +1093,8 @@ packages:
     resolution: {integrity: sha512-635pb0OIxhhr2yVPwqExOyNh8eo01JLOqXkDvvflHFBaGo7CHvq5sduwriXdplkn2TRNkxdkdy/eNSOMNPVa1A==}
     engines: {node: '>=20'}
 
-  '@scalar/themes@0.13.0':
-    resolution: {integrity: sha512-V71pinTrx46beu7a4gSS8Umogd4bWD4vD140Z0B5bpTF1Ir4xGP3eQqxn/xZy1BmdD8YAyxAa0V2nTMIGGGnAA==}
+  '@scalar/themes@0.13.1':
+    resolution: {integrity: sha512-mzBODskODQ9DlAT9paf7Vf+dsBtdUPxaNQEsxcelyTqfiLx59CS4DxPhF1Pv6eSv3cy8mvLoFvt9kubuifPFmA==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.1':
@@ -1591,8 +1591,8 @@ packages:
     resolution: {integrity: sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  eslint@9.27.0:
-    resolution: {integrity: sha512-ixRawFQuMB9DZ7fjU3iGGganFDp3+45bPOdaRurcFHSXO1e/sYwUX/FtQZpLZJR6SjMoJH8hR2pPEAfDyCoU2Q==}
+  eslint@9.28.0:
+    resolution: {integrity: sha512-ocgh41VhRlf9+fVpe7QKzwLj9c92fDiqOj8Y3Sd4/ZmVA4Btx4PlUYPq4pp9JDyupkf1upbEXecxL2mwNV7jPQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
     peerDependencies:
@@ -2717,9 +2717,9 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@eslint-community/eslint-utils@4.4.0(eslint@9.27.0)':
+  '@eslint-community/eslint-utils@4.4.0(eslint@9.28.0)':
     dependencies:
-      eslint: 9.27.0
+      eslint: 9.28.0
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.1': {}
@@ -2752,7 +2752,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/js@9.27.0': {}
+  '@eslint/js@9.28.0': {}
 
   '@eslint/object-schema@2.1.6': {}
 
@@ -2943,7 +2943,7 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  '@scalar/themes@0.13.0':
+  '@scalar/themes@0.13.1':
     dependencies:
       '@scalar/types': 0.2.1
       nanoid: 5.1.5
@@ -3473,9 +3473,9 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@9.1.0(eslint@9.27.0):
+  eslint-config-prettier@9.1.0(eslint@9.28.0):
     dependencies:
-      eslint: 9.27.0
+      eslint: 9.28.0
 
   eslint-plugin-prettier-vue@5.0.0:
     dependencies:
@@ -3485,16 +3485,16 @@ snapshots:
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
 
-  eslint-plugin-vue@9.33.0(eslint@9.27.0):
+  eslint-plugin-vue@9.33.0(eslint@9.28.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@9.27.0)
-      eslint: 9.27.0
+      '@eslint-community/eslint-utils': 4.4.0(eslint@9.28.0)
+      eslint: 9.28.0
       globals: 13.24.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.1.1
       semver: 7.6.3
-      vue-eslint-parser: 9.4.3(eslint@9.27.0)
+      vue-eslint-parser: 9.4.3(eslint@9.28.0)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -3513,15 +3513,15 @@ snapshots:
 
   eslint-visitor-keys@4.2.0: {}
 
-  eslint@9.27.0:
+  eslint@9.28.0:
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@9.27.0)
+      '@eslint-community/eslint-utils': 4.4.0(eslint@9.28.0)
       '@eslint-community/regexpp': 4.12.1
       '@eslint/config-array': 0.20.0
       '@eslint/config-helpers': 0.2.2
       '@eslint/core': 0.14.0
       '@eslint/eslintrc': 3.3.1
-      '@eslint/js': 9.27.0
+      '@eslint/js': 9.28.0
       '@eslint/plugin-kit': 0.3.1
       '@humanfs/node': 0.16.6
       '@humanwhocodes/module-importer': 1.0.1
@@ -4053,10 +4053,10 @@ snapshots:
     dependencies:
       vue: 3.4.36(typescript@5.8.3)
 
-  vue-eslint-parser@9.4.3(eslint@9.27.0):
+  vue-eslint-parser@9.4.3(eslint@9.28.0):
     dependencies:
       debug: 4.3.6
-      eslint: 9.27.0
+      eslint: 9.28.0
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
