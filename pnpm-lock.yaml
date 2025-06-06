@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.1
         version: 0.13.1
       '@scalar/types':
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: ^0.2.2
+        version: 0.2.2
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -191,6 +191,10 @@ packages:
 
   '@babel/types@7.27.3':
     resolution: {integrity: sha512-Y1GkI4ktrtvmawoSq+4FCVHNryea6uR+qUQy0AGxLSsjCX0nVmkYQMBLHDkXZuo5hGx7eYdnIaslsdBFm7zbUw==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.27.6':
+    resolution: {integrity: sha512-ETyHEk2VHHvl9b9jZP5IHPavHYk57EhanlRRuae9XCpb/j5bDCbPPMOBfCWhnl/7EDJz0jEMCi/RhccCE8r1+Q==}
     engines: {node: '>=6.9.0'}
 
   '@cloudflare/kv-asset-handler@0.3.4':
@@ -1093,12 +1097,20 @@ packages:
     resolution: {integrity: sha512-635pb0OIxhhr2yVPwqExOyNh8eo01JLOqXkDvvflHFBaGo7CHvq5sduwriXdplkn2TRNkxdkdy/eNSOMNPVa1A==}
     engines: {node: '>=20'}
 
+  '@scalar/openapi-types@0.3.2':
+    resolution: {integrity: sha512-O1AnVF29Z34TTiuMPzA8Bi9zAZuxLq5xGbW5vLvm9zUkwtI1v/mUsDNiWF3b0oOdk5LlVkrppKvI3xRFYUiyXg==}
+    engines: {node: '>=20'}
+
   '@scalar/themes@0.13.1':
     resolution: {integrity: sha512-mzBODskODQ9DlAT9paf7Vf+dsBtdUPxaNQEsxcelyTqfiLx59CS4DxPhF1Pv6eSv3cy8mvLoFvt9kubuifPFmA==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.1':
     resolution: {integrity: sha512-eXcxuwazLABrnCjpqE4tG+FgiCKyHhKxB4V8Bn4Uj/XCBTemRd+WSzXp0mmpGuBbqz820j5UGrlZ5cWlUWaWWw==}
+    engines: {node: '>=20'}
+
+  '@scalar/types@0.2.2':
+    resolution: {integrity: sha512-56KPwde4+zemnA/Nln6TP0ezBiem7K/UcEk94WhsPZU8PV9DVScyepCPU1xEMCNayMrOGG9OHybYyXKkbqt/fA==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2341,7 +2353,7 @@ snapshots:
 
   '@babel/parser@7.27.5':
     dependencies:
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
     optional: true
 
   '@babel/runtime@7.24.7':
@@ -2390,6 +2402,12 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+
+  '@babel/types@7.27.6':
+    dependencies:
+      '@babel/helper-string-parser': 7.27.1
+      '@babel/helper-validator-identifier': 7.27.1
+    optional: true
 
   '@cloudflare/kv-asset-handler@0.3.4':
     dependencies:
@@ -2943,6 +2961,10 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
+  '@scalar/openapi-types@0.3.2':
+    dependencies:
+      zod: 3.24.1
+
   '@scalar/themes@0.13.1':
     dependencies:
       '@scalar/types': 0.2.1
@@ -2951,6 +2973,12 @@ snapshots:
   '@scalar/types@0.2.1':
     dependencies:
       '@scalar/openapi-types': 0.3.1
+      nanoid: 5.1.5
+      zod: 3.24.1
+
+  '@scalar/types@0.2.2':
+    dependencies:
+      '@scalar/openapi-types': 0.3.2
       nanoid: 5.1.5
       zod: 3.24.1
 
