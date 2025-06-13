@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.2
         version: 0.13.2
       '@scalar/types':
-        specifier: ^0.2.2
-        version: 0.2.2
+        specifier: ^0.2.3
+        version: 0.2.3
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -1097,12 +1097,20 @@ packages:
     resolution: {integrity: sha512-O1AnVF29Z34TTiuMPzA8Bi9zAZuxLq5xGbW5vLvm9zUkwtI1v/mUsDNiWF3b0oOdk5LlVkrppKvI3xRFYUiyXg==}
     engines: {node: '>=20'}
 
+  '@scalar/openapi-types@0.3.3':
+    resolution: {integrity: sha512-mr3OvbCyvuzSDgv9gR9D3pJAsl82BRNBp1P8ldgRgKF4Wiswfa7nQeKibpX0kHSGXLgiyvxWJULUFwgdWMXNNA==}
+    engines: {node: '>=20'}
+
   '@scalar/themes@0.13.2':
     resolution: {integrity: sha512-4e6UFGzk3KJC/w2Cn9otSf9o1t/ArFW1sQ09MO5kC1/w4Ch7poV1GNCuYILLiVN9jNH5IWMuODoRFuMd3h/gZA==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.2':
     resolution: {integrity: sha512-56KPwde4+zemnA/Nln6TP0ezBiem7K/UcEk94WhsPZU8PV9DVScyepCPU1xEMCNayMrOGG9OHybYyXKkbqt/fA==}
+    engines: {node: '>=20'}
+
+  '@scalar/types@0.2.3':
+    resolution: {integrity: sha512-K1/Vp5xaQ8TEGDYwHg88OBuQWJRWrE3ToZ0Z2LJwskcY1Eg+uDiRQXKF4QPngZzu5rrWgRErAq4yte4Y7omqgA==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -1921,8 +1929,8 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.4:
-    resolution: {integrity: sha512-QSa9EBe+uwlGTFmHsPKokv3B/oEMQZxfqW0QqNCyhpa6mB1afzulwn8hihglqAb2pOw+BJgNlmXQ8la2VeHB7w==}
+  postcss@8.5.5:
+    resolution: {integrity: sha512-d/jtm+rdNT8tpXuHY5MMtcbJFBkhXE6593XVR9UoGCH8jSFGci7jGvMGH5RYd5PBJW+00NZQt6gf7CbagJCrhg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2953,6 +2961,10 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
+  '@scalar/openapi-types@0.3.3':
+    dependencies:
+      zod: 3.24.1
+
   '@scalar/themes@0.13.2':
     dependencies:
       '@scalar/types': 0.2.2
@@ -2961,6 +2973,12 @@ snapshots:
   '@scalar/types@0.2.2':
     dependencies:
       '@scalar/openapi-types': 0.3.2
+      nanoid: 5.1.5
+      zod: 3.24.1
+
+  '@scalar/types@0.2.3':
+    dependencies:
+      '@scalar/openapi-types': 0.3.3
       nanoid: 5.1.5
       zod: 3.24.1
 
@@ -3102,7 +3120,7 @@ snapshots:
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
       magic-string: 0.30.17
-      postcss: 8.5.4
+      postcss: 8.5.5
       source-map-js: 1.2.1
     optional: true
 
@@ -3837,7 +3855,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.4:
+  postcss@8.5.5:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
