@@ -15,8 +15,8 @@ importers:
         specifier: ^0.17.0
         version: 0.17.0
       '@scalar/themes':
-        specifier: ^0.13.2
-        version: 0.13.2
+        specifier: ^0.13.3
+        version: 0.13.3
       '@scalar/types':
         specifier: ^0.2.3
         version: 0.2.3
@@ -1093,20 +1093,12 @@ packages:
     resolution: {integrity: sha512-W1E5uTbbD+43vxBki7mIoAsoLsWzgVIfYSawPGCaBzr0+g2DHQWGLZXB12bgX3SnOtNEl986NiX1ruiCk8RUAw==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-types@0.3.2':
-    resolution: {integrity: sha512-O1AnVF29Z34TTiuMPzA8Bi9zAZuxLq5xGbW5vLvm9zUkwtI1v/mUsDNiWF3b0oOdk5LlVkrppKvI3xRFYUiyXg==}
-    engines: {node: '>=20'}
-
   '@scalar/openapi-types@0.3.3':
     resolution: {integrity: sha512-mr3OvbCyvuzSDgv9gR9D3pJAsl82BRNBp1P8ldgRgKF4Wiswfa7nQeKibpX0kHSGXLgiyvxWJULUFwgdWMXNNA==}
     engines: {node: '>=20'}
 
-  '@scalar/themes@0.13.2':
-    resolution: {integrity: sha512-4e6UFGzk3KJC/w2Cn9otSf9o1t/ArFW1sQ09MO5kC1/w4Ch7poV1GNCuYILLiVN9jNH5IWMuODoRFuMd3h/gZA==}
-    engines: {node: '>=20'}
-
-  '@scalar/types@0.2.2':
-    resolution: {integrity: sha512-56KPwde4+zemnA/Nln6TP0ezBiem7K/UcEk94WhsPZU8PV9DVScyepCPU1xEMCNayMrOGG9OHybYyXKkbqt/fA==}
+  '@scalar/themes@0.13.3':
+    resolution: {integrity: sha512-qJ6b2k6g6DA7dTK6toIAAu5RZJzelZrsjh5xmRIFZS18SqOqrhTh9+UNPmm4d3NR5ajDkR3pFCa6+k1sNb/9wQ==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.3':
@@ -2957,24 +2949,14 @@ snapshots:
       leven: 4.0.0
       yaml: 2.8.0
 
-  '@scalar/openapi-types@0.3.2':
-    dependencies:
-      zod: 3.24.1
-
   '@scalar/openapi-types@0.3.3':
     dependencies:
       zod: 3.24.1
 
-  '@scalar/themes@0.13.2':
+  '@scalar/themes@0.13.3':
     dependencies:
-      '@scalar/types': 0.2.2
+      '@scalar/types': 0.2.3
       nanoid: 5.1.5
-
-  '@scalar/types@0.2.2':
-    dependencies:
-      '@scalar/openapi-types': 0.3.2
-      nanoid: 5.1.5
-      zod: 3.24.1
 
   '@scalar/types@0.2.3':
     dependencies:
