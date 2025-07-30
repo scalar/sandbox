@@ -15,8 +15,8 @@ importers:
         specifier: ^0.18.2
         version: 0.18.2
       '@scalar/themes':
-        specifier: ^0.13.10
-        version: 0.13.10
+        specifier: ^0.13.12
+        version: 0.13.12
       '@scalar/types':
         specifier: ^0.2.10
         version: 0.2.10
@@ -193,8 +193,8 @@ packages:
     resolution: {integrity: sha512-Y1GkI4ktrtvmawoSq+4FCVHNryea6uR+qUQy0AGxLSsjCX0nVmkYQMBLHDkXZuo5hGx7eYdnIaslsdBFm7zbUw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.28.1':
-    resolution: {integrity: sha512-x0LvFTekgSX+83TI28Y9wYPUfzrnl2aT5+5QLnO6v7mSJYtEEevuDRN0F0uSHRk1G1IWZC43o00Y0xDDrpBGPQ==}
+  '@babel/types@7.28.2':
+    resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
 
   '@cloudflare/kv-asset-handler@0.3.4':
@@ -1100,16 +1100,20 @@ packages:
     resolution: {integrity: sha512-hkLIgDIQxSgZNYCqNkty2p/V8hjeMf711uT8IKIjNw8oaT/cjT1HC/3V0FVhJ6x2eaufir+WXt5Zqv/iVk5pyQ==}
     engines: {node: '>=20'}
 
-  '@scalar/themes@0.13.10':
-    resolution: {integrity: sha512-B0Lv4MMtC4jaW95P0YtKwvE4kWARUHu+YRpSojyhx3lA6RaKLYvLEeeRdcOOCFdO49e7RiNeQ2YVjdktpW2DAQ==}
+  '@scalar/openapi-types@0.3.7':
+    resolution: {integrity: sha512-QHSvHBVDze3+dUwAhIGq6l1iOev4jdoqdBK7QpfeN1Q4h+6qpVEw3EEqBiH0AXUSh/iWwObBv4uMgfIx0aNZ5g==}
+    engines: {node: '>=20'}
+
+  '@scalar/themes@0.13.12':
+    resolution: {integrity: sha512-fM010t8npZ8XqGle7ZjoAFGEfzkJ1XjEk1W3OJ5nLzSLq3hXXp72f4wHp6eaKoDWw8rFq+ZeOZk1GP7PgSr/Jw==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.10':
     resolution: {integrity: sha512-ZlOzYoYzzGRnMr6RufAnjksv94MyL4s4HElg9mdo9gQXPch24lNiE0pE0k6vxdB+ncgbGWZ1T6qCC/lJXMLL1Q==}
     engines: {node: '>=20'}
 
-  '@scalar/types@0.2.9':
-    resolution: {integrity: sha512-rRnu60g5PSahdsCYSR9kFZG5f9rtYBpAsWDih2y67V6enVNpsfP8l4VAgNCXYbQuYjmI+W+mA1llMRdaVp0gNA==}
+  '@scalar/types@0.2.11':
+    resolution: {integrity: sha512-SUZzGmoisWsYv33LmmT/ajvSlcl9ZDj9d5RncJ+wB9ZQ2l018xlfpDIH9Kdfo+6KCKQOe3LYLXfH4Lzm891Mag==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2352,7 +2356,7 @@ snapshots:
 
   '@babel/parser@7.28.0':
     dependencies:
-      '@babel/types': 7.28.1
+      '@babel/types': 7.28.2
     optional: true
 
   '@babel/runtime@7.24.7':
@@ -2402,7 +2406,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@babel/types@7.28.1':
+  '@babel/types@7.28.2':
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
@@ -2963,9 +2967,13 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  '@scalar/themes@0.13.10':
+  '@scalar/openapi-types@0.3.7':
     dependencies:
-      '@scalar/types': 0.2.9
+      zod: 3.24.1
+
+  '@scalar/themes@0.13.12':
+    dependencies:
+      '@scalar/types': 0.2.11
       nanoid: 5.1.5
 
   '@scalar/types@0.2.10':
@@ -2974,9 +2982,9 @@ snapshots:
       nanoid: 5.1.5
       zod: 3.24.1
 
-  '@scalar/types@0.2.9':
+  '@scalar/types@0.2.11':
     dependencies:
-      '@scalar/openapi-types': 0.3.6
+      '@scalar/openapi-types': 0.3.7
       nanoid: 5.1.5
       zod: 3.24.1
 
