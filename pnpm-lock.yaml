@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.20.0
-        version: 0.20.0(typescript@5.8.3)
+        specifier: ^0.20.1
+        version: 0.20.1(typescript@5.8.3)
       '@scalar/themes':
         specifier: ^0.13.12
         version: 0.13.12
@@ -1096,12 +1096,12 @@ packages:
     resolution: {integrity: sha512-9A1CxL3jV7Kl9wGu86/cR/wiJN6J+3tK4WuW3252s2gF+upXsgQRx9WLhFF3xifOP1irIGusitZBiojiKmUSVg==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.3.0':
-    resolution: {integrity: sha512-RmX6tIsV76xHioQWVTB1By85+7tbBkKFFbMn3p+1s5PrPiK/U20AAv9OUTt6f5U5fjaTSuaQNVyyhn5SYjtBQQ==}
+  '@scalar/json-magic@0.3.1':
+    resolution: {integrity: sha512-vQvl4TckiMT8Txo6S82ETJ4OI+K6iSxLZsjPaq4cEqY+9zVfmIMALFGPj/X5BB8tU3FdluV2yEa8LswsMQ68IA==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.20.0':
-    resolution: {integrity: sha512-gsqpiDP9BuZNMx8Ma9UXapdoorIXiyAwr3qra/Zb3CsShun2KQoq20jSMJzVSTAm8HnBmNlZIQm1jSUvzDW5Tw==}
+  '@scalar/openapi-parser@0.20.1':
+    resolution: {integrity: sha512-rxtuBQ90YsUEDefWU3GAEmvjYr1CvGO6nkDVzbjmWv2aPB3mtK80bCRBgQGTdIdW5XQEWAAmflSKEhcj2Xo5QA==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.3.7':
@@ -2975,7 +2975,7 @@ snapshots:
 
   '@scalar/helpers@0.0.8': {}
 
-  '@scalar/json-magic@0.3.0(typescript@5.8.3)':
+  '@scalar/json-magic@0.3.1(typescript@5.8.3)':
     dependencies:
       '@scalar/helpers': 0.0.8
       vue: 3.5.20(typescript@5.8.3)
@@ -2983,9 +2983,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/openapi-parser@0.20.0(typescript@5.8.3)':
+  '@scalar/openapi-parser@0.20.1(typescript@5.8.3)':
     dependencies:
-      '@scalar/json-magic': 0.3.0(typescript@5.8.3)
+      '@scalar/json-magic': 0.3.1(typescript@5.8.3)
       '@scalar/openapi-types': 0.3.7
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
