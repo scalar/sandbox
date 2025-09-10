@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.20.2
-        version: 0.20.2(typescript@5.8.3)
+        specifier: ^0.20.3
+        version: 0.20.3(typescript@5.8.3)
       '@scalar/themes':
         specifier: ^0.13.16
         version: 0.13.16
@@ -1100,8 +1100,8 @@ packages:
     resolution: {integrity: sha512-P4xfYSQB+rcJKDfxNC+T9cms4VNp9aMW0wrVcSKEUJLap/GDUFFUbMoVZMYLUcCehMta9KGM1SsN37f9FIBNow==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.20.2':
-    resolution: {integrity: sha512-CxrEfvfGHHxyuOTdH+PLGPQAJWfLKU3NCNslPz9iHpppxVyK5S7MPB1pLZYIFH+pcohiPx8LmirUpspolKHBwQ==}
+  '@scalar/openapi-parser@0.20.3':
+    resolution: {integrity: sha512-vjnJ9EyUza4GnYR+YK9/GLrYVWbuyH3U4NZWa51kdOg/34gh5H9Jc2Cphmrz/Unxe8EmzwqaElbeM+7qKADgXQ==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.3.7':
@@ -2983,7 +2983,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/openapi-parser@0.20.2(typescript@5.8.3)':
+  '@scalar/openapi-parser@0.20.3(typescript@5.8.3)':
     dependencies:
       '@scalar/json-magic': 0.4.0(typescript@5.8.3)
       '@scalar/openapi-types': 0.3.7
