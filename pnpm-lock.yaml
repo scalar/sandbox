@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.20.3
-        version: 0.20.3(typescript@5.8.3)
+        specifier: ^0.20.4
+        version: 0.20.4(typescript@5.8.3)
       '@scalar/themes':
         specifier: ^0.13.16
         version: 0.13.16
@@ -1092,16 +1092,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/helpers@0.0.9':
-    resolution: {integrity: sha512-paQArJ1zVHkDpK+hXES0ZSg4Cj77zrQSQ3wOVI6xjQ8jTVSVVfbHwkxtM1Me4fbLY7EkkVj8tX21uAw2XzJ51w==}
+  '@scalar/helpers@0.0.10':
+    resolution: {integrity: sha512-VmVgIAkSLBmE5fHgkPiQ0EUZqjsYQNSd/Wd5PwsInYgBvTAxojSeiM58ZVZzMsRRfrCwboCkGn9uNEkbZQX8fg==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.4.0':
-    resolution: {integrity: sha512-P4xfYSQB+rcJKDfxNC+T9cms4VNp9aMW0wrVcSKEUJLap/GDUFFUbMoVZMYLUcCehMta9KGM1SsN37f9FIBNow==}
+  '@scalar/json-magic@0.4.1':
+    resolution: {integrity: sha512-A0tDockhyLDw19TUPuC+8dF4+mdPalNYw5RsT3j9FkyY4ZOvcPEgFiIv3C3/nK5wbwZu+Cf2mrzSkBc0yaN+Wg==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.20.3':
-    resolution: {integrity: sha512-vjnJ9EyUza4GnYR+YK9/GLrYVWbuyH3U4NZWa51kdOg/34gh5H9Jc2Cphmrz/Unxe8EmzwqaElbeM+7qKADgXQ==}
+  '@scalar/openapi-parser@0.20.4':
+    resolution: {integrity: sha512-/HsNsr4KKNL4BU2PlrklJUFmt44kMumC3OIBXtQHDWgLGjF63k4Ir/mw5mdlCpuXD3X+UL/3k6paB/BrYTE8/g==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.3.7':
@@ -1807,8 +1807,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  leven@4.0.0:
-    resolution: {integrity: sha512-puehA3YKku3osqPlNuzGDUHq8WpwXupUg1V6NXdV38G+gr+gkBwFC8g1b/+YcIvp8gnqVIus+eJCH/eGsRmJNw==}
+  leven@4.1.0:
+    resolution: {integrity: sha512-KZ9W9nWDT7rF7Dazg8xyLHGLrmpgq2nVNFUckhqdW3szVP6YhCpp/RAnpmVExA9JvrMynjwSLVrEj3AepHR6ew==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   levn@0.4.1:
@@ -2973,25 +2973,25 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
-  '@scalar/helpers@0.0.9': {}
+  '@scalar/helpers@0.0.10': {}
 
-  '@scalar/json-magic@0.4.0(typescript@5.8.3)':
+  '@scalar/json-magic@0.4.1(typescript@5.8.3)':
     dependencies:
-      '@scalar/helpers': 0.0.9
+      '@scalar/helpers': 0.0.10
       vue: 3.5.21(typescript@5.8.3)
       yaml: 2.8.0
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/openapi-parser@0.20.3(typescript@5.8.3)':
+  '@scalar/openapi-parser@0.20.4(typescript@5.8.3)':
     dependencies:
-      '@scalar/json-magic': 0.4.0(typescript@5.8.3)
+      '@scalar/json-magic': 0.4.1(typescript@5.8.3)
       '@scalar/openapi-types': 0.3.7
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
       ajv-formats: 3.0.1(ajv@8.17.1)
       jsonpointer: 5.0.1
-      leven: 4.0.0
+      leven: 4.1.0
       yaml: 2.8.0
     transitivePeerDependencies:
       - typescript
@@ -3765,7 +3765,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  leven@4.0.0: {}
+  leven@4.1.0: {}
 
   levn@0.4.1:
     dependencies:
