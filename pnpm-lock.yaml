@@ -15,8 +15,8 @@ importers:
         specifier: ^0.20.5
         version: 0.20.5(typescript@5.8.3)
       '@scalar/themes':
-        specifier: ^0.13.16
-        version: 0.13.16
+        specifier: ^0.13.17
+        version: 0.13.17
       '@scalar/types':
         specifier: ^0.2.15
         version: 0.2.15
@@ -1108,8 +1108,8 @@ packages:
     resolution: {integrity: sha512-QHSvHBVDze3+dUwAhIGq6l1iOev4jdoqdBK7QpfeN1Q4h+6qpVEw3EEqBiH0AXUSh/iWwObBv4uMgfIx0aNZ5g==}
     engines: {node: '>=20'}
 
-  '@scalar/themes@0.13.16':
-    resolution: {integrity: sha512-1Jqey9WywVa+kxbHk1RtEiV8xnkJafHIsnK1gA90KKUyP1UdcE8FpUN2Jagx+vX/vCLAfWAbOEXJZzeXvPO95g==}
+  '@scalar/themes@0.13.17':
+    resolution: {integrity: sha512-6iIMuCvTf7k4N8h7mOke5cEHBWCK4W8JOCAEU636ZEREMg/q+27r+i0Z0nlqXshB5OEgPzOPoW7ls7dMfwEI6Q==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.15':
@@ -3000,7 +3000,7 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  '@scalar/themes@0.13.16':
+  '@scalar/themes@0.13.17':
     dependencies:
       '@scalar/types': 0.2.15
       nanoid: 5.1.5
