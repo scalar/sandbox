@@ -15,8 +15,8 @@ importers:
         specifier: ^0.20.6
         version: 0.20.6(typescript@5.8.3)
       '@scalar/themes':
-        specifier: ^0.13.17
-        version: 0.13.17
+        specifier: ^0.13.18
+        version: 0.13.18
       '@scalar/types':
         specifier: ^0.2.15
         version: 0.2.15
@@ -1108,12 +1108,16 @@ packages:
     resolution: {integrity: sha512-QHSvHBVDze3+dUwAhIGq6l1iOev4jdoqdBK7QpfeN1Q4h+6qpVEw3EEqBiH0AXUSh/iWwObBv4uMgfIx0aNZ5g==}
     engines: {node: '>=20'}
 
-  '@scalar/themes@0.13.17':
-    resolution: {integrity: sha512-6iIMuCvTf7k4N8h7mOke5cEHBWCK4W8JOCAEU636ZEREMg/q+27r+i0Z0nlqXshB5OEgPzOPoW7ls7dMfwEI6Q==}
+  '@scalar/themes@0.13.18':
+    resolution: {integrity: sha512-2vsE2NeGZ1w4uSR81vw4ZZYBN7VQAgjX5YaGi5uQKpcuOIKt6aD4aD3Msv/I/BC37eFf83aJyAVnlFQEal/5QQ==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.2.15':
     resolution: {integrity: sha512-x2aCNmkDqr3VXUHjw7wPXK9KZwHbGGMs4NuxJIzy9MbAxUS9li8HXGG0K82Q5fDm47SAM+68z0/tnWkJpu+kzg==}
+    engines: {node: '>=20'}
+
+  '@scalar/types@0.2.16':
+    resolution: {integrity: sha512-XWff9jWfYaj6q3ww94x66S6Q58u/3kA1sDOUhLAwb9va7r58bzk3NRwLOkEEdJmyEns1MEJAM53mY8KRWX6elA==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -3000,12 +3004,18 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  '@scalar/themes@0.13.17':
+  '@scalar/themes@0.13.18':
     dependencies:
-      '@scalar/types': 0.2.15
+      '@scalar/types': 0.2.16
       nanoid: 5.1.5
 
   '@scalar/types@0.2.15':
+    dependencies:
+      '@scalar/openapi-types': 0.3.7
+      nanoid: 5.1.5
+      zod: 3.24.1
+
+  '@scalar/types@0.2.16':
     dependencies:
       '@scalar/openapi-types': 0.3.7
       nanoid: 5.1.5
