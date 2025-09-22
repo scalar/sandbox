@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.20.6
-        version: 0.20.6(typescript@5.8.3)
+        specifier: ^0.21.0
+        version: 0.21.0(typescript@5.8.3)
       '@scalar/themes':
         specifier: ^0.13.17
         version: 0.13.17
@@ -1096,16 +1096,20 @@ packages:
     resolution: {integrity: sha512-EoAufzG0crQloYJxbCV8F+Y5vPyeeh1HMngGlXPT6oGSJPi6DiNA9wztqK3lvaBmSkJMh4VKIbejVqAXx1a0tg==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.4.3':
-    resolution: {integrity: sha512-ve2prNKXWO+4O/fqzNhxxuXc0e3bgjVw4zmbYyPsc14gkHsbdDxvag/vKCVMmfKdBsiPVTW4ETiRu5saEHNBfA==}
+  '@scalar/json-magic@0.5.0':
+    resolution: {integrity: sha512-JNxwGYl0w+gD9Ax9ISLMVvd6CXIEqJKmQWqUdTq5JyOAQ8Tq3DeiJFjfjKf83BxfFOWxJSBx8oXbED9Tushgwg==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.20.6':
-    resolution: {integrity: sha512-TS2E9PVZRxls4gNwTAaEgyCJbW/5vm6+ntf8FwGe/osWYZTiKUZ5iEPW/NtrgfiNiylUPqlo0hGa/K//zeJeqw==}
+  '@scalar/openapi-parser@0.21.0':
+    resolution: {integrity: sha512-YdQtSIQ+BBotBZgJeC9J/Vza6yWuJILKN4A3UXWSY2/IjGTijxk2PEF1wh92TKKBhZxoLXVfW6Q+T0uymclrkQ==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.3.7':
     resolution: {integrity: sha512-QHSvHBVDze3+dUwAhIGq6l1iOev4jdoqdBK7QpfeN1Q4h+6qpVEw3EEqBiH0AXUSh/iWwObBv4uMgfIx0aNZ5g==}
+    engines: {node: '>=20'}
+
+  '@scalar/openapi-upgrader@0.1.0':
+    resolution: {integrity: sha512-qUCUtONzjM0I7dheOYqsZXpO7Rb+jgeWwI/SIXhpxyqs+Cxpc9p/HBDSG1IFDxLDq7T5rXUITYzThMdQwWnV9w==}
     engines: {node: '>=20'}
 
   '@scalar/themes@0.13.17':
@@ -2975,7 +2979,7 @@ snapshots:
 
   '@scalar/helpers@0.0.11': {}
 
-  '@scalar/json-magic@0.4.3(typescript@5.8.3)':
+  '@scalar/json-magic@0.5.0(typescript@5.8.3)':
     dependencies:
       '@scalar/helpers': 0.0.11
       vue: 3.5.21(typescript@5.8.3)
@@ -2983,10 +2987,11 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/openapi-parser@0.20.6(typescript@5.8.3)':
+  '@scalar/openapi-parser@0.21.0(typescript@5.8.3)':
     dependencies:
-      '@scalar/json-magic': 0.4.3(typescript@5.8.3)
+      '@scalar/json-magic': 0.5.0(typescript@5.8.3)
       '@scalar/openapi-types': 0.3.7
+      '@scalar/openapi-upgrader': 0.1.0
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
       ajv-formats: 3.0.1(ajv@8.17.1)
@@ -2999,6 +3004,10 @@ snapshots:
   '@scalar/openapi-types@0.3.7':
     dependencies:
       zod: 3.24.1
+
+  '@scalar/openapi-upgrader@0.1.0':
+    dependencies:
+      '@scalar/openapi-types': 0.3.7
 
   '@scalar/themes@0.13.17':
     dependencies:
