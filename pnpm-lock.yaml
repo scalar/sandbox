@@ -15,8 +15,8 @@ importers:
         specifier: ^0.22.1
         version: 0.22.1
       '@scalar/themes':
-        specifier: ^0.13.20
-        version: 0.13.20
+        specifier: ^0.13.21
+        version: 0.13.21
       '@scalar/types':
         specifier: ^0.3.0
         version: 0.3.0
@@ -1108,16 +1108,24 @@ packages:
     resolution: {integrity: sha512-vdFLzz7vETw6kS3bxWUHCBeFtJOnr1bk/+FXKyxKkd6TbcyT6USXkoelI704IaBdoXyOgGX10FD1IVrs4FwUow==}
     engines: {node: '>=20'}
 
+  '@scalar/openapi-types@0.4.1':
+    resolution: {integrity: sha512-JCXCbs/Sty/qosplTFP0YdR2yD7Jkzfy44+3Om3dlzNtOu92lVTcvcVU3MIn1J4zY4/gk23DhI3m137xxNITRw==}
+    engines: {node: '>=20'}
+
   '@scalar/openapi-upgrader@0.1.1':
     resolution: {integrity: sha512-NlrQezuNGtejqS/SQshY9SjD4D66jiJcWgC2zfCS4muyfE2K85e0i6gegnKLZPSNrqoAvJyR78NPapme9z2/wg==}
     engines: {node: '>=20'}
 
-  '@scalar/themes@0.13.20':
-    resolution: {integrity: sha512-NOigbwPaJSz/91vuL4u0NP/aVpw9RnzZK6rJTkRb14facBnXTlKj5rKE9v7Q39zxwzH/JP1pFZXpJ0pwNBADoQ==}
+  '@scalar/themes@0.13.21':
+    resolution: {integrity: sha512-Los+CCr70Nal613Y5IKI6vE6lL+wzznspNoktcVYQYz+G18AZTyDzx1FIiQ+dH713pqeI8O9xdDlZ3GWmbC0Tw==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.3.0':
     resolution: {integrity: sha512-RVL4waBX2jpshVBU8l1J8gsG+Ai9oRoTN1Zc1+yaO2WG/ZMXOBtq1noJWpUk2c2i16E1oxmRZC8/nPNFRbkxog==}
+    engines: {node: '>=20'}
+
+  '@scalar/types@0.3.1':
+    resolution: {integrity: sha512-wTxhK6ByAcJRuSTJSwu3CCy0JvxxekAk1hHlseSnZ6/jKSANPmkCY/804wrRUW6A5TgyFx/4nVl4Vb3ymymHvg==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2985,18 +2993,29 @@ snapshots:
     dependencies:
       zod: 4.1.11
 
+  '@scalar/openapi-types@0.4.1':
+    dependencies:
+      zod: 4.1.11
+
   '@scalar/openapi-upgrader@0.1.1':
     dependencies:
       '@scalar/openapi-types': 0.4.0
 
-  '@scalar/themes@0.13.20':
+  '@scalar/themes@0.13.21':
     dependencies:
-      '@scalar/types': 0.3.0
+      '@scalar/types': 0.3.1
       nanoid: 5.1.5
 
   '@scalar/types@0.3.0':
     dependencies:
       '@scalar/openapi-types': 0.4.0
+      nanoid: 5.1.5
+      type-fest: 4.41.0
+      zod: 4.1.11
+
+  '@scalar/types@0.3.1':
+    dependencies:
+      '@scalar/openapi-types': 0.4.1
       nanoid: 5.1.5
       type-fest: 4.41.0
       zod: 4.1.11
