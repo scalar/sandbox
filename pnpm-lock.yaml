@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.22.1
-        version: 0.22.1
+        specifier: ^0.22.2
+        version: 0.22.2
       '@scalar/themes':
         specifier: ^0.13.20
         version: 0.13.20
@@ -1100,16 +1100,20 @@ packages:
     resolution: {integrity: sha512-sy2yL7V8ZF7oUoMl46TjFbBfqZESDmKPfPXeyWeIcwKgjFwjM/FvLdGOOPNsYQ2tPZUCzg8QCNJk9QM+BKVyRg==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.22.1':
-    resolution: {integrity: sha512-GJV7f9VLoyKbArMcWETbJ+xPqkopNBlb+oxEBSlSYYsoWc+p+sLAtuwObfJT8Ia+CStl5Y2ZRk/2DgCuy1vsaQ==}
+  '@scalar/openapi-parser@0.22.2':
+    resolution: {integrity: sha512-+5V+FOq5aTpn7u3r1np0cdB8Hrbsf1IZ8s2V14z5I1eSRhrCIhYmSlisx6Gs2LSuejR9KKSAvGWn/qJVW+qM9w==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.4.0':
     resolution: {integrity: sha512-vdFLzz7vETw6kS3bxWUHCBeFtJOnr1bk/+FXKyxKkd6TbcyT6USXkoelI704IaBdoXyOgGX10FD1IVrs4FwUow==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-upgrader@0.1.1':
-    resolution: {integrity: sha512-NlrQezuNGtejqS/SQshY9SjD4D66jiJcWgC2zfCS4muyfE2K85e0i6gegnKLZPSNrqoAvJyR78NPapme9z2/wg==}
+  '@scalar/openapi-types@0.4.1':
+    resolution: {integrity: sha512-JCXCbs/Sty/qosplTFP0YdR2yD7Jkzfy44+3Om3dlzNtOu92lVTcvcVU3MIn1J4zY4/gk23DhI3m137xxNITRw==}
+    engines: {node: '>=20'}
+
+  '@scalar/openapi-upgrader@0.1.2':
+    resolution: {integrity: sha512-Yi5myOpV/IP73ht9pr6i/SMnmN4nqSWrDhz+azK9n8A26hQYUmEkI3R/OJfwDAiGvm3DOJ+F/sVy+Xj+H7IEvw==}
     engines: {node: '>=20'}
 
   '@scalar/themes@0.13.20':
@@ -2969,11 +2973,11 @@ snapshots:
       '@scalar/helpers': 0.0.11
       yaml: 2.8.0
 
-  '@scalar/openapi-parser@0.22.1':
+  '@scalar/openapi-parser@0.22.2':
     dependencies:
       '@scalar/json-magic': 0.6.0
-      '@scalar/openapi-types': 0.4.0
-      '@scalar/openapi-upgrader': 0.1.1
+      '@scalar/openapi-types': 0.4.1
+      '@scalar/openapi-upgrader': 0.1.2
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
       ajv-formats: 3.0.1(ajv@8.17.1)
@@ -2985,9 +2989,13 @@ snapshots:
     dependencies:
       zod: 4.1.11
 
-  '@scalar/openapi-upgrader@0.1.1':
+  '@scalar/openapi-types@0.4.1':
     dependencies:
-      '@scalar/openapi-types': 0.4.0
+      zod: 4.1.11
+
+  '@scalar/openapi-upgrader@0.1.2':
+    dependencies:
+      '@scalar/openapi-types': 0.4.1
 
   '@scalar/themes@0.13.20':
     dependencies:
