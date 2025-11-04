@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.23
         version: 0.13.23
       '@scalar/types':
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: ^0.4.0
+        version: 0.4.0
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -1108,10 +1108,6 @@ packages:
     resolution: {integrity: sha512-vGhraOwgbfZwyRrpbveoCpbZFSC/f4E6y1eW6s8yVXCZTxCL55wV3Grt/mMQoaNn+Als0oI16CjcrFZM/GnlkQ==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-types@0.5.0':
-    resolution: {integrity: sha512-HJBcLa+/mPP+3TCcQngj/iW5UqynRosOQdEETXjmdy6Ngw8wBjwIcT6C86J5jufJ6sI8++HYnt+e7pAvp5FO6A==}
-    engines: {node: '>=20'}
-
   '@scalar/openapi-types@0.5.1':
     resolution: {integrity: sha512-8g7s9lPolyDFtijyh3Ob459tpezPuZbkXoFgJwBTHjPZ7ap+TvOJTvLk56CFwxVBVz2BxCzWJqxYyy3FUdeLoA==}
     engines: {node: '>=20'}
@@ -1122,10 +1118,6 @@ packages:
 
   '@scalar/themes@0.13.23':
     resolution: {integrity: sha512-9eQs3h9mg9TtM8tyR8/Q7lyBXssXEelem20ZVvQ2eQyB6+ibHaXKh8lkUipuX1w6KU5JVr2VMYr/Q8G0B/5USw==}
-    engines: {node: '>=20'}
-
-  '@scalar/types@0.3.2':
-    resolution: {integrity: sha512-+X10CCvG57nAqYbTGteiSzRFQcMYm7DLfCRMeEfiWQ9Bq2ladat17XsMSvkvwcfpOSlsoepWf3P5dErERUSOQQ==}
     engines: {node: '>=20'}
 
   '@scalar/types@0.4.0':
@@ -3000,10 +2992,6 @@ snapshots:
       leven: 4.1.0
       yaml: 2.8.0
 
-  '@scalar/openapi-types@0.5.0':
-    dependencies:
-      zod: 4.1.11
-
   '@scalar/openapi-types@0.5.1':
     dependencies:
       zod: 4.1.11
@@ -3016,13 +3004,6 @@ snapshots:
     dependencies:
       '@scalar/types': 0.4.0
       nanoid: 5.1.5
-
-  '@scalar/types@0.3.2':
-    dependencies:
-      '@scalar/openapi-types': 0.5.0
-      nanoid: 5.1.5
-      type-fest: 5.0.0
-      zod: 4.1.11
 
   '@scalar/types@0.4.0':
     dependencies:
