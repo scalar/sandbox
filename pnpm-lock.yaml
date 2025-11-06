@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.23.0
-        version: 0.23.0
+        specifier: ^0.23.1
+        version: 0.23.1
       '@scalar/themes':
         specifier: ^0.13.23
         version: 0.13.23
@@ -1096,16 +1096,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/helpers@0.0.13':
-    resolution: {integrity: sha512-iz7jEXhseN86X/QyBtWx1Ad4nMM9VnyERqlAtZSxRDB+xb8clgkVmHs1IMqCR+fBXEZjQlJGJSatEyoQ7XP8Fg==}
+  '@scalar/helpers@0.1.0':
+    resolution: {integrity: sha512-xggWEVs5TCyyVG+hEI6s3A3FzV89DZH94+I0LX5XzjPAaPvNuH3SdAWgX8FYRqBLIqIrCTWrcvLTypJcuCR4Ug==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.7.0':
-    resolution: {integrity: sha512-W/fh9/ibK95CqTkNCugQujHdauzbm/UoyFQqP54Gi5B7zif2H3IZeMuBfVU6EAAhOPGlzzwTyFYk+uu8hboVbQ==}
+  '@scalar/json-magic@0.8.0':
+    resolution: {integrity: sha512-8uhsMNkYSiY6lrWGKNIbSMVT3ZwkzwmQBdgNvGyd5HFO+eHDGLJ4dGhgf/3MdCrg2xf4sbqkUTQUJhAHigX8jg==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.23.0':
-    resolution: {integrity: sha512-vGhraOwgbfZwyRrpbveoCpbZFSC/f4E6y1eW6s8yVXCZTxCL55wV3Grt/mMQoaNn+Als0oI16CjcrFZM/GnlkQ==}
+  '@scalar/openapi-parser@0.23.1':
+    resolution: {integrity: sha512-uOHnLGfDPxCxRKUhqWG+7iCYVD9+eJTCISgp7/mBYbN7YLSu+49jXSzoCI14zy318axFZvPwLvyEk9pjL/P/HA==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.5.1':
@@ -2274,6 +2274,9 @@ packages:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
 
+  xxhash-wasm@1.1.0:
+    resolution: {integrity: sha512-147y/6YNh+tlp6nd/2pWq38i9h6mz/EuQ6njIrmW8D1BS5nCqs0P6DG+m6zTGnNz5I+uhZ0SHxBs9BsPrwcKDA==}
+
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
@@ -2973,16 +2976,17 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
-  '@scalar/helpers@0.0.13': {}
+  '@scalar/helpers@0.1.0': {}
 
-  '@scalar/json-magic@0.7.0':
+  '@scalar/json-magic@0.8.0':
     dependencies:
-      '@scalar/helpers': 0.0.13
+      '@scalar/helpers': 0.1.0
+      xxhash-wasm: 1.1.0
       yaml: 2.8.0
 
-  '@scalar/openapi-parser@0.23.0':
+  '@scalar/openapi-parser@0.23.1':
     dependencies:
-      '@scalar/json-magic': 0.7.0
+      '@scalar/json-magic': 0.8.0
       '@scalar/openapi-types': 0.5.1
       '@scalar/openapi-upgrader': 0.1.4
       ajv: 8.17.1
@@ -4197,6 +4201,8 @@ snapshots:
   ws@8.18.0: {}
 
   xml-name-validator@4.0.0: {}
+
+  xxhash-wasm@1.1.0: {}
 
   y18n@5.0.8: {}
 
