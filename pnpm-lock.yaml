@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.25
         version: 0.13.25
       '@scalar/types':
-        specifier: ^0.5.1
-        version: 0.5.1
+        specifier: ^0.5.2
+        version: 0.5.2
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -1120,8 +1120,8 @@ packages:
     resolution: {integrity: sha512-ZoRMcCj0qY2bERiIP/yRoy9NKQncmv8mMnlnPUHQD2TmZMNlNkYEJKCnUtO4PLbgBlzZE5CtgB8zg8++WFAnkQ==}
     engines: {node: '>=20'}
 
-  '@scalar/types@0.5.1':
-    resolution: {integrity: sha512-+BSZlfDc5tqFnB+MEJ16o5x86PkKfRK4UYgEv9T5LYmaGmStZF110GoYNbUW6lWRmjFzdPyqS8S7Tijwqd7hXA==}
+  '@scalar/types@0.5.2':
+    resolution: {integrity: sha512-F5wyb/B/Mu56PpNqhgSfuKwiwVnmhNhzTOo+k5b++HvYhjwAnqnw8BzbDzwXhhn172IPw8kSkupA/vphw61IRA==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2304,6 +2304,9 @@ packages:
   zod@4.1.11:
     resolution: {integrity: sha512-WPsqwxITS2tzx1bzhIKsEs19ABD5vmCVa4xBo2tq/SrV4RNZtfws1EnCWQXM6yh8bD08a1idvkB5MZSBiZsjwg==}
 
+  zod@4.1.13:
+    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
+
 snapshots:
 
   '@babel/code-frame@7.24.7':
@@ -3004,11 +3007,11 @@ snapshots:
     dependencies:
       nanoid: 5.1.5
 
-  '@scalar/types@0.5.1':
+  '@scalar/types@0.5.2':
     dependencies:
       nanoid: 5.1.5
       type-fest: 5.0.0
-      zod: 4.1.11
+      zod: 4.1.13
 
   '@tanstack/virtual-core@3.7.0': {}
 
@@ -4223,3 +4226,5 @@ snapshots:
   zod@3.22.3: {}
 
   zod@4.1.11: {}
+
+  zod@4.1.13: {}
