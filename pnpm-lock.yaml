@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.26
         version: 0.13.26
       '@scalar/types':
-        specifier: ^0.5.4
-        version: 0.5.4
+        specifier: ^0.5.6
+        version: 0.5.6
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -1100,6 +1100,10 @@ packages:
     resolution: {integrity: sha512-G7oGybO2QXM+MIxa4OZLXaYsS9mxKygFgOcY4UOXO6xpVoY5+8rahdak9cPk7HNj8RZSt4m/BveoT8g5BtnXxg==}
     engines: {node: '>=20'}
 
+  '@scalar/helpers@0.2.6':
+    resolution: {integrity: sha512-A471YFBCj7ZOlGIkAYnU8oYgeyts82ZNX+4UicrlmKv3eAQ+kwboN3Dy0R6u1lcA/+I/zzeXi/fBObsT7P9qTA==}
+    engines: {node: '>=20'}
+
   '@scalar/json-magic@0.8.8':
     resolution: {integrity: sha512-BUyBfXrbwRrpjqPXHbUTYQD06KRtonoWIVTxCylQmS4kbp91k9G7SUCnJe9txX1GrpD6CwkBvyQ/Q9oNy1HTaw==}
     engines: {node: '>=20'}
@@ -1120,8 +1124,8 @@ packages:
     resolution: {integrity: sha512-uS4gek85aDYH663DAiXaXmEMz/NuzBDL6oIGvb+Z8KNYGb7GSSTbFJky+l13ru7juyuDqZIwJ9isk1SnGzm1Zg==}
     engines: {node: '>=20'}
 
-  '@scalar/types@0.5.4':
-    resolution: {integrity: sha512-5FNQH/zx3tnERzxfpErscPHfRxLCuhncmhFYiaSz196Xi2iG1YI08BtxTV2slfT6of52epJ/MrKerarplKf9eg==}
+  '@scalar/types@0.5.6':
+    resolution: {integrity: sha512-yvTXYdSQPq8qmJ1zZPBRRB3RkkE2c0J3gIIMirX997yyVixrhtb0jmfM+9EZ2ZWXGx2JGLquGP10zY0nmnu75w==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2301,8 +2305,8 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@4.2.1:
-    resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
+  zod@4.3.5:
+    resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
 snapshots:
 
@@ -2975,6 +2979,8 @@ snapshots:
 
   '@scalar/helpers@0.2.4': {}
 
+  '@scalar/helpers@0.2.6': {}
+
   '@scalar/json-magic@0.8.8':
     dependencies:
       '@scalar/helpers': 0.2.4
@@ -2994,7 +3000,7 @@ snapshots:
 
   '@scalar/openapi-types@0.5.3':
     dependencies:
-      zod: 4.2.1
+      zod: 4.3.5
 
   '@scalar/openapi-upgrader@0.1.6':
     dependencies:
@@ -3004,12 +3010,12 @@ snapshots:
     dependencies:
       nanoid: 5.1.5
 
-  '@scalar/types@0.5.4':
+  '@scalar/types@0.5.6':
     dependencies:
-      '@scalar/helpers': 0.2.4
+      '@scalar/helpers': 0.2.6
       nanoid: 5.1.5
       type-fest: 5.0.0
-      zod: 4.2.1
+      zod: 4.3.5
 
   '@tanstack/virtual-core@3.7.0': {}
 
@@ -4223,4 +4229,4 @@ snapshots:
 
   zod@3.22.3: {}
 
-  zod@4.2.1: {}
+  zod@4.3.5: {}
