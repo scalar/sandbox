@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.26
         version: 0.13.26
       '@scalar/types':
-        specifier: ^0.5.6
-        version: 0.5.6
+        specifier: ^0.5.7
+        version: 0.5.7
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -1100,6 +1100,10 @@ packages:
     resolution: {integrity: sha512-A471YFBCj7ZOlGIkAYnU8oYgeyts82ZNX+4UicrlmKv3eAQ+kwboN3Dy0R6u1lcA/+I/zzeXi/fBObsT7P9qTA==}
     engines: {node: '>=20'}
 
+  '@scalar/helpers@0.2.7':
+    resolution: {integrity: sha512-uFTcdi3XYDDuaJLWiMuM3ijQit1OBw7AkuOuujReY8L9UmUQHY56erYg0+Db3llTsinuIYFh+eS/WX/sYuevYQ==}
+    engines: {node: '>=20'}
+
   '@scalar/json-magic@0.8.10':
     resolution: {integrity: sha512-TWdKQ/hcy4erFQDp2MVlFoPesFep2VY96Q69cjLHmx5hxM0ZUBfmNB4lA8Uh3klgx5JmCDfSNIGjPFIpxlosUw==}
     engines: {node: '>=20'}
@@ -1120,8 +1124,8 @@ packages:
     resolution: {integrity: sha512-uS4gek85aDYH663DAiXaXmEMz/NuzBDL6oIGvb+Z8KNYGb7GSSTbFJky+l13ru7juyuDqZIwJ9isk1SnGzm1Zg==}
     engines: {node: '>=20'}
 
-  '@scalar/types@0.5.6':
-    resolution: {integrity: sha512-yvTXYdSQPq8qmJ1zZPBRRB3RkkE2c0J3gIIMirX997yyVixrhtb0jmfM+9EZ2ZWXGx2JGLquGP10zY0nmnu75w==}
+  '@scalar/types@0.5.7':
+    resolution: {integrity: sha512-WhoqhDxDmij9tiMqZ7Vl7+8/0602ZSyqU0tXcma55vL1tsfJlTXCNVFAYV83MKq9oon2dt0wcFzwL+WYs8+KTA==}
     engines: {node: '>=20'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2975,6 +2979,8 @@ snapshots:
 
   '@scalar/helpers@0.2.6': {}
 
+  '@scalar/helpers@0.2.7': {}
+
   '@scalar/json-magic@0.8.10':
     dependencies:
       '@scalar/helpers': 0.2.6
@@ -3004,9 +3010,9 @@ snapshots:
     dependencies:
       nanoid: 5.1.5
 
-  '@scalar/types@0.5.6':
+  '@scalar/types@0.5.7':
     dependencies:
-      '@scalar/helpers': 0.2.6
+      '@scalar/helpers': 0.2.7
       nanoid: 5.1.5
       type-fest: 5.0.0
       zod: 4.3.5
