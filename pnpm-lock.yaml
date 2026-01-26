@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.24.3
-        version: 0.24.3
+        specifier: ^0.24.4
+        version: 0.24.4
       '@scalar/themes':
         specifier: ^0.13.26
         version: 0.13.26
@@ -1100,12 +1100,16 @@ packages:
     resolution: {integrity: sha512-aXXRF4sCaiGZIRpZ1MUcnl8y0Q9pPG1VXqQMWacVWDh6zQN9cuayTC/TbODzWeldp50sgJ1E8MpHvpeV7CEF9g==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.9.2':
-    resolution: {integrity: sha512-Oo+AwX+3VtNWmUeCvw7ig+aoWxC1z4YDgA1wpLD8wWUh9eE+txni/7z7Q557da7vY+NPm2r3p1edOrABaiCZ6g==}
+  '@scalar/helpers@0.2.9':
+    resolution: {integrity: sha512-Y4ffJF0yELdwZ0BKgonqn3SumIgRn1WKyYCVHD+TDM7qRFChdGRypyt20+efHs26fmJeyBAIIv2laICj5uimiw==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.24.3':
-    resolution: {integrity: sha512-k+jR2enWQLVqcCDQYIhvE1wicU0LcWtKk8F+pJCDyKuA2SsnV0rW4mC38AqpgxQ+K9JA9o1PgBmJ4CkdiL1XAA==}
+  '@scalar/json-magic@0.9.3':
+    resolution: {integrity: sha512-MwH9UPNWXp1OZE78Rjtr1nRt27B00PQDvRdq1F5Tvp5yE+pxkmLZFBISP19R3Pi8Hzjv+w2otkaPmRN4owSULQ==}
+    engines: {node: '>=20'}
+
+  '@scalar/openapi-parser@0.24.4':
+    resolution: {integrity: sha512-pBAi+lgwxqSWWTtHXA54weHDupVDi33Ov84T7gByJgPZvabHTQg7rt/u2EoomjZX7ON5Z/lymPO6serdJO2Piw==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.5.3':
@@ -2309,6 +2313,9 @@ packages:
   zod@4.3.5:
     resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+
 snapshots:
 
   '@babel/code-frame@7.24.7':
@@ -2980,14 +2987,16 @@ snapshots:
 
   '@scalar/helpers@0.2.8': {}
 
-  '@scalar/json-magic@0.9.2':
+  '@scalar/helpers@0.2.9': {}
+
+  '@scalar/json-magic@0.9.3':
     dependencies:
-      '@scalar/helpers': 0.2.8
+      '@scalar/helpers': 0.2.9
       yaml: 2.8.0
 
-  '@scalar/openapi-parser@0.24.3':
+  '@scalar/openapi-parser@0.24.4':
     dependencies:
-      '@scalar/json-magic': 0.9.2
+      '@scalar/json-magic': 0.9.3
       '@scalar/openapi-types': 0.5.3
       '@scalar/openapi-upgrader': 0.1.8
       ajv: 8.17.1
@@ -2999,7 +3008,7 @@ snapshots:
 
   '@scalar/openapi-types@0.5.3':
     dependencies:
-      zod: 4.3.5
+      zod: 4.3.6
 
   '@scalar/openapi-upgrader@0.1.8':
     dependencies:
@@ -4231,3 +4240,5 @@ snapshots:
   zod@3.22.3: {}
 
   zod@4.3.5: {}
+
+  zod@4.3.6: {}
