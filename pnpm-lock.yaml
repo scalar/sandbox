@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.24.7
-        version: 0.24.7
+        specifier: ^0.24.8
+        version: 0.24.8
       '@scalar/themes':
         specifier: ^0.14.0
         version: 0.14.0
@@ -1096,20 +1096,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/helpers@0.2.10':
-    resolution: {integrity: sha512-VS32setBEAGY9JifuDZKHIq8SUCUWLEfL1V+h3s5V4wcmE8OZVkzaJemsMq/YAM9e7gb9ZbkvJLL4zzEvPSrVg==}
-    engines: {node: '>=20'}
-
   '@scalar/helpers@0.2.11':
     resolution: {integrity: sha512-Y7DLt1bIZF9dvHzJwSJTcC1lpSr1Tbf4VBhHOCRIHu23Rr7/lhQnddRxFmPV1tZXwEQKz7F7yRrubwCfKPCucw==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.9.6':
-    resolution: {integrity: sha512-2TKoqkAophHti1nH+rvQlR4lhD6X9tqQpuNeAE0cytHSX/yndkSOE0yA7cep5T9tFjGN4Km0gMnelvY3LgWs4A==}
+  '@scalar/json-magic@0.10.0':
+    resolution: {integrity: sha512-7QCaKjhPCNBe5vieI0zZcxOupI+kk2PoWL/tuxB7ROLbDOIdmeZ8x1FrZqdtamDPi+zsQGx+kc/cvTDz7GdTKw==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.24.7':
-    resolution: {integrity: sha512-vfByQw8fbuh/PO5sowMmEfe65/WPX7MCiEzo2z2/qObK3nsdPrbXOZDYRjD7nvG5VTec8Tv2QpTJZTm7+i/Qng==}
+  '@scalar/openapi-parser@0.24.8':
+    resolution: {integrity: sha512-1ZFC/nNbH/e/rriDgfsXCcr23WphvqHVxX8V90qhR8c9QWXNb0cyNXl3hNjvtTB7Lg7O9aS22BUZ14gabCWvRQ==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.5.3':
@@ -2982,19 +2978,17 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
-  '@scalar/helpers@0.2.10': {}
-
   '@scalar/helpers@0.2.11': {}
 
-  '@scalar/json-magic@0.9.6':
+  '@scalar/json-magic@0.10.0':
     dependencies:
       '@scalar/helpers': 0.2.11
       yaml: 2.8.0
 
-  '@scalar/openapi-parser@0.24.7':
+  '@scalar/openapi-parser@0.24.8':
     dependencies:
       '@scalar/helpers': 0.2.11
-      '@scalar/json-magic': 0.9.6
+      '@scalar/json-magic': 0.10.0
       '@scalar/openapi-types': 0.5.3
       '@scalar/openapi-upgrader': 0.1.8
       ajv: 8.17.1
