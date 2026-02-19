@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.24.10
-        version: 0.24.10
+        specifier: ^0.24.13
+        version: 0.24.13
       '@scalar/themes':
         specifier: ^0.14.0
         version: 0.14.0
@@ -1100,12 +1100,16 @@ packages:
     resolution: {integrity: sha512-Ig/H1Je8nqcDiY+YwFIpATxF2ko7zKrjIZFWK2gGeNTYK4Np9XnqDHg56jM3Xru439Eh4qHq9P/lX7Se5nnxFA==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.11.1':
-    resolution: {integrity: sha512-JsugkVpZ9SmKW6fDhamcmkttc9YOPGgb9Azbwc7hXTlZgG6YeYXx8qFvYr5eJE4cfzCqalodS/9w7moZnVG3cw==}
+  '@scalar/helpers@0.2.15':
+    resolution: {integrity: sha512-hMHXejGFVOS4HwCo7C2qddChuvMJs3sEOALo7gNOvwLS4dGLrW8flbSglDki4ttyremlKQstP5WJuPxmHQU3sA==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.24.10':
-    resolution: {integrity: sha512-E9K8OYD7XKHsvTyLTSdILKHbm4Q3n/MA3EGdDTEBLJHSJd1vLOwiJzrp3+h+xiqFxlX7vlecInZvFy/3c1fqPg==}
+  '@scalar/json-magic@0.11.4':
+    resolution: {integrity: sha512-F40E18vp6GIcJU5kV9UOKGhIrzN2IYdEMCcG3vw3INvvkXqJGqVPnCjcnSWFk27MByaD5Dzjlc3TvkgTiqNGYw==}
+    engines: {node: '>=20'}
+
+  '@scalar/openapi-parser@0.24.13':
+    resolution: {integrity: sha512-PMrvJRZeosQ35LX8wbbmIU07fxjnWuIe2Yk9suzH+dGbeV/IrGKJZiZZ4Cj9EK1olwBuNZ9YHBl+P0ZlvcHc8A==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.5.3':
@@ -2980,15 +2984,18 @@ snapshots:
 
   '@scalar/helpers@0.2.12': {}
 
-  '@scalar/json-magic@0.11.1':
+  '@scalar/helpers@0.2.15': {}
+
+  '@scalar/json-magic@0.11.4':
     dependencies:
-      '@scalar/helpers': 0.2.12
+      '@scalar/helpers': 0.2.15
+      pathe: 2.0.3
       yaml: 2.8.0
 
-  '@scalar/openapi-parser@0.24.10':
+  '@scalar/openapi-parser@0.24.13':
     dependencies:
-      '@scalar/helpers': 0.2.12
-      '@scalar/json-magic': 0.11.1
+      '@scalar/helpers': 0.2.15
+      '@scalar/json-magic': 0.11.4
       '@scalar/openapi-types': 0.5.3
       '@scalar/openapi-upgrader': 0.1.8
       ajv: 8.18.0
