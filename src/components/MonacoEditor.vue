@@ -164,7 +164,4 @@ onMounted(() => {
 </template>
 
 <style>
-.editor {
-  height: 100%;
-}
 </style>
