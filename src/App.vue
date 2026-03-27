@@ -25,12 +25,21 @@ const editing = ref<boolean>(true)
 const content = ref<string>(
   JSON.stringify(
     {
-      openapi: '3.1.0',
+      openapi: '3.1.2',
       info: {
         title: 'Hello World',
         version: '1.0.0',
       },
-      paths: {},
+      servers: [
+        {
+          url: 'https://void.scalar.com',
+        },
+      ],
+      paths: {
+        '/': {
+          get: {},
+        },
+      },
     },
     null,
     2,
