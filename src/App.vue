@@ -198,15 +198,23 @@ onUnmounted(() => {
 <style scoped>
 .app {
   font-family: var(--scalar-font);
+  --scalar-header-height: 50px;
 }
 
 .header {
-  height: 50px;
-  border-bottom: 1px solid var(--scalar-border-color);
+  height: var(--scalar-header-height);
+  border-bottom: var(--scalar-border-width) solid var(--scalar-border-color);
+  background: var(--scalar-background-1);
   color: var(--scalar-color-1);
   display: flex;
   align-items: center;
   padding: 12px;
+
+  position: sticky;
+  top: 0;
+  inset-inline: 0;
+
+  z-index: 100;
 }
 
 .header > * {
@@ -255,8 +263,6 @@ onUnmounted(() => {
 
 .layout {
   display: flex;
-  height: calc(100vh - 50px);
-  position: relative;
 }
 
 .layout > * {
@@ -265,20 +271,27 @@ onUnmounted(() => {
 }
 
 .layout > * + * {
-  border-left: 1px solid var(--scalar-border-color);
+  border-left: var(--scalar-border-width) solid var(--scalar-border-color);
 }
 
-.editor,
+.editor {
+  position: sticky;
+  top: var(--scalar-header-height);
+  height: calc(100dvh - var(--scalar-header-height));
+}
+
 .preview {
-  overflow: auto;
-  z-index: 0;
+  margin-top: calc(-1 * var(--scalar-header-height));
 }
 
 @media (max-width: 1000px) {
   .editor {
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    inset-inline: 0;
     z-index: 1;
+  }
+  .preview {
+    z-index: 0;
   }
 }
 </style>
