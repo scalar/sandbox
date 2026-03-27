@@ -188,7 +188,7 @@ onUnmounted(() => {
         </div>
         <div class="preview">
           <ApiReference
-            :configuration="{ spec: { content }, darkMode: isDark }" />
+            :configuration="{ content, darkMode: isDark }" />
         </div>
       </div>
     </div>

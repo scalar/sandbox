@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { ReferenceConfiguration } from '@scalar/types'
+import type { AnyApiReferenceConfiguration } from '@scalar/types'
 import { onMounted, watch } from 'vue'
 import { loadScript } from 'vue-plugin-load-script'
 
 const props = defineProps<{
-  configuration?: ReferenceConfiguration
+  configuration?: AnyApiReferenceConfiguration
 }>()
 
 onMounted(() => {
