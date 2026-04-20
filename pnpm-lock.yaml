@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.23(vue@3.4.36(typescript@5.8.3))
       '@scalar/openapi-parser':
-        specifier: ^0.25.9
-        version: 0.25.9
+        specifier: ^0.25.10
+        version: 0.25.10
       '@scalar/themes':
         specifier: ^0.15.3
         version: 0.15.3
@@ -1100,16 +1100,16 @@ packages:
     resolution: {integrity: sha512-Gv2V7SFreLx3DltzF2lKXdaJSH5cP1LOyt9PxON1cSWGxkrs3sg93c1taEJsW24E9ckfYXkL5hjCAVLfAN3wQw==}
     engines: {node: '>=22'}
 
-  '@scalar/helpers@0.5.0':
-    resolution: {integrity: sha512-S7m46UWqngUmDXuihUerNKS58vlUqF/qaXle3QREfc8Xh9wperAKxFmmxrnulAayrcCQ/fTJyGu5oSM2STlxkA==}
+  '@scalar/helpers@0.5.1':
+    resolution: {integrity: sha512-9VvPfv8b+YZVIFwR3SWeq4Y8ij/kU3/kf2M6NKcbf2iVyh63d8s0ssap5m/nOhiz/Puidv/29MAJlJCA0LRssA==}
     engines: {node: '>=22'}
 
-  '@scalar/json-magic@0.12.6':
-    resolution: {integrity: sha512-N5NMOmKfDBcQBXVAdL26p6f9J9d5czku5GnXJ8ifA/w00D7imlwLhrfQPeL1nN17vt2xBYTym8ulx/w3+lWmfA==}
+  '@scalar/json-magic@0.12.7':
+    resolution: {integrity: sha512-GD7BdZzlkCjNwRxGjsg5TmsFqNKWVuUjIfEUeTux2BqCarToqsU29HzwdA1Z9RZSeG3e4G46ogMVHRID9cmAnQ==}
     engines: {node: '>=22'}
 
-  '@scalar/openapi-parser@0.25.9':
-    resolution: {integrity: sha512-1KtcL1DDDt+LWQMSThTtXvqdqqMbrv0nHFErKduVimT2Cvk1B2H31+BLOSr0eH28AYCGYCmZ4xY8lN074rPgHg==}
+  '@scalar/openapi-parser@0.25.10':
+    resolution: {integrity: sha512-4gkNMIpPA+mtgXzWPgMItgCwnH/SgmKj66zSYFdiWTTaBsgQZWSbUnzaHpe+rLwq7/U6uRb1DSU+KgS1ZcrN4w==}
     engines: {node: '>=22'}
 
   '@scalar/openapi-types@0.7.0':
@@ -2984,18 +2984,18 @@ snapshots:
 
   '@scalar/helpers@0.4.3': {}
 
-  '@scalar/helpers@0.5.0': {}
+  '@scalar/helpers@0.5.1': {}
 
-  '@scalar/json-magic@0.12.6':
+  '@scalar/json-magic@0.12.7':
     dependencies:
-      '@scalar/helpers': 0.5.0
+      '@scalar/helpers': 0.5.1
       pathe: 2.0.3
       yaml: 2.8.0
 
-  '@scalar/openapi-parser@0.25.9':
+  '@scalar/openapi-parser@0.25.10':
     dependencies:
-      '@scalar/helpers': 0.5.0
-      '@scalar/json-magic': 0.12.6
+      '@scalar/helpers': 0.5.1
+      '@scalar/json-magic': 0.12.7
       '@scalar/openapi-types': 0.7.0
       '@scalar/openapi-upgrader': 0.2.5
       ajv: 8.18.0
