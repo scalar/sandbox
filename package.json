@@ -20,7 +20,7 @@
     "@headlessui/vue": "^1.7.17",
     "@scalar/openapi-parser": "^0.28.6",
     "@scalar/themes": "^0.15.6",
-    "@scalar/types": "^0.12.3",
+    "@scalar/types": "^0.13.0",
     "@vueuse/core": "^10.7.2",
     "drizzle-orm": "^0.32.2",
     "monaco-editor": "^0.50.0",
