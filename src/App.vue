@@ -20,7 +20,7 @@ const router = useRouter()
 
 const loading = ref<boolean>(false)
 
-const editing = ref<boolean>(true)
+const editing = ref<boolean>(route.name !== 'preview')
 
 const content = ref<string>(
   JSON.stringify(
