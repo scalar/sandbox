@@ -152,6 +152,7 @@ watch(
         })
     }
   },
+  { immediate: true },
 )
 
 function handleDrop(text: string) {
