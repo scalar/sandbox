@@ -18,8 +18,8 @@ importers:
         specifier: ^0.16.2
         version: 0.16.2
       '@scalar/types':
-        specifier: ^0.16.2
-        version: 0.16.2
+        specifier: ^0.16.3
+        version: 0.16.3
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -260,11 +260,11 @@ packages:
 
   '@esbuild-kit/core-utils@3.3.2':
     resolution: {integrity: sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ==}
-    deprecated: 'Merged into tsx: https://tsx.is'
+    deprecated: 'Merged into tsx: https://tsx.hirok.io'
 
   '@esbuild-kit/esm-loader@2.6.5':
     resolution: {integrity: sha512-FxEMIkJKnodyA1OaCUoEvbYRkoZlLZ4d/eXFu9Fh8CbBBgP5EmZxrfTRyN0qpXZ4vOvqnE5YdRdcrmUUXuU+dA==}
-    deprecated: 'Merged into tsx: https://tsx.is'
+    deprecated: 'Merged into tsx: https://tsx.hirok.io'
 
   '@esbuild-plugins/node-globals-polyfill@0.2.3':
     resolution: {integrity: sha512-r3MIryXDeXDOZh7ih1l/yE9ZLORCd5e8vWg02azWRGj5SPTuoh69A2AIyn0Z31V/kHBfZ4HgWJ+OK3GTTwLmnw==}
@@ -1104,6 +1104,10 @@ packages:
     resolution: {integrity: sha512-M34CLRCttqC1bXthI/QSzQj0s5C6nrU2PFWf/vOT3RpycbiGDGQbqR+5RfFzpOIQvRqbHfNdcRbeiZBw+vCbkQ==}
     engines: {node: '>=22'}
 
+  '@scalar/helpers@0.9.1':
+    resolution: {integrity: sha512-UKSLIPfN++f+zzbsZ+F6I0lNrR4yX4PtokjHgGwGiHapxT5VJqAF4zFTIP2KCd27XG7KnAIA7qq62O4xRBxc6w==}
+    engines: {node: '>=22'}
+
   '@scalar/json-magic@0.12.17':
     resolution: {integrity: sha512-Vw2nrUDIjhvMP6vxFtkiiFlabJ6SyTtfn1BsOxgnr1hIB+/rkngMguiDzl5em21VjyfFGIoADia+QWKM2hdcdA==}
     engines: {node: '>=22'}
@@ -1124,8 +1128,8 @@ packages:
     resolution: {integrity: sha512-4mAn7z2W5/ASi1OF06dqf04xjxTHnMzESC2E+qVMukJsEsV4kDlYSIfm/g5hwWxhqWsBMjorF9Dtlqd0ycJ92g==}
     engines: {node: '>=22'}
 
-  '@scalar/types@0.16.2':
-    resolution: {integrity: sha512-QAlCtDVRsX/UV1N9ctLqPsKQy84eceFf4dMnTZM0JhaRfwS/Ovwp8oFf3POSpqQILNiqLFZLE6IV6p/5rNoAag==}
+  '@scalar/types@0.16.3':
+    resolution: {integrity: sha512-8TVNlK8AdvIekrapAoEVwy+IVRbMTSDYnpprskAJV4XanmZ52Kru6RmS6d+tbEBfMo2dTgQ9cV9P0kqsAu/AuA==}
     engines: {node: '>=22'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -1865,8 +1869,8 @@ packages:
     resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
     hasBin: true
 
-  nanoid@3.3.15:
-    resolution: {integrity: sha512-y7Wygv/7mEOvxTuEQDB8StXdMRBWf1kR/tlhAzBRUFkB2jfcLOAxO/SHmOO2zgz1pVgK29/kyupn059/bCHdjA==}
+  nanoid@3.3.16:
+    resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -1945,8 +1949,8 @@ packages:
     resolution: {integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.16:
-    resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
+  postcss@8.5.19:
+    resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.3:
@@ -2992,6 +2996,8 @@ snapshots:
 
   '@scalar/helpers@0.9.0': {}
 
+  '@scalar/helpers@0.9.1': {}
+
   '@scalar/json-magic@0.12.17':
     dependencies:
       '@scalar/helpers': 0.9.0
@@ -3021,9 +3027,9 @@ snapshots:
     dependencies:
       nanoid: 5.1.16
 
-  '@scalar/types@0.16.2':
+  '@scalar/types@0.16.3':
     dependencies:
-      '@scalar/helpers': 0.9.0
+      '@scalar/helpers': 0.9.1
       nanoid: 5.1.16
       type-fest: 5.8.0
       zod: 4.4.3
@@ -3166,7 +3172,7 @@ snapshots:
       '@vue/shared': 3.5.21
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.16
+      postcss: 8.5.19
       source-map-js: 1.2.1
     optional: true
 
@@ -3832,7 +3838,7 @@ snapshots:
 
   mustache@4.2.0: {}
 
-  nanoid@3.3.15: {}
+  nanoid@3.3.16: {}
 
   nanoid@5.1.16: {}
 
@@ -3893,20 +3899,20 @@ snapshots:
 
   postcss@8.4.41:
     dependencies:
-      nanoid: 3.3.15
+      nanoid: 3.3.16
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  postcss@8.5.16:
+  postcss@8.5.19:
     dependencies:
-      nanoid: 3.3.15
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
     optional: true
 
   postcss@8.5.3:
     dependencies:
-      nanoid: 3.3.15
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
