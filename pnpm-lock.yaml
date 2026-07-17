@@ -18,8 +18,8 @@ importers:
         specifier: ^0.16.3
         version: 0.16.3
       '@scalar/types':
-        specifier: ^0.16.3
-        version: 0.16.3
+        specifier: ^0.16.4
+        version: 0.16.4
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.11.1(vue@3.4.36(typescript@5.8.3))
@@ -1104,6 +1104,10 @@ packages:
     resolution: {integrity: sha512-UKSLIPfN++f+zzbsZ+F6I0lNrR4yX4PtokjHgGwGiHapxT5VJqAF4zFTIP2KCd27XG7KnAIA7qq62O4xRBxc6w==}
     engines: {node: '>=22'}
 
+  '@scalar/helpers@0.9.2':
+    resolution: {integrity: sha512-hjyMpMZjTBZQhyByZmz5oUgRKUQJO5V5AOiJxsVEGbUmgA7sJRQeTrXLB+BEwzaKS5nm2opJeNyMBYLFNK4hiQ==}
+    engines: {node: '>=22'}
+
   '@scalar/json-magic@0.12.18':
     resolution: {integrity: sha512-3oZr+jUUiwD3C+x2CROBtlyIUnwt9ScRhFfczuOTPZlD7Pnb5cyTTfkiHbxxU4qd66ij0Z3JA4X/Nj0OADyEiA==}
     engines: {node: '>=22'}
@@ -1124,8 +1128,8 @@ packages:
     resolution: {integrity: sha512-PIYSUQwAafVlA684H1e2JJjbg/o3xmJo0Yn6cMzOAevPfyO2uEBQuKr7C2TnZ0emBOAzr3rd9V41Cp1mZVjaSQ==}
     engines: {node: '>=22'}
 
-  '@scalar/types@0.16.3':
-    resolution: {integrity: sha512-8TVNlK8AdvIekrapAoEVwy+IVRbMTSDYnpprskAJV4XanmZ52Kru6RmS6d+tbEBfMo2dTgQ9cV9P0kqsAu/AuA==}
+  '@scalar/types@0.16.4':
+    resolution: {integrity: sha512-fLf0ANAC3iQq0sIVdmH6aGM+pFSLyD8GfGBxSWcLpI0jE0iFAzX2A3p0qVZm7vqBT4TQnn0fSwg5U+h+FZ52BA==}
     engines: {node: '>=22'}
 
   '@tanstack/virtual-core@3.7.0':
@@ -2992,6 +2996,8 @@ snapshots:
 
   '@scalar/helpers@0.9.1': {}
 
+  '@scalar/helpers@0.9.2': {}
+
   '@scalar/json-magic@0.12.18':
     dependencies:
       '@scalar/helpers': 0.9.1
@@ -3021,9 +3027,9 @@ snapshots:
     dependencies:
       nanoid: 5.1.16
 
-  '@scalar/types@0.16.3':
+  '@scalar/types@0.16.4':
     dependencies:
-      '@scalar/helpers': 0.9.1
+      '@scalar/helpers': 0.9.2
       nanoid: 5.1.16
       type-fest: 5.8.0
       zod: 4.4.3
